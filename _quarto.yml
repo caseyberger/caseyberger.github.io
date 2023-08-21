@@ -14,17 +14,17 @@ website:
     #left is left-aligned top bar
     left:
       - href: index.qmd
-        text: Home
-      - sidebar:cv_and_pubs
+        text: "Home"
+      - href: cv_and_pubs.qmd
+        text: "CV and Publications"
       - sidebar:teaching
  
   sidebar:
-    - id: cv_and_pubs
-      title: "CV and Publications"
-      #style: "docked"
-      background: light
-      contents:
-       - cv_and_pubs.qmd
+    #- id: cv_and_pubs
+    #  title: "CV and Publications"
+    #  background: light
+    #  contents:
+    #   - cv_and_pubs.qmd
    
     - id: teaching
       title: "Teaching and Pedagogy"
