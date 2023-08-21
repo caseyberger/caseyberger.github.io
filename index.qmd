@@ -1,0 +1,24 @@
+---
+title: "Casey E Berger"
+
+format: 
+  html:
+    toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    self-contained: true
+editor: visual
+jupyter: python3
+---
+
+# Casey E. Berger
+
+Assistant Professor\
+Physics and Statistical and Data Sciences\
+Smith College
+
+## Interdisciplinary Science
+
+Life is more interesting on the boundaries!

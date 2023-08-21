@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: docs
+ 
+website:
+  cookie-consent:
+    type: express
+    style: headline
+    palette: dark  
+  title: "Casey E. Berger"
+  navbar:
+    background: primary #color of background is primary color in palette
+    search: true
+    #left is left-aligned top bar
+    left:
+      - href: index.qmd
+        text: Home
+      - sidebar:cv_and_pubs
+      - sidebar:teaching
+ 
+  sidebar:
+    - id: cv_and_pubs
+      title: "CV and Publications"
+      style: "docked"
+      background: light
+      contents:
+       - cv_and_pubs.qmd
+   
+    - id: teaching
+      title: "Teaching and Pedagogy"
+      style: "docked"
+      background: light
+      contents:
+       - teaching_philosophy.qmd
+       - teaching_experience.qmd
+       
+ 
+format:
+  html:
+    theme: flatly
+    css: styles.css
+    toc: true
+
+editor: visual
