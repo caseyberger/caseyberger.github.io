@@ -21,7 +21,7 @@ website:
   sidebar:
     - id: cv_and_pubs
       title: "CV and Publications"
-      style: "docked"
+      #style: "docked"
       background: light
       contents:
        - cv_and_pubs.qmd
