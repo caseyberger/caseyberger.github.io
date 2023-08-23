@@ -14,7 +14,7 @@ website:
     #left is left-aligned top bar
     left:
       - href: index.qmd
-        text: "Home"
+        text: Home
       - sidebar:about
       - sidebar:teaching
             
