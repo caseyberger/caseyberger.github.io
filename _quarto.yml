@@ -15,17 +15,17 @@ website:
     left:
       - href: index.qmd
         text: "Home"
-      - href: cv_and_pubs.qmd
-        text: "CV and Publications"
-      - text: "Teaching"
-        sidebar:teaching
+      - sidebar:about
+      - sidebar:teaching
             
   sidebar:
-    #- id: cv_and_pubs
-    #  title: "CV and Publications"
-    #  background: light
-    #  contents:
-    #   - cv_and_pubs.qmd
+    - id: about
+      title: "About me"
+      style: "docked"
+      background: light
+      contents:
+       - bio.qmd
+       - cv_and_pubs.qmd
    
     - id: teaching
       title: "Teaching and Pedagogy"
