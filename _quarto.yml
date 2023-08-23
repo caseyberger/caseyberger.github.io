@@ -17,7 +17,8 @@ website:
         text: "Home"
       - href: cv_and_pubs.qmd
         text: "CV and Publications"
-      - sidebar:teaching
+      - text: "Teaching"
+        sidebar:teaching
             
   sidebar:
     #- id: cv_and_pubs
