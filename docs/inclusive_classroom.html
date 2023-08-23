@@ -102,10 +102,21 @@ cookieconsent.run({
     <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./cv_and_pubs.html" rel="" target="">
- <span class="menu-text">CV and Publications</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-me" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">About Me</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about-me">    
+        <li>
+    <a class="dropdown-item" href="./bio.html" rel="" target="">
+ <span class="dropdown-text">About Me</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./cv_and_pubs.html" rel="" target="">
+ <span class="dropdown-text">CV and Publications</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching-and-pedagogy" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
  <span class="menu-text">Teaching and Pedagogy</span>
@@ -113,7 +124,11 @@ cookieconsent.run({
     <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching-and-pedagogy">    
         <li>
     <a class="dropdown-item" href="./teaching_philosophy.html" rel="" target="">
- <span class="dropdown-text">CV and Publications</span></a>
+ <span class="dropdown-text">Teaching Philosophy</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./inclusive_classroom.html" rel="" target="">
+ <span class="dropdown-text">Building an Inclusive Classroom</span></a>
   </li>  
     </ul>
   </li>
@@ -128,7 +143,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Building an Inclusive Classroom</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./inclusive_classroom.html">Building an Inclusive Classroom</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -143,12 +158,15 @@ cookieconsent.run({
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./teaching_philosophy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">CV and Publications</span></a>
+ <span class="menu-text">Teaching Philosophy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
- <span class="menu-text">teaching_experience.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="./inclusive_classroom.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Building an Inclusive Classroom</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>

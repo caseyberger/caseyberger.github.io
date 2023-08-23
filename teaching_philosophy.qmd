@@ -1,5 +1,5 @@
 ---
-title: "CV and Publications"
+title: "Teaching Philosophy"
 format: 
   html:
     toc: true

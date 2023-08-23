@@ -20,7 +20,7 @@ website:
             
   sidebar:
     - id: about
-      title: "About me"
+      title: "About Me"
       style: "docked"
       background: light
       contents:
