@@ -17,28 +17,22 @@ website:
         text: "Home"
       - href: cv_and_pubs.qmd
         text: "CV and Publications"
-      - text: "Teaching and Pedagogy"
-        menu:
-          - text: "Teaching Philosophy"
-            href: teaching_philosophy.qmd
-          - text: "Building an Inclusive Classroom"
-            href: inclusive_classroom.qmd
+      - sidebar:teaching
             
-            
-  #sidebar:
+  sidebar:
     #- id: cv_and_pubs
     #  title: "CV and Publications"
     #  background: light
     #  contents:
     #   - cv_and_pubs.qmd
    
-    #- id: teaching
-    #  title: "Teaching and Pedagogy"
-    #  style: "docked"
-    #  background: light
-    #  contents:
-    #   - teaching_philosophy.qmd
-    #   - teaching_experience.qmd
+    - id: teaching
+      title: "Teaching and Pedagogy"
+      style: "docked"
+      background: light
+      contents:
+       - teaching_philosophy.qmd
+       - inclusive_classroom.qmd
        
  
 format:
