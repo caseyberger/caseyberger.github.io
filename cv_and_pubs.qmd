@@ -16,7 +16,4 @@ jupyter: python3
 
 My up-to-date academic CV as of August 2023 can be found [here](pdfs/CV.pdf)
 
-
 # Academic Publications
-
-
