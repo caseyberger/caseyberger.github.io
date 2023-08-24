@@ -1,0 +1,36 @@
+---
+title: "Teaching Data Science to Physics Students"
+format: 
+  html:
+    toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    self-contained: true
+editor: visual
+jupyter: python3
+---
+So you want to teach your physics students some data science?\
+Fortunately, there are lots of resources to help you do just this! I've put together a handy guide that should help walk you through this process, whether you're just hearing the words "Python programming language" for the first time or a seasoned pro.
+
+If you are completely new to Python, you should start with [The Basics of Python](beginning_python.html), where I walk through a basic Python bootcamp and provide links to other resources for practice.
+
+::: panel-tabset
+# Getting Started
+
+In this section are a number of resources to help walk you through some of the most widely-used (and accessible) tools for programming in the classroom. There, you can learn some basic Python, get comfortable with a free and easy to use (no downloads or installs required!) coding environment, and get some best practices tips for teaching students who are also just getting started.
+
+If you don’t already have Python installed on your machine, or if you don’t already have access to a cloud-based programming environment (like JupyterHub or Posit), this notebook will walk you through Google Colab, which is an excellent, free option if you want to program with Python and don’t want to have to install a bunch of programs on your computer. All you need to start this process is a Google account.
+ 
+This tutorial will walk you through the basics of Colab. Click on this [link](https://github.com/soltaniehha/Intro-to-Colab/blob/main/Colab-Intro.ipynb), and it should take you to a page that looks like this:
+
+
+# Ready to Dive In
+
+In this section, you can find modules developed by graduate and postdoctoral fellows in the Data Science Education Community of Practice ([DSECOP](www.descop.org)), part of the American Physical Society's topical Group on Data Science. These modules are designed to fit into physics courses and can be adapted for students at varying levels of coding ability
+
+# Dig Deeper
+
+In this section, you will find more modules by the [DSECOP](www.dsecop.org) fellows, which are intended for more advanced students. Once students have gained some familiarity with data science tools and processes (using the earlier modules, for example), they will be ready for these modules. 
+:::

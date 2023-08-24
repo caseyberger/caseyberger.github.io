@@ -17,6 +17,7 @@ website:
         text: Home
       - sidebar:about
       - sidebar:teaching
+      - sidebar:python-data-science
             
   sidebar:
     - id: about
@@ -35,6 +36,13 @@ website:
        - teaching_philosophy.qmd
        - inclusive_classroom.qmd
        
+    - id: python-data-science
+      title: "Data Science in the Physics Classroom"
+      style: "docked"
+      background: light
+      contents:
+        - beginning_python.qmd
+        - python_data_science.qmd
  
 format:
   html:

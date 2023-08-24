@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Casey E. Berger - Casey E Berger</title>
+<title>Casey E. Berger - Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ cookieconsent.run({
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -99,7 +99,7 @@ cookieconsent.run({
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -153,26 +153,59 @@ cookieconsent.run({
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./beginning_python.html">Beginning Python</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./beginning_python.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Beginning Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./python_data_science.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Teaching Data Science to Physics Students</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#interdisciplinary-science" id="toc-interdisciplinary-science" class="nav-link active" data-scroll-target="#interdisciplinary-science">Interdisciplinary Science</a></li>
+  <li><a href="#should-i-install-python-or-use-a-cloud-based-environment" id="toc-should-i-install-python-or-use-a-cloud-based-environment" class="nav-link active" data-scroll-target="#should-i-install-python-or-use-a-cloud-based-environment">Should I install Python or use a cloud-based environment?</a></li>
+  <li><a href="#using-a-notebook-jupyter-or-colab" id="toc-using-a-notebook-jupyter-or-colab" class="nav-link" data-scroll-target="#using-a-notebook-jupyter-or-colab">Using a Notebook (Jupyter or Colab)</a>
+  <ul class="collapse">
+  <li><a href="#additional-references" id="toc-additional-references" class="nav-link" data-scroll-target="#additional-references">Additional References</a></li>
+  </ul></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="beginning_python.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Casey E Berger</h1>
+<h1 class="title">Beginning Python</h1>
 </div>
 
 
@@ -187,14 +220,31 @@ cookieconsent.run({
 
 </header>
 
-<p>Assistant Professor<br>
-Physics and Statistical and Data Sciences<br>
-Smith College</p>
-<section id="interdisciplinary-science" class="level2">
-<h2 class="anchored" data-anchor-id="interdisciplinary-science">Interdisciplinary Science</h2>
-<p>Life is more interesting on the boundaries!</p>
+<p>If you’re brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of <a href="#additional-references">Additional References</a> for more detail and opportunities to practice.</p>
+<section id="should-i-install-python-or-use-a-cloud-based-environment" class="level1">
+<h1>Should I install Python or use a cloud-based environment?</h1>
+<p>This depends on your own needs. If you want to be able to work offline, then you’ll want to install Python on your local machine. But if you can reliably expect access to the internet, then an online service will be a lot quicker to start with and will prevent the need to manage updates, install special packages, or deal with software incompatibilities.</p>
+<p>In both cases, I recommend working with Jupyter notebooks to begin. A Jupyter notebook allows you to run code in small chunks as well as leave clear notes and documentation throughout. If you have worked with Posit or RStudio, you will already be familiar with how this works. If you haven’t, don’t worry! We will walk through it below.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Installing Python and JupyterLab</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Accessing Google Colab</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+
+</div>
+</div>
+</div>
+</section>
+<section id="using-a-notebook-jupyter-or-colab" class="level1">
+<h1>Using a Notebook (Jupyter or Colab)</h1>
+<section id="additional-references" class="level2">
+<h2 class="anchored" data-anchor-id="additional-references">Additional References</h2>
+<p>Python’s guide to <a href="https://www.python.org/about/gettingstarted/">Python for Beginners</a></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

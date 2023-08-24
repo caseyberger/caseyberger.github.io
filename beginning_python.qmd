@@ -1,0 +1,35 @@
+---
+title: "Beginning Python"
+format: 
+  html:
+    toc: true
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    self-contained: true
+editor: visual
+jupyter: python3
+---
+
+If you're brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of [Additional References] for more detail and opportunities to practice.
+
+# Should I install Python or use a cloud-based environment?
+
+This depends on your own needs. If you want to be able to work offline, then you'll want to install Python on your local machine. But if you can reliably expect access to the internet, then an online service will be a lot quicker to start with and will prevent the need to manage updates, install special packages, or deal with software incompatibilities.
+
+In both cases, I recommend working with Jupyter notebooks to begin. A Jupyter notebook allows you to run code in small chunks as well as leave clear notes and documentation throughout. If you have worked with Posit or RStudio, you will already be familiar with how this works. If you haven't, don't worry! We will walk through it below.
+
+::: panel-tabset
+# Installing Python and JupyterLab
+
+# Accessing Google Colab
+
+
+:::
+
+# Using a Notebook (Jupyter or Colab)
+
+## Additional References
+
+Python's guide to [Python for Beginners](https://www.python.org/about/gettingstarted/)

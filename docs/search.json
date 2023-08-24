@@ -75,5 +75,47 @@
     "title": "About Me",
     "section": "",
     "text": "Academic Bio\nI am an assistant professor of physics and statistical and data sciences at Smith College. Previously, I was a postdoctoral research associate at Boston University in the physics department and the Hariri Institute for Computing. I earned my PhD from the University of North Carolina at Chapel Hill, where I was a Department of Energy Computational Science Graduate Fellow and a William Neal Reynolds fellow in the Royster Society of Fellows. My research is in computational and data science methods in many-body quantum mechanics.\n\nI also work on issues of diversity and equity in STEM, with an emphasis on improving representation and support of women, LGBTQ folks, BIPOC, and other underrepresented groups in STEM. When I’m not working in STEM and STEM-related pursuits, you can find me running, cooking, practicing photography, or writing."
+  },
+  {
+    "objectID": "python_data_science.html",
+    "href": "python_data_science.html",
+    "title": "Teaching Data Science to Physics Students",
+    "section": "",
+    "text": "So you want to teach your physics students some data science?\nFortunately, there are lots of resources to help you do just this! I’ve put together a handy guide that should help walk you through this process, whether you’re just hearing the words “Python programming language” for the first time or a seasoned pro.\nIf you are completely new to Python, you should start with The Basics of Python, where I walk through a basic Python bootcamp and provide links to other resources for practice.\n\nGetting StartedReady to Dive InDig Deeper\n\n\nIn this section are a number of resources to help walk you through some of the most widely-used (and accessible) tools for programming in the classroom. There, you can learn some basic Python, get comfortable with a free and easy to use (no downloads or installs required!) coding environment, and get some best practices tips for teaching students who are also just getting started.\nIf you don’t already have Python installed on your machine, or if you don’t already have access to a cloud-based programming environment (like JupyterHub or Posit), this notebook will walk you through Google Colab, which is an excellent, free option if you want to program with Python and don’t want to have to install a bunch of programs on your computer. All you need to start this process is a Google account.\nThis tutorial will walk you through the basics of Colab. Click on this link, and it should take you to a page that looks like this:\n\n\nIn this section, you can find modules developed by graduate and postdoctoral fellows in the Data Science Education Community of Practice (DSECOP), part of the American Physical Society’s topical Group on Data Science. These modules are designed to fit into physics courses and can be adapted for students at varying levels of coding ability\n\n\nIn this section, you will find more modules by the DSECOP fellows, which are intended for more advanced students. Once students have gained some familiarity with data science tools and processes (using the earlier modules, for example), they will be ready for these modules."
+  },
+  {
+    "objectID": "python_data_science.html#python-basics",
+    "href": "python_data_science.html#python-basics",
+    "title": "Teaching Python and Data Science to Physics Students",
+    "section": "Python basics",
+    "text": "Python basics"
+  },
+  {
+    "objectID": "python_data_science.html#using-google-colab",
+    "href": "python_data_science.html#using-google-colab",
+    "title": "Teaching Python and Data Science to Physics Students",
+    "section": "Using Google colab",
+    "text": "Using Google colab\nIf you don’t already have Python installed on your machine, or if you don’t already have access to a cloud-based programming environment (like JupyterHub or Posit), this notebook will walk you through Google Colab, which is an excellent, free option if you want to program with Python and don’t want to have to install a bunch of programs on your computer. All you need to start this process is a Google account.\nThis tutorial will walk you through the basics of Colab. Click on this link, and it should take you to a page that looks like this:"
+  },
+  {
+    "objectID": "beginning_python.html",
+    "href": "beginning_python.html",
+    "title": "Beginning Python",
+    "section": "",
+    "text": "If you’re brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of Additional References for more detail and opportunities to practice."
+  },
+  {
+    "objectID": "beginning_python.html#should-i-install-python-or-use-a-cloud-based-environment",
+    "href": "beginning_python.html#should-i-install-python-or-use-a-cloud-based-environment",
+    "title": "Beginning Python",
+    "section": "Should I install Python or use a cloud-based environment?",
+    "text": "Should I install Python or use a cloud-based environment?\nThis depends on your own needs. If you want to be able to work offline, then you’ll want to install Python on your local machine. But if you can reliably expect access to the internet, then an online service will be a lot quicker to start with and will prevent the need to manage updates, install special packages, or deal with software incompatibilities.\nIn both cases, I recommend working with Jupyter notebooks to begin. A Jupyter notebook allows you to run code in small chunks as well as leave clear notes and documentation throughout. If you have worked with Posit or RStudio, you will already be familiar with how this works. If you haven’t, don’t worry! We will walk through it below.\n\nInstalling Python and JupyterLabAccessing Google Colab"
+  },
+  {
+    "objectID": "beginning_python.html#additional-references",
+    "href": "beginning_python.html#additional-references",
+    "title": "Beginning Python",
+    "section": "Additional References",
+    "text": "Additional References\nPython’s guide to Python for Beginners"
   }
 ]
