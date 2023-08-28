@@ -30,6 +30,6 @@ In both cases, I recommend working with Jupyter notebooks to begin. A Jupyter no
 
 # Using a Notebook (Jupyter or Colab)
 
-## Additional References
+# Additional References
 
 Python's guide to [Python for Beginners](https://www.python.org/about/gettingstarted/)

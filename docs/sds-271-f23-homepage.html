@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Casey E. Berger - Beginning Python</title>
+<title>Casey E. Berger - SDS 271 Fall 2023</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,6 +147,17 @@ cookieconsent.run({
   </li>  
     </ul>
   </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sds-271-fall-2023" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">SDS 271 Fall 2023</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sds-271-fall-2023">    
+        <li>
+    <a class="dropdown-item" href="./sds-271-f23-homepage.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Fall 2023</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
             <div class="quarto-navbar-tools ms-auto">
 </div>
@@ -158,7 +169,7 @@ cookieconsent.run({
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./beginning_python.html">Beginning Python</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sds-271-f23-homepage.html">SDS 271 Fall 2023</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -172,14 +183,8 @@ cookieconsent.run({
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./beginning_python.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Beginning Python</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./python_data_science.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Teaching Data Science to Physics Students</span></a>
+  <a href="./sds-271-f23-homepage.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">SDS 271 Fall 2023</span></a>
   </div>
 </li>
     </ul>
@@ -192,18 +197,18 @@ cookieconsent.run({
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#should-i-install-python-or-use-a-cloud-based-environment" id="toc-should-i-install-python-or-use-a-cloud-based-environment" class="nav-link active" data-scroll-target="#should-i-install-python-or-use-a-cloud-based-environment">Should I install Python or use a cloud-based environment?</a></li>
-  <li><a href="#using-a-notebook-jupyter-or-colab" id="toc-using-a-notebook-jupyter-or-colab" class="nav-link" data-scroll-target="#using-a-notebook-jupyter-or-colab">Using a Notebook (Jupyter or Colab)</a></li>
-  <li><a href="#additional-references" id="toc-additional-references" class="nav-link" data-scroll-target="#additional-references">Additional References</a></li>
+  <li><a href="#syllabus-and-schedule" id="toc-syllabus-and-schedule" class="nav-link active" data-scroll-target="#syllabus-and-schedule">Syllabus and Schedule</a></li>
+  <li><a href="#accessing-compute-resources-and-reporting-issues" id="toc-accessing-compute-resources-and-reporting-issues" class="nav-link" data-scroll-target="#accessing-compute-resources-and-reporting-issues">Accessing Compute Resources and Reporting Issues</a></li>
+  <li><a href="#providing-feedback" id="toc-providing-feedback" class="nav-link" data-scroll-target="#providing-feedback">Providing Feedback</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="beginning_python.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Beginning Python</h1>
+<h1 class="title">SDS 271 Fall 2023</h1>
 </div>
 
 
@@ -218,29 +223,28 @@ cookieconsent.run({
 
 </header>
 
-<p>If you’re brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of <a href="#additional-references">Additional References</a> for more detail and opportunities to practice.</p>
-<section id="should-i-install-python-or-use-a-cloud-based-environment" class="level1">
-<h1>Should I install Python or use a cloud-based environment?</h1>
-<p>This depends on your own needs. If you want to be able to work offline, then you’ll want to install Python on your local machine. But if you can reliably expect access to the internet, then an online service will be a lot quicker to start with and will prevent the need to manage updates, install special packages, or deal with software incompatibilities.</p>
-<p>In both cases, I recommend working with Jupyter notebooks to begin. A Jupyter notebook allows you to run code in small chunks as well as leave clear notes and documentation throughout. If you have worked with Posit or RStudio, you will already be familiar with how this works. If you haven’t, don’t worry! We will walk through it below.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Installing Python and JupyterLab</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Accessing Google Colab</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-
-</div>
-</div>
-</div>
+<p>Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Science in Python!</p>
+<section id="syllabus-and-schedule" class="level2">
+<h2 class="anchored" data-anchor-id="syllabus-and-schedule">Syllabus and Schedule</h2>
+<p>The course syllabus can be found <a href="SDS271/F23/SDS-271-F23-Syllabus.pdf">here</a>.<br>
+<br>
+The course schedule can be found <a href="https://docs.google.com/spreadsheets/d/1cgGw0gnp9zf7X_boAl0-BlcDbxlrTiVobbfTav6SB0o/edit?usp=sharing">here</a>. It will be updated regularly and is subject to change.<br>
+<br>
+</p>
 </section>
-<section id="using-a-notebook-jupyter-or-colab" class="level1">
-<h1>Using a Notebook (Jupyter or Colab)</h1>
+<section id="accessing-compute-resources-and-reporting-issues" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-compute-resources-and-reporting-issues">Accessing Compute Resources and Reporting Issues</h2>
+<p>You can access the Smith JupyterHub server <a href="https://jupyterhub.smith.edu/">here</a>. You will need to log in with your Smith credentials. If you are off-campus, you will have to log into a VPN to get access.<br>
+<br>
+Instructions on how to install the Pulse Secure VPN can be found [on the Smith website] (https://www.smith.edu/its/tara/networking/vpn.html). You need to log in to the VPN with your Smith credentials before accessing JupyterHub. Once you’ve signed in (and done the Duo push), you should be able to access the server as normal.<br>
+<br>
+If you have a bug or connection issue to report, you can do so <a href="https://forms.gle/yuu11ZZpEEyunkJe8">here</a>.<br>
+<br>
+</p>
 </section>
-<section id="additional-references" class="level1">
-<h1>Additional References</h1>
-<p>Python’s guide to <a href="https://www.python.org/about/gettingstarted/">Python for Beginners</a></p>
+<section id="providing-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="providing-feedback">Providing Feedback</h2>
+<p>If you have feedback for me that you are not comfortable sharing directly but would like me to take into acocunt, please don’t hesitate to leave it <a href="https://forms.gle/UybDA8HT5KoD8kWRA">here</a>. This form is entirely anonymous – the only information I ask for is the class that this is about.</p>
 
 
 </section>

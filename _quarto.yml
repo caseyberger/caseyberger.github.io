@@ -18,6 +18,7 @@ website:
       - sidebar:about
       - sidebar:teaching
       - sidebar:python-data-science
+      - sidebar:sds-271-f23
             
   sidebar:
     - id: about
@@ -43,7 +44,13 @@ website:
       contents:
         - beginning_python.qmd
         - python_data_science.qmd
- 
+        
+    - id: sds-271-f23
+      title: "SDS 271 Fall 2023"
+      style: "docked"
+      background: light
+      contents: 
+        - sds-271-f23-homepage.qmd
 format:
   html:
     theme: flatly
