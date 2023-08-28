@@ -1,4 +1,9 @@
-# Lab 1: Getting Started
+---
+title: "Lab 1: Getting Started"
+format: html
+editor: visual
+jupyter: python3
+---
 
 # Welcome to SDS 271!
 
