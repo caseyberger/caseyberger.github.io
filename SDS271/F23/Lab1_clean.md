@@ -1,3 +1,5 @@
+# Lab 1: Getting Started
+
 # Welcome to SDS 271!
 
 This introductory lab will serve as a refresher on the Python skills you learned in previous classes, as well as a chance to get to know the course structure and content.

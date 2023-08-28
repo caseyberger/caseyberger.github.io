@@ -7,6 +7,8 @@ jupyter: python3
 
 Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Science in Python!
 
+# Course Details and Other Help
+
 ## Syllabus and Schedule
 The course syllabus can be found [here](SDS271/F23/SDS-271-F23-Syllabus.pdf).\
 \
@@ -23,3 +25,8 @@ If you have a bug or connection issue to report, you can do so [here](https://fo
 
 ## Providing Feedback
 If you have feedback for me that you are not comfortable sharing directly but would like me to take into acocunt, please don't hesitate to leave it [here](https://forms.gle/UybDA8HT5KoD8kWRA). This form is entirely anonymous -- the only information I ask for is the class that this is about.
+
+# Labs
+
+## Lab 1
+Lab 1 is all about getting started with 

@@ -51,6 +51,7 @@ website:
       background: light
       contents: 
         - sds-271-f23-homepage.qmd
+        - SDS271/F23/Lab1_clean.md
 format:
   html:
     theme: flatly
