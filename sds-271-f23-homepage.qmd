@@ -29,4 +29,4 @@ If you have feedback for me that you are not comfortable sharing directly but wo
 # Labs
 
 ## Lab 1
-Lab 1 is all about getting started with 
+[Lab 1](SDS271/F23/Lab1_clean.qmd) is all about getting started with JupyterHub and reviewing your previous Python experience.
