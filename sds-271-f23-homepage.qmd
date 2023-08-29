@@ -9,6 +9,9 @@ Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Scien
 
 # Course Details and Other Help
 
+## Textbook
+The textbook is [Python for Data Analysis, 3rd edition](https://wesmckinney.com/book/), and is available for free online.
+
 ## Syllabus and Schedule
 The course syllabus can be found [here](SDS271/F23/SDS-271-F23-Syllabus.pdf).\
 \
