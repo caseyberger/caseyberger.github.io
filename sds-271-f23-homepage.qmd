@@ -20,6 +20,9 @@ The course syllabus can be found [here](SDS271/F23/SDS-271-F23-Syllabus.pdf).\
 The course schedule can be found [here](https://docs.google.com/spreadsheets/d/1cgGw0gnp9zf7X_boAl0-BlcDbxlrTiVobbfTav6SB0o/edit?usp=sharing). It will be updated regularly and is subject to change.\
 \
 
+## Office Hours
+Office hours will be scheduled in the second week of classes. I try to work around the schedules of the class as much as is realistic, so please fill out [the office hours poll](https://www.when2meet.com/?21111679-BiXAY) before the end of the day on Monday, September 11 to help me set my office hours. 
+
 ## Accessing Compute Resources and Reporting Issues
 
 You can access the Smith JupyterHub server [here](https://jupyterhub.smith.edu/). You will need to log in with your Smith credentials. If you are off-campus, you will have to log into a VPN to get access.\
