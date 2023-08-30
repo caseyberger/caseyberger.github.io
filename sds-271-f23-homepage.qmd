@@ -10,26 +10,35 @@ Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Scien
 # Course Details and Other Help
 
 ## Textbook
+
 The textbook is [Python for Data Analysis, 3rd edition](https://wesmckinney.com/book/), and is available for free online.
 
 ## Syllabus and Schedule
+
 The course syllabus can be found [here](SDS271/F23/SDS-271-F23-Syllabus.pdf).\
 \
 The course schedule can be found [here](https://docs.google.com/spreadsheets/d/1cgGw0gnp9zf7X_boAl0-BlcDbxlrTiVobbfTav6SB0o/edit?usp=sharing). It will be updated regularly and is subject to change.\
 \
 
 ## Accessing Compute Resources and Reporting Issues
-You can access the Smith JupyterHub server [here](https://jupyterhub.smith.edu/). You will need to log in with your Smith credentials. If you are off-campus, you will have to log into a VPN to get access. \
+
+You can access the Smith JupyterHub server [here](https://jupyterhub.smith.edu/). You will need to log in with your Smith credentials. If you are off-campus, you will have to log into a VPN to get access.\
 \
-Instructions on how to install the Pulse Secure VPN can be found [on the Smith website] (https://www.smith.edu/its/tara/networking/vpn.html). You need to log in to the VPN with your Smith credentials before accessing JupyterHub. Once you've signed in (and done the Duo push), you should be able to access the server as normal.\
+Instructions on how to install the Pulse Secure VPN can be found \[on the Smith website\] (https://www.smith.edu/its/tara/networking/vpn.html). You need to log in to the VPN with your Smith credentials before accessing JupyterHub. Once you've signed in (and done the Duo push), you should be able to access the server as normal.\
 \
 If you have a bug or connection issue to report, you can do so [here](https://forms.gle/yuu11ZZpEEyunkJe8).\
 \
 
 ## Providing Feedback
+
 If you have feedback for me that you are not comfortable sharing directly but would like me to take into acocunt, please don't hesitate to leave it [here](https://forms.gle/UybDA8HT5KoD8kWRA). This form is entirely anonymous -- the only information I ask for is the class that this is about.
 
 # Labs
 
 ## Lab 1
+
 [Lab 1](SDS271/F23/Lab1_clean.qmd) is all about getting started with JupyterHub and reviewing your previous Python experience.
+
+## Lab 2
+
+[Lab 2](SDS271/F23/Lab2_clean.qmd) gives you a chance to dig deeper into Python; learn how to import and use Python packages like random, matplotlib, and numpy; and apply your previous statistical knowledge to explore the dangers of making uninformed wagers.
