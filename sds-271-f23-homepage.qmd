@@ -21,7 +21,7 @@ The course schedule can be found [here](https://docs.google.com/spreadsheets/d/1
 \
 
 ## Office Hours
-Office hours will be scheduled in the second week of classes. I try to work around the schedules of the class as much as is realistic, so please fill out [the office hours poll](https://www.when2meet.com/?21111679-BiXAY) before the end of the day on Monday, September 11 to help me set my office hours. 
+TBD.
 
 ## Accessing Compute Resources and Reporting Issues
 
