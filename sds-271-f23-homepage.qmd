@@ -45,6 +45,8 @@ If you have feedback for me that you are not comfortable sharing directly but wo
 
 [Lab 1](SDS271/F23/Lab1_clean.qmd) is all about getting started with JupyterHub and reviewing your previous Python experience.
 
+You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.research.google.com/drive/1w4aK3JO1ifkciSFsfkBdUUlgqYBZWBN2) if you'd prefer to use Google colab.
+
 ## Lab 2
 
 [Lab 2](SDS271/F23/Lab2_clean.qmd) gives you a chance to dig deeper into Python; learn how to import and use Python packages like random, matplotlib, and numpy; and apply your previous statistical knowledge to explore the dangers of making uninformed wagers.
