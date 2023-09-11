@@ -5,7 +5,7 @@ editor: visual
 jupyter: python3
 ---
 
-Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Science in Python!
+Welcome to the Fall 2023 version of SDS 271: Programming for Data Science in Python!
 
 # Course Details and Other Help
 
@@ -41,11 +41,13 @@ If you have feedback for me that you are not comfortable sharing directly but wo
 
 # Labs
 
+You can find all labs in Moodle, or in this [Google Drive Folder](https://drive.google.com/drive/folders/1BrjKefesMYX1B9Gv8545PNQnDzq5kt4d?usp=drive_link/).
+
 ## Lab 1
 
 [Lab 1](SDS271/F23/Lab1_clean.qmd) is all about getting started with JupyterHub and reviewing your previous Python experience.
 
-You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.research.google.com/drive/1w4aK3JO1ifkciSFsfkBdUUlgqYBZWBN2) if you'd prefer to use Google colab.
+You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.research.google.com/drive/1w4aK3JO1ifkciSFsfkBdUUlgqYBZWBN2).
 
 ## Lab 2
 

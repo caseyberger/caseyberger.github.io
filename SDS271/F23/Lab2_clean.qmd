@@ -51,7 +51,7 @@ Investigate the documentation for the Python random module and do the following:
 
 <li>Generate a random integer between 1 and 6 (inclusive)</li>
 
-<li> Pick randomly from a list of "heads" and "tails" </li>
+<li>Pick randomly from a list of "heads" and "tails"</li>
 
 </ui>
 
@@ -389,30 +389,42 @@ Try your function out on the following scenarios:
 
 Scenario 1: <ui>
 
-<li> Starting funds: </li>
-<li> Wager amount: 100 </li>
-<li> Number of bets : 5 </li>
+<li>Starting funds:</li>
+
+<li>Wager amount: 100</li>
+
+<li>Number of bets : 5</li>
+
 </ui>
 
 Scenario 2: <ui>
 
-<li> Starting funds: 10000 </li>
-<li> Wager amount: 100</li>
-<li>  Number of bets : 10 </li>
+<li>Starting funds: 10000</li>
+
+<li>Wager amount: 100</li>
+
+<li>Number of bets : 10</li>
+
 </ui>
 
 Scenario 3: <ui>
 
-<li> Starting funds: 10000 </li>
-<li> Wager amount: 100 </li>
-<li> Number of bets : 100 </li>
+<li>Starting funds: 10000</li>
+
+<li>Wager amount: 100</li>
+
+<li>Number of bets : 100</li>
+
 </ui>
 
 Scenario 4: <ui>
 
-<li> Starting funds: 10000 </li>
-<li> Wager amount: 100 </li>
-<li> Number of bets : 10000</li>
+<li>Starting funds: 10000</li>
+
+<li>Wager amount: 100</li>
+
+<li>Number of bets : 10000</li>
+
 </ui>
 
 Plot the individual outcomes and average result from each simulation. What do you notice?

@@ -277,7 +277,7 @@
     "href": "sds-271-f23.html",
     "title": "SDS 271 Fall 2023",
     "section": "",
-    "text": "Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Science in Python!"
+    "text": "Welcome to the Fall 2023 version of SDS 271: Programming for Data Science in Python!"
   },
   {
     "objectID": "sds-271-f23.html#textbook",
@@ -319,7 +319,7 @@
     "href": "sds-271-f23.html#lab-1",
     "title": "SDS 271 Fall 2023",
     "section": "Lab 1",
-    "text": "Lab 1\nLab 1 is all about getting started with JupyterHub and reviewing your previous Python experience.\nYou can find the .ipynb for this lab in Moodle, or at this link if you’d prefer to use Google colab."
+    "text": "Lab 1\nLab 1 is all about getting started with JupyterHub and reviewing your previous Python experience.\nYou can find the .ipynb for this lab in Moodle, or at this link."
   },
   {
     "objectID": "sds-271-f23.html#lab-2",
