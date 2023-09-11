@@ -271,5 +271,61 @@
     "title": "SDS 271 Fall 2023",
     "section": "Office Hours",
     "text": "Office Hours\nMondays 10AM-11AM and Tuesdays 1PM-2PM, McConnell 214\n\nOr by appointment: www.calendly.com/caseyberger"
+  },
+  {
+    "objectID": "sds-271-f23.html",
+    "href": "sds-271-f23.html",
+    "title": "SDS 271 Fall 2023",
+    "section": "",
+    "text": "Welcome to the Fall 2023 version of SDS 271: Advanced Programming for Data Science in Python!"
+  },
+  {
+    "objectID": "sds-271-f23.html#textbook",
+    "href": "sds-271-f23.html#textbook",
+    "title": "SDS 271 Fall 2023",
+    "section": "Textbook",
+    "text": "Textbook\nThe textbook is Python for Data Analysis, 3rd edition, and is available for free online."
+  },
+  {
+    "objectID": "sds-271-f23.html#syllabus-and-schedule",
+    "href": "sds-271-f23.html#syllabus-and-schedule",
+    "title": "SDS 271 Fall 2023",
+    "section": "Syllabus and Schedule",
+    "text": "Syllabus and Schedule\nThe course syllabus can be found here.\n\nThe course schedule can be found here. It will be updated regularly and is subject to change."
+  },
+  {
+    "objectID": "sds-271-f23.html#office-hours",
+    "href": "sds-271-f23.html#office-hours",
+    "title": "SDS 271 Fall 2023",
+    "section": "Office Hours",
+    "text": "Office Hours\nMondays 10AM-11AM and Tuesdays 1PM-2PM, McConnell 214\n\nOr by appointment: www.calendly.com/caseyberger"
+  },
+  {
+    "objectID": "sds-271-f23.html#accessing-compute-resources-and-reporting-issues",
+    "href": "sds-271-f23.html#accessing-compute-resources-and-reporting-issues",
+    "title": "SDS 271 Fall 2023",
+    "section": "Accessing Compute Resources and Reporting Issues",
+    "text": "Accessing Compute Resources and Reporting Issues\nYou can access the Smith JupyterHub server here. You will need to log in with your Smith credentials. If you are off-campus, you will have to log into a VPN to get access.\n\nInstructions on how to install the Pulse Secure VPN can be found [on the Smith website] (https://www.smith.edu/its/tara/networking/vpn.html). You need to log in to the VPN with your Smith credentials before accessing JupyterHub. Once you’ve signed in (and done the Duo push), you should be able to access the server as normal.\n\nIf you have a bug or connection issue to report, you can do so here."
+  },
+  {
+    "objectID": "sds-271-f23.html#providing-feedback",
+    "href": "sds-271-f23.html#providing-feedback",
+    "title": "SDS 271 Fall 2023",
+    "section": "Providing Feedback",
+    "text": "Providing Feedback\nIf you have feedback for me that you are not comfortable sharing directly but would like me to take into acocunt, please don’t hesitate to leave it here. This form is entirely anonymous – the only information I ask for is the class that this is about."
+  },
+  {
+    "objectID": "sds-271-f23.html#lab-1",
+    "href": "sds-271-f23.html#lab-1",
+    "title": "SDS 271 Fall 2023",
+    "section": "Lab 1",
+    "text": "Lab 1\nLab 1 is all about getting started with JupyterHub and reviewing your previous Python experience.\nYou can find the .ipynb for this lab in Moodle, or at this link if you’d prefer to use Google colab."
+  },
+  {
+    "objectID": "sds-271-f23.html#lab-2",
+    "href": "sds-271-f23.html#lab-2",
+    "title": "SDS 271 Fall 2023",
+    "section": "Lab 2",
+    "text": "Lab 2\nLab 2 gives you a chance to dig deeper into Python; learn how to import and use Python packages like random, matplotlib, and numpy; and apply your previous statistical knowledge to explore the dangers of making uninformed wagers."
   }
 ]

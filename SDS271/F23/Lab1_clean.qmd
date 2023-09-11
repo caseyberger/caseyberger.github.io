@@ -9,7 +9,7 @@ jupyter: python3
 
 This introductory lab will serve as a refresher on the Python skills you learned in previous classes, as well as a chance to get to know the course structure and content.
 
-You can download the .ipynb for this lab [here](https://colab.research.google.com/drive/1w4aK3JO1ifkciSFsfkBdUUlgqYBZWBN2), or you can find it in Moodle.
+You can download the .ipynb for this lab [here](https://drive.google.com/file/d/1w4aK3JO1ifkciSFsfkBdUUlgqYBZWBN2/view?usp=drive_link), or you can find it in Moodle.
 
 ## A note on the labs
 

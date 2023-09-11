@@ -50,7 +50,7 @@ website:
       style: "docked"
       background: light
       contents: 
-        - sds-271-f23-homepage.qmd
+        - sds-271-f23.qmd
         - SDS271/F23/Lab1_clean.qmd
         - SDS271/F23/Lab2_clean.qmd
 format:
