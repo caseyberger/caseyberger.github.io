@@ -52,3 +52,5 @@ You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.
 ## Lab 2
 
 [Lab 2](SDS271/F23/Lab2_clean.qmd) gives you a chance to dig deeper into Python; learn how to import and use Python packages like random, matplotlib, and numpy; and apply your previous statistical knowledge to explore the dangers of making uninformed wagers.
+
+[Lab 2 Solutions - 9/12](SDS271/F23/Lab2_solutions_09_12.qmd)
