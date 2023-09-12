@@ -53,6 +53,7 @@ website:
         - sds-271-f23.qmd
         - SDS271/F23/Lab1_clean.qmd
         - SDS271/F23/Lab2_clean.qmd
+        - SDS271/F23/Lab2_solutions_09_12.qmd
 format:
   html:
     theme: flatly
