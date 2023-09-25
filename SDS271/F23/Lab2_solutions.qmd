@@ -1,4 +1,4 @@
-# Lab 2 solutions: Statistics and Betting
+# SDS 271 Lab 2: Statistics and Betting
 
 This lab will dig a little more deeply into your previous Python experience as we examine two case studies in statistical simulations: the Monty Hall Problem and why the House always wins in gambling.
 
@@ -56,9 +56,9 @@ Investigate the documentation for the Python random module and do the following:
 
 <li>Generate a random integer between 1 and 6 (inclusive)</li>
 
-```         
+        
 <li> Pick randomly from a list of "heads" and "tails" </li>
-```
+
 
 </ui>
 
@@ -72,34 +72,16 @@ for n in range(10):
 ```
 
 ```         
-5
-4
-3
-1
-5
-3
-1
-4
-2
-3
-```
-
-``` python
-for n in range(10):
-    print(rd.randint(1,6))
-```
-
-```         
-3
-1
 1
 6
-6
-3
-3
 4
-2
 5
+3
+2
+3
+5
+1
+3
 ```
 
 ``` python
@@ -112,41 +94,14 @@ for n in range(10):
 ```         
 heads
 heads
-tails
-heads
-heads
-tails
-heads
-tails
-heads
-tails
-```
-
-``` python
-coin_list[0]
-```
-
-```         
-'heads'
-```
-
-``` python
-for n in range(10):
-    r = rd.randint(0,1)
-    print(coin_list[r])
-```
-
-```         
 heads
 heads
 tails
 tails
+tails
+tails
 heads
-tails
-tails
-tails
-tails
-tails
+heads
 ```
 
 ### Putting it all together
@@ -175,21 +130,21 @@ tails
 heads
 tails
 heads
-heads
-tails
-heads
 tails
 tails
 heads
-heads
-heads
+tails
 tails
 tails
 heads
 heads
+heads
 tails
-tails
-tails
+heads
+heads
+heads
+heads
+heads
 heads
 ```
 
@@ -224,19 +179,19 @@ for n in range(10):
 
 ```         
 {'heads': 0.6, 'tails': 0.4}
-{'heads': 0.45, 'tails': 0.55}
+{'heads': 0.5, 'tails': 0.5}
+{'heads': 0.55, 'tails': 0.45}
+{'heads': 0.65, 'tails': 0.35}
+{'heads': 0.6, 'tails': 0.4}
+{'heads': 0.35, 'tails': 0.65}
+{'heads': 0.55, 'tails': 0.45}
 {'heads': 0.75, 'tails': 0.25}
-{'heads': 0.3, 'tails': 0.7}
 {'heads': 0.65, 'tails': 0.35}
 {'heads': 0.45, 'tails': 0.55}
-{'heads': 0.6, 'tails': 0.4}
-{'heads': 0.55, 'tails': 0.45}
-{'heads': 0.6, 'tails': 0.4}
-{'heads': 0.55, 'tails': 0.45}
 ```
 
 ::: {.alert .alert-success}
-Stop here for a minute. Check-in with [sli.do](https://app.sli.do/event/nxerK76JaKCmLuNqJ3eepS/embed/polls/0495c42d-356e-4edf-b95a-4b60a36994da) and then wait. Work on something else, help your neighbor, etc. We will be returning to this lab shortly.
+Stop here for a minute. Check-in with <a href = "https://app.sli.do/event/nxerK76JaKCmLuNqJ3eepS/embed/polls/0495c42d-356e-4edf-b95a-4b60a36994da"> slido</a> and then wait. Work on something else, help your neighbor, etc. We will be returning to this lab shortly.
 :::
 
 ## Monte Carlo methods
@@ -270,7 +225,7 @@ results[0]
 ```
 
 ```         
-{'heads': 0.85, 'tails': 0.15}
+{'heads': 0.5, 'tails': 0.5}
 ```
 
 ### Basic visualization with matplotlib
@@ -307,7 +262,9 @@ plt.hist(heads_results, bins = 10)
 :::
 
 ::: {.alert .alert-warning}
+```         
 Hint: if you want to keep python from printing out information about your data and the plot, use plt.show() after your plot commands -- it cleans up the output.
+```
 :::
 
 ``` python
@@ -322,7 +279,7 @@ plt.hist(heads_results, bins = 10)
 plt.show()
 ```
 
-![](./graphics/output_40_0.png)
+![](./graphics/output_37_0.png)
 
 ``` python
 #solution
@@ -330,7 +287,7 @@ plt.hist(tails_results, bins = 10)
 plt.show()
 ```
 
-![](./graphics/output_41_0.png)
+![](./graphics/output_38_0.png)
 
 ::: {.alert .alert-success}
 Stop here for a minute. Check-in with <a href = "https://app.sli.do/event/nxerK76JaKCmLuNqJ3eepS/embed/polls/0d379ab5-44eb-4a88-b14b-ea4c35449dbb"> slido</a> and then wait. Work on something else, help your neighbor, etc. We will be returning to this lab shortly.
@@ -348,6 +305,11 @@ Exercise 8:
 Import numpy with the nickname "np"
 :::
 
+``` python
+#solution
+import numpy as np
+```
+
 The base "unit" of numpy is the numpy array. This is similar to a list in Python, but it's much faster to use for calculations. Numpy uses vectorization to speed up all its internal functions.
 
 You can convert a list to an array by using
@@ -363,6 +325,31 @@ Exercise 9:
 
 Convert your two lists (heads results and tails results) to numpy arrays and calculate the mean and standard deviation of those results.
 :::
+
+``` python
+#solution
+heads_array = np.array(heads_results)
+tails_array = np.array(tails_results)
+heads_avg = np.mean(heads_array)
+tails_avg = np.mean(tails_array)
+heads_sdev = np.std(heads_array)
+tails_sdev = np.std(tails_array)
+```
+
+``` python
+#solution
+print(heads_avg)
+print(tails_avg)
+print(heads_sdev)
+print(tails_sdev)
+```
+
+```         
+0.498
+0.502
+0.1092291169972549
+0.1092291169972549
+```
 
 Let's add this information to the plot we already made. We made a histogram of the results of the heads experiments (stored in a numpy array called "heads_results") like this:
 
@@ -411,6 +398,18 @@ Exercise 10:
 Make a plot like we did above, but for the results for tails, not heads. Use red as the color, and make the fill more transparent.
 :::
 
+``` python
+#solution
+plt.hist(tails_results, color = 'gray',bins = 9)
+plt.axvline(x = tails_avg, color = 'r', label = 'mean result for tails')
+xmin = tails_avg - tails_sdev
+xmax = tails_avg + tails_sdev
+plt.axvspan(xmin,xmax, color='r', alpha=0.25)
+plt.show()
+```
+
+![](./graphics/output_51_0.png)
+
 The standard deviation tells us how much we might expect any given experiment to deviate from the average. But if we wanted to give an answer to how often a coin landed on heads, with error, we would use the standard error, not the standard deviation.
 
 $\sigma = \frac{1}{\sqrt{N}}\text{SD}$
@@ -425,6 +424,23 @@ Find the fraction of times a flipped coin will land on heads, with the standard 
 Hint: you can use len() to determine the number of elements in a numpy array, just like you can with a Python list.
 :::
 
+``` python
+#solution
+heads_err = heads_sdev/np.sqrt(len(heads_array))
+tails_err = tails_sdev/np.sqrt(len(tails_array))
+```
+
+``` python
+#solution
+print(f"The coin will land on heads {heads_avg*100}% plus or minus {heads_err*100}% of the time")
+print(f"The coin will land on tails {tails_avg*100}% plus or minus {tails_err*100}% of the time")
+```
+
+```         
+The coin will land on heads 49.8% plus or minus 0.3454127965203374% of the time
+The coin will land on tails 50.2% plus or minus 0.3454127965203374% of the time
+```
+
 Let's take a look now at how the Monte Carlo method (the repeated experiments) gets us from something with a relatively wide distribution to something with very high accuracy (hint: the more you do, the better it gets)
 
 ``` python
@@ -433,7 +449,7 @@ plt.hlines(heads_avg,xmin = 0,xmax =len(heads_results),color = "b")
 plt.show()
 ```
 
-![](./graphics/output_54_0.png)
+![](./graphics/output_57_0.png)
 
 All I've done here is plot the cumulative average of the results of our experiments for "heads." I did this using the built-in cumulative sum function and dividing that array by an array that shows the number of experiments completed up to that point (1, then 2, then 3, all the way up to the final number of 1000).
 
@@ -446,6 +462,15 @@ Exercise 12:
 
 Repeat the process above to make a plot that shows the cumulative average for the results for tails, along with the final average value. Use red to indicate the average value for tails.
 :::
+
+``` python
+#solution
+plt.plot(np.cumsum(tails_results)/np.arange(1,len(tails_results)+1,1), color = "gray")
+plt.hlines(tails_avg,xmin = 0,xmax =len(tails_results),color = "r")
+plt.show()
+```
+
+![](./graphics/output_60_0.png)
 
 ::: {.alert .alert-success}
 Stop here for a minute. Check-in with <a href = "https://app.sli.do/event/hbQevqDLVfydG7mz4opbrU/embed/polls/73e95464-742c-4121-b7cf-7e404ba31901"> slido</a> and then wait. Work on something else, help your neighbor, etc. We will be returning to this lab shortly.
@@ -508,17 +533,104 @@ Exercise 13:
 Test this function. Does it do what you expect? Do you understand the output?
 :::
 
+``` python
+#solution
+results_stay = []
+results_change = []
+for n in range(10):
+    MontyHall(doors, results_stay, results_change)
+    print(results_stay)
+```
+
+```         
+['goat']
+['goat', 'car']
+['goat', 'car', 'car']
+['goat', 'car', 'car', 'car']
+['goat', 'car', 'car', 'car', 'goat']
+['goat', 'car', 'car', 'car', 'goat', 'goat']
+['goat', 'car', 'car', 'car', 'goat', 'goat', 'car']
+['goat', 'car', 'car', 'car', 'goat', 'goat', 'car', 'goat']
+['goat', 'car', 'car', 'car', 'goat', 'goat', 'car', 'goat', 'goat']
+['goat', 'car', 'car', 'car', 'goat', 'goat', 'car', 'goat', 'goat', 'goat']
+```
+
+``` python
+results_stay
+results_change
+```
+
+```         
+['car', 'goat', 'goat', 'goat', 'car', 'car', 'goat', 'car', 'car', 'car']
+```
+
 ::: {.alert .alert-info}
 Exercise 14:
 
-Create a function that performs a Monte Carlo simulation for this scenario. It should use the Monty Hall function we wrote above, and you can assume one "choice" is one experiment.
+Create a function that performs a Monte Carlo simulation for this scenario. It should use a modified version of the Monty Hall function we wrote above, and you can assume one "choice" is one experiment.
 
-Your function should take as an argument the number of Monte Carlo iterations you want to do. It should return a dictionary with two keys: "stay" and "change" whose values are a numpy array that tracks how many times you have won by staying with your original door for "stay" or by changing to the other door for "change".
+Your function should take as an argument the number of Monte Carlo iterations you want to do. It should return a dictionary with two keys: "stay" and "change" whose values are a numpy array that tracks whether won by staying with your original door for "stay" or by changing to the other door for "change" for each experiment.
 
 Hint: you may want to modify the MontyHall function we wrote above to make the results numerical, for example, 1 for a car and 0 for a goat.
 
 Run this function for 10, 100, and 1000 iterations and plot the results for each, similarly to how we plotted the heads/tails results. Show us the cumulative average of wins for "stay" and "change" each, but put them both on the same plot (you don't need to plot the overall average for each, just the cumulative average)
 :::
+
+``` python
+#solution
+def MontyHall(doors, results_stay, results_change):    
+    rd.shuffle(doors)
+    first_door = rd.choice(doors)
+    if first_door == "car":
+        results_stay.append(1)
+        results_change.append(0)
+    else:
+        results_stay.append(0)
+        results_change.append(1)
+        
+def MontyHallMC(n_MC):
+    results_stay = [] 
+    results_change = []
+    for n in range(n_MC):
+        MontyHall(doors, results_stay, results_change)
+    results = {}
+    results["stay"] = np.asarray(results_stay)
+    results["change"] = np.asarray(results_change)
+    return results
+```
+
+``` python
+#solution
+results_10 = MontyHallMC(10)
+plt.plot(np.cumsum(results_10["stay"])/np.arange(1,len(results_10["stay"])+1,1), color = "r", label = "stay")
+plt.plot(np.cumsum(results_10["change"])/np.arange(1,len(results_10["change"])+1,1), color = "b", label = "change")
+plt.legend()
+plt.show()
+```
+
+![](./graphics/output_73_0.png)
+
+``` python
+#solution
+results_100 = MontyHallMC(100)
+plt.plot(np.cumsum(results_100["stay"])/np.arange(1,len(results_100["stay"])+1,1), color = "r", label = "stay")
+plt.plot(np.cumsum(results_100["change"])/np.arange(1,len(results_100["change"])+1,1), color = "b", label = "change")
+plt.legend()
+plt.show()
+```
+
+![](./graphics/output_74_0.png)
+
+``` python
+#solution
+results_1000 = MontyHallMC(1000)
+plt.plot(np.cumsum(results_1000["stay"])/np.arange(1,len(results_1000["stay"])+1,1), color = "r", label = "stay")
+plt.plot(np.cumsum(results_1000["change"])/np.arange(1,len(results_1000["change"])+1,1), color = "b", label = "change")
+plt.legend()
+plt.show()
+```
+
+![](./graphics/output_75_0.png)
 
 ::: {.alert .alert-success}
 Stop here for a minute. Check-in with <a href = "https://app.sli.do/event/hbQevqDLVfydG7mz4opbrU/embed/polls/2ac758d9-e6ed-4239-8272-8f96b82cd2e5"> slido</a> and then wait. Work on something else, help your neighbor, etc. We will be returning to this lab shortly.
@@ -544,7 +656,7 @@ Therefore, the house edge in our imaginary game is 2%.
 
 (This isn't just because of our fictional scenario -- you can see some house edges <a href = "https://wizardofodds.com/gambling/house-edge/"> here </a> to see how our game compares. We are actually being quite generous to our fictional player)
 
-## The simulation
+### The simulation
 
 We need a dice simulator which throws a value from 1--100 with uniform probability distribution.
 
@@ -553,6 +665,16 @@ Exercise 15:
 
 Create a function to simulate the dice throw above and return the boolean operator True if the player wins and False if the casino wins.
 :::
+
+``` python
+#solution
+def roll():
+    r = rd.randrange(1,101)
+    if r > 51:
+        return True
+    else:
+        return False
+```
 
 Now that we've simulated the roll, we need to simulate the betting process. This is a little more complicated, but we can use the equation for expected profit above to help us out. We should consider three things:
 
@@ -572,6 +694,29 @@ This function should track the amount of money the player has after each play, f
 Don't forget to test that function -- make sure it's doing what you want.
 :::
 
+``` python
+#solution
+def play_game(starting_funds,wager,num_plays):
+    outcomes = np.array([starting_funds])
+    funds = starting_funds
+    for n in range(num_plays):
+        if roll():
+            funds += wager
+        else:
+            funds -= wager
+        outcomes = np.append(outcomes,funds)
+    return outcomes
+```
+
+``` python
+#solution
+play_game(100,10,10)
+```
+
+```         
+array([100, 110, 100,  90, 100, 110, 100,  90,  80,  70,  80])
+```
+
 Now, remember we are looking for average behavior. Hopefully you noticed in testing your function that sometimes the player emerges with more money than they started with! That's the allure of gambling! But hopefully you also noticed that most often, the player ends at a loss.
 
 If we want to know how this looks to the house, what we need to do is simulate many many scenarios and see what the average result is (and how large the error is on that result). That's just a Monte Carlo simulation (aptly named).
@@ -585,6 +730,36 @@ Remember to run the simulation many times (let's go with 1,000).
 
 Plot the outcomes -- it can help to show the individual scenarios alongside the average (in a different color, and/or with an alpha less than 1 so we can see how all the varied outcomes contribute to the overall average. You can include this plot as part of your MC function or you can write it separately.
 :::
+
+``` python
+#solution
+def MC_gambling(n_MC, starting_funds, wager, num_plays):
+    MC_outcomes = []
+    for n in range(n_MC):
+        outcomes = play_game(starting_funds,wager,num_plays)
+        plt.plot(outcomes, alpha = 0.25)
+        MC_outcomes.append(outcomes)
+    plays = np.arange(0,num_plays+1,1)
+    MC_avg = np.mean(MC_outcomes,axis = 0)
+    MC_err = np.std(MC_outcomes,axis = 0)/np.sqrt(n_MC)
+    plt.errorbar(x = plays, y = MC_avg, yerr = MC_err, color = "black")#, linestyle = "dashed")
+    plt.show()
+    plt.errorbar(x = plays, y= MC_avg, yerr = MC_err, color = "black")
+    plt.show()
+```
+
+``` python
+#solution
+n_MC = 1000
+starting_funds = 100
+wager = 10
+num_plays = 10
+MC_gambling(n_MC, starting_funds, wager, num_plays)
+```
+
+![](./graphics/output_92_0.png)
+
+![](./graphics/output_92_1.png)
 
 ### Testing different scenarios
 
@@ -603,6 +778,58 @@ Scenario 4: \* Starting funds: 10000 \* Wager amount: 100 \* Number of bets : 10
 
 Plot the individual outcomes and average result from each simulation. What do you notice?
 :::
+
+``` python
+#solution
+#scenario 1
+starting_funds = 10000
+wager = 100
+num_plays = 5
+MC_gambling(n_MC, starting_funds, wager, num_plays)
+```
+
+![](./graphics/output_95_0.png)
+
+![](./graphics/output_95_1.png)
+
+``` python
+#solution
+#scenario 2
+starting_funds = 10000
+wager = 100
+num_plays = 10
+MC_gambling(n_MC, starting_funds, wager, num_plays)
+```
+
+![](./graphics/output_96_0.png)
+
+![](./graphics/output_96_1.png)
+
+``` python
+#solution
+#scenario 3
+starting_funds = 1000
+wager = 100
+num_plays = 100
+MC_gambling(n_MC, starting_funds, wager, num_plays)
+```
+
+![](./graphics/output_97_0.png)
+
+![](./graphics/output_97_1.png)
+
+``` python
+#solution
+#scenario 4
+starting_funds = 10000
+wager = 100
+num_plays = 10000
+MC_gambling(n_MC, starting_funds, wager, num_plays)
+```
+
+![](./graphics/output_98_0.png)
+
+![](./graphics/output_98_1.png)
 
 ![](./graphics/the-good-place-pobodys-nerfect.gif)
 

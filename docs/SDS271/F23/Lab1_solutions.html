@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Casey E. Berger – lab1_solutions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"headline",
+  "consent_type":"express",
+  "palette":"dark",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Casey E. Berger</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-me" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">About Me</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about-me">    
+        <li>
+    <a class="dropdown-item" href="../../bio.html" rel="" target="">
+ <span class="dropdown-text">About Me</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../cv_and_pubs.html" rel="" target="">
+ <span class="dropdown-text">CV and Publications</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching-and-pedagogy" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Teaching and Pedagogy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching-and-pedagogy">    
+        <li>
+    <a class="dropdown-item" href="../../teaching_philosophy.html" rel="" target="">
+ <span class="dropdown-text">Teaching Philosophy</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../inclusive_classroom.html" rel="" target="">
+ <span class="dropdown-text">Building an Inclusive Classroom</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-science-in-the-physics-classroom" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Data Science in the Physics Classroom</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-science-in-the-physics-classroom">    
+        <li>
+    <a class="dropdown-item" href="../../beginning_python.html" rel="" target="">
+ <span class="dropdown-text">Beginning Python</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../python_data_science.html" rel="" target="">
+ <span class="dropdown-text">Teaching Data Science to Physics Students</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sds-271-fall-2023" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">SDS 271 Fall 2023</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sds-271-fall-2023">    
+        <li>
+    <a class="dropdown-item" href="../../sds-271-f23.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Fall 2023</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab1_clean.html" rel="" target="">
+ <span class="dropdown-text">Lab 1: Getting Started</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab2_clean.html" rel="" target="">
+ <span class="dropdown-text">Lab 2: Statistics and Betting</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome-to-sds-271" id="toc-welcome-to-sds-271" class="nav-link active" data-scroll-target="#welcome-to-sds-271">Welcome to SDS 271!</a>
+  <ul class="collapse">
+  <li><a href="#a-note-on-the-labs" id="toc-a-note-on-the-labs" class="nav-link" data-scroll-target="#a-note-on-the-labs">A note on the labs</a></li>
+  <li><a href="#part-one-jupyterhub" id="toc-part-one-jupyterhub" class="nav-link" data-scroll-target="#part-one-jupyterhub">Part one: JupyterHub</a>
+  <ul class="collapse">
+  <li><a href="#get-access-to-jupyterhub" id="toc-get-access-to-jupyterhub" class="nav-link" data-scroll-target="#get-access-to-jupyterhub">Get access to JupyterHub</a></li>
+  <li><a href="#code-and-markdown" id="toc-code-and-markdown" class="nav-link" data-scroll-target="#code-and-markdown">Code and Markdown</a></li>
+  <li><a href="#kernels-running-and-interrupting" id="toc-kernels-running-and-interrupting" class="nav-link" data-scroll-target="#kernels-running-and-interrupting">Kernels, running, and interrupting</a></li>
+  </ul></li>
+  <li><a href="#part-two-python-refresher-and-syllabus-activity" id="toc-part-two-python-refresher-and-syllabus-activity" class="nav-link" data-scroll-target="#part-two-python-refresher-and-syllabus-activity">Part two: Python refresher and syllabus activity</a>
+  <ul class="collapse">
+  <li><a href="#basic-data-types" id="toc-basic-data-types" class="nav-link" data-scroll-target="#basic-data-types">Basic Data Types</a></li>
+  </ul></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#dictionaries" id="toc-dictionaries" class="nav-link" data-scroll-target="#dictionaries">Dictionaries</a></li>
+  <li><a href="#loops-and-functions" id="toc-loops-and-functions" class="nav-link" data-scroll-target="#loops-and-functions">Loops and functions</a></li>
+  </ul></li>
+  <li><a href="#post-lab-production-and-reflection" id="toc-post-lab-production-and-reflection" class="nav-link" data-scroll-target="#post-lab-production-and-reflection">Post-Lab: Production and Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="welcome-to-sds-271" class="level1">
+<h1>Welcome to SDS 271!</h1>
+<p>This introductory lab will serve as a refresher on the Python skills you learned in previous classes, as well as a chance to get to know the course structure and content.</p>
+<section id="a-note-on-the-labs" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-the-labs">A note on the labs</h2>
+<p>For the first half of the semester, we will focus on skill building through in-class labs. You may or may not be able to complete the lab during class time, it is your responsibility to complete the lab and respond to the self-reflection poll (linked at the end of each lab). These will constitute your “weekly homework” and must be turned in by the due date (usually the Wednesday of the following week).</p>
+<p>In these labs, you will see information and instructions given in a few ways.</p>
+<p><strong>Ordinary markdown</strong>: These traditional black-text-white-background sections are useful instructions, background, etc. You should read them to get context for what you will be doing.</p>
+<div class="alert alert-warning">
+<p>These sections give you specific tips on how to do something that may be new or tricky.</p>
+<p>Look here first if you are stuck!</p>
+</div>
+<div class="alert alert-info">
+<p>These sections give you instructions for what you are supposed to do in order to complete the lab. Consider these the “problem statements” to which you are expected to produce a solution.</p>
+</div>
+<p>If at any point you are confused about what you are supposed to do, please ask!</p>
+</section>
+<section id="part-one-jupyterhub" class="level2">
+<h2 class="anchored" data-anchor-id="part-one-jupyterhub">Part one: JupyterHub</h2>
+<section id="get-access-to-jupyterhub" class="level3">
+<h3 class="anchored" data-anchor-id="get-access-to-jupyterhub">Get access to JupyterHub</h3>
+<p>If you’re reading this notebook in JupyterHub, then great! You’ve done it! If you’re reading this on the course website, then do the following:</p>
+<p>In your browser, navigate to <a href="jupyterhub.smith.edu">jupyterhub.smith.edu</a></p>
+<p>You should see a page that looks like this:</p>
+<p><img src="./graphics/JupyterHub-login-screen.png" class="img-fluid"></p>
+<p>Everyone who was already registered for the class or who sent Casey an email before yesterday at 5PM stating their intention to add the class have been added to the list of people who have access to this server. You should be able to log in using your Smith credentials.</p>
+<p>username: your Smith email address, without the <span class="citation" data-cites="smith.edu">@smith.edu</span> password: the password you use to access your Smith email</p>
+<p>If you have not registered for the class or emailed Casey before yesterday at 5PM, then you are not on that list. Please speak to Casey and she will ask CATS add you, but it may take a day or two before you get access.</p>
+<div class="alert alert-warning">
+<pre><code>If you are struggling to connect, please speak to Casey or submit a bug report &lt;a href="https://forms.gle/FfBe5VvMCgqHy5Vi6"&gt;here&lt;/a&gt;.</code></pre>
+</div>
+<div class="alert alert-success">
+<p>Once you are able to open the Lab 1 notebook (.ipynb extension) in JupyterHub, please check in on <a href="https://app.sli.do/event/8Kfhi62TA9JoGVqLbKxnc6/embed/polls/3a4614ea-f80c-469e-8966-dab057058331"> slido</a>. You may proceed once you have done this.</p>
+</div>
+</section>
+<section id="code-and-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="code-and-markdown">Code and Markdown</h3>
+<p>Once you have access to JupyterHub, let’s get comfortable with using it. Similar to R Markdown (Quarto) that you used in SDS 100, JupyterHub allows you to write code in special code cells and annotate the code in markdown cells.</p>
+<div class="alert alert-warning">
+<p>To create a new cell, press the “+” button in the menu along the top of the notebook.</p>
+<p>Once you have a new cell, click on that cell to select it.</p>
+<p>You can now choose “Code” or “Markdown” from the dropdown menu above.</p>
+<p>To evaluate a code cell, use shift+enter.</p>
+</div>
+<div class="alert alert-info">
+<p>Exercise 1:</p>
+<ul>
+<li>
+Perform a simple calculation with Python (it can be as easy as 1 + 1) in a cell.
+</li>
+<li>
+Leave a sentence or two in a markdown cell about what you did.
+</li>
+</ul>
+<p>Then enjoy some wholesome support from Coach Lasso in the form of a gif.</p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># solution</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>2</code></pre>
+<p>//solution</p>
+<p>I used a cell to evaluate 1 + 1 and got the output 2, as expected.</p>
+<p><img src="./graphics/ted-lasso-how-about-that.gif" class="img-fluid"></p>
+</section>
+<section id="kernels-running-and-interrupting" class="level3">
+<h3 class="anchored" data-anchor-id="kernels-running-and-interrupting">Kernels, running, and interrupting</h3>
+<p>Sometimes, mistakes happen. Sometimes you write a while loop that has no termination condition and will run until the end of time if you let it. Sometimes you just realize after you ran a cell that you typed the wrong thing. Either way, you can always stop Jupyter in the middle of its processes.</p>
+<div class="alert alert-warning">
+<p>In the menu at the top of the page, select Kernel &gt; Interrupt to stop the Kernel.</p>
+<p>Once you’re ready to run the code again, you can re-run.</p>
+<p>You can also restart the whole kernel and run the notebook from the start (this is often a good first debugging method if you’re not sure why something isn’t working). Kernel &gt; Restart Kernel and Run All Cells</p>
+</div>
+<p>Now, let’s try to see how this works. Here’s a line of code:</p>
+<pre><code>x = 0
+while x &lt; 10:
+    print("hello world!")</code></pre>
+<p>Why do you expect this will be a problem if you try to run it? If you don’t know, talk to a neighbor.</p>
+<div class="alert alert-info">
+<p>Exercise 2:</p>
+<p>Once you understand the problem, copy the code above into a new code cell and start running it.</p>
+<p>When it loops forever, you’ll want to interrupt it using Kernel &gt; Interrupt.</p>
+<p>Then fix the code and rerun it so it only prints “hello world” 10 times.</p>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">10</span>:</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"hello world!"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">+=</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>hello world!
+hello world!
+hello world!
+hello world!
+hello world!
+hello world!
+hello world!
+hello world!
+hello world!
+hello world!</code></pre>
+<div class="alert alert-warning">
+<p>Another useful tip: click on the tab on the far left of the browser that looks like a square inside of a circle. That tab will show you what tabs you have open and what kernels are running. It’s good practice to shut down any kernels you are not actively using. If you don’t do this, you will overload the server and have a hard time running your notebooks. Periodically check this tab and clean up your processes.</p>
+</div>
+</section>
+</section>
+<section id="part-two-python-refresher-and-syllabus-activity" class="level2">
+<h2 class="anchored" data-anchor-id="part-two-python-refresher-and-syllabus-activity">Part two: Python refresher and syllabus activity</h2>
+<p>One of the expectations of this class is that you have previous experience with Python. This is one of the reasons CSC 110 is a course prerequisite. It may have been a while since you’ve used Python, so let’s just refresh the skills you’ve already learned.</p>
+<p>If you’re feeling particularly rusty, please use the second chapter of the <a href="https://wesmckinney.com/book/python-basics.html">course textbook</a> to remind yourself of these basic Python operations.</p>
+<section id="basic-data-types" class="level3">
+<h3 class="anchored" data-anchor-id="basic-data-types">Basic Data Types</h3>
+<p>Recall that in Python, we can create variables, which are placeholders to which we assign some value. That value does not have to be numerical – there are many kinds of data types we could use. Python will automatically assign a type to your data when you enter it, but it helps to be able to check that it’s what you expect.</p>
+<div class="alert alert-info">
+<p>Exercise 3:</p>
+<p>Look through the first page of the syllabus and create variables to represent the following information. You may name the variables however you like, following Python’s naming conventions.</p>
+<ul>
+<li>
+Course number (not including the department prefix), integer
+</li>
+<li>
+Instructor first name, string
+</li>
+<li>
+Instructor email, string
+</li>
+<li>
+Length of the class, floating point number
+</li>
+<li>
+Days of the week we meet, list of strings
+</li>
+<li>
+Course prerequisites, list of strings
+</li>
+</ul>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># solution</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>course_num <span class="op">=</span> <span class="dv">271</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>instructor <span class="op">=</span> <span class="st">"Casey"</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>inst_email <span class="op">=</span> <span class="st">"cberger@smith.edu"</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>class_len_hours <span class="op">=</span> <span class="fl">1.25</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can see how Python stores the variable type using the type() function. For example, if I define</p>
+<pre><code>x = 10</code></pre>
+<p>and then use type(), I should see</p>
+<pre><code>type(x)
+&gt; int</code></pre>
+<div class="alert alert-info">
+<p>Exercise 4:</p>
+<p>Now use the Python type function to see how Python stored the variables you defined above. Do they match what you expect? If not, what do you need to change to make it right?</p>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(course_num))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(instructor))</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(inst_email))</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(class_len_hours))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;class 'int'&gt;
+&lt;class 'str'&gt;
+&lt;class 'str'&gt;
+&lt;class 'float'&gt;</code></pre>
+<div class="alert alert-warning">
+<p>If you are only getting one output printed to the console, that’s because Jupyter only default prints the last operation you ask for. In order to force it to print everything, you need to wrap your instructions in the print() function.</p>
+</div>
+</section>
+</section>
+<section id="lists" class="level2">
+<h2 class="anchored" data-anchor-id="lists">Lists</h2>
+<p>Python can store collections of information in a number of ways. The simplest way is a list. To make a list in Python, you use square brackets to enclose the list and separate the entries with commas.</p>
+<div class="alert alert-warning">
+<p>Python can make a list that contains multiple data types! This flexibility is useful but can be quite dangerous, especially when you try to automate things. Although we will be moving away from lists quickly, it’s important to know about this, and in general in this class, we will create “lists” that do not mix data types within one list or list-like object (more on that when we get to Pandas).</p>
+</div>
+<div class="alert alert-info">
+<p>Exercise 5:</p>
+<p>Turn to page two of the syllabus and make a list of the learning objectives you will have completed by the end of the course. You may copy from the syllabus or you may write them in your own words.</p>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>course_objectives <span class="op">=</span> [<span class="st">"write your own functions and packages in Python"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"utilize class structures in Python to create reproducible, organized processes for data manupulation"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"understand when to use functions and when to use classes"</span>, <span class="st">"submit a pull request to GitHub"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"create clear and helpful documentation for your code"</span>, </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"use the Pandas library to organize, manage, and manipulate data"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"explore a dataset visually with seaborn"</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>                    <span class="st">"tell a story with data through effective visualizations"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>                     <span class="st">"write a complete Python package"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
+<p>Another way of organizing information in Python is to create a dictionary. Dictionaries store informaiton using keys and values – you can use the key to find the value you are looking for.</p>
+<p>For example, if I wanted to make a dictionary for my family’s pets and who they belong to, I could do the following:</p>
+<pre><code>pets = {"Aspen": "Casey", "Sox":"Alannah", "Autumn": "Michael"}</code></pre>
+<p>In this case, the pet names (Aspen, Sox, and Autumn) are the keys, and their person is the value. If I typed in</p>
+<pre><code>pets["Sox"]</code></pre>
+<p>I would get the answer “Alannah”.</p>
+<p>You can use any data type in here, and you can mix data types as well. There is a lot of flexiblity in creating dictionaries.</p>
+<div class="alert alert-info">
+<p>Exercise 6:</p>
+<p>Look at page 3 of the syllabus and create a dictionary for the course compenents and their grading, where the key is the assignment name and the value is the percentage of the grade (express this as a decimal, where 1. = 100%).</p>
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># solution</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>grades <span class="op">=</span> {<span class="st">"Labs"</span>:<span class="fl">0.2</span>,<span class="st">"Project 1"</span>: <span class="fl">0.1</span>, <span class="st">"Project 2"</span>: <span class="fl">0.15</span>, <span class="st">"Pull request"</span>:<span class="fl">0.05</span>, <span class="st">"Final Project"</span>: <span class="fl">0.5</span> }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>grades[<span class="st">"Project 2"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>0.15</code></pre>
+<p>You can also make a nested dictionary and add more information. Let’s do this with the pets example first. If I wanted to add more information, like what kind of animal each pet was and how old they are, I can do this by making a key for each pet and then a dictionary as the value. That inner dictionary could then be the information I desired.</p>
+<p>For example</p>
+<pre><code>pets_detailed = {
+    "Aspen": {
+        "person": "Casey",
+        "age": 7,
+        "kind": "dog"
+        },
+    "Sox": {
+        "person":"Alannah",
+        "age": 9,
+        "kind": "cat"
+        },
+   "Autumn": {
+       "person":"Michael",
+        "age": 9,
+        "kind": "cat"
+       }
+    }</code></pre>
+<p>In this case, the pet names are still the key, but if I choose that key, I get a whole dictionary. I can then select the keys from inside that dictionary. If I want to know whether Sox is a cat or a dog, I can do:</p>
+<pre><code>pets_detailed["Sox"]["kind"]</code></pre>
+<p>I would get the answer “cat”.</p>
+<p>If I want to know who is Aspen’s person, I would say:</p>
+<pre><code>pets_detailed["Aspen"]["person"]</code></pre>
+<p>To find the keys of a dictionary, you just use the dictionary name and .keys():</p>
+<pre><code>pets_detailed.keys()</code></pre>
+<p>returns</p>
+<pre><code>['Aspen', 'Sox', 'Autumn']</code></pre>
+<p>and</p>
+<pre><code>pets_detailed["Aspen"].keys()</code></pre>
+<p>returns</p>
+<pre><code>['person', 'age', 'kind']</code></pre>
+<div class="alert alert-info">
+<p>Exercise 7:</p>
+<p>Make a new, nested dictionary, where the key is the assignment, and inside you have a dictionary that gives the due date, the percentage of the grade, and whether it’s graded S/U or on a numerical system. Note that you will need divide the final project into its components to do this.</p>
+</div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>grades_detailed <span class="op">=</span> {</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Labs"</span>:{</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"Wednesdays"</span>,</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.2</span>,</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Project 1"</span>:{</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"9/19"</span>,</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.1</span>,</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    }, </span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Project 2"</span>: {</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"11/7"</span>,</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.15</span>,</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    }, </span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Pull request"</span>:{</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"10/31"</span>,</span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.05</span>,</span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>    }, </span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Final Project Pitch"</span>: {</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"10/5"</span>,</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.05</span>,</span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Final project proposal"</span>:{</span>
+<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"10/19"</span>,</span>
+<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.05</span>,</span>
+<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Final project rough draft"</span>:{</span>
+<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"11/16"</span>,</span>
+<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.1</span>,</span>
+<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"S/U"</span></span>
+<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Final project final draft"</span>:{</span>
+<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"12/14"</span>,</span>
+<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.2</span>,</span>
+<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"numerical"</span></span>
+<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Final project assessments"</span>:{</span>
+<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a>        <span class="st">"due"</span>: <span class="st">"12/14"</span>,</span>
+<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade fraction"</span>:<span class="fl">0.1</span>,</span>
+<span id="cb25-46"><a href="#cb25-46" aria-hidden="true" tabindex="-1"></a>        <span class="st">"grade type"</span>: <span class="st">"numerical"</span></span>
+<span id="cb25-47"><a href="#cb25-47" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb25-48"><a href="#cb25-48" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>grades_detailed[<span class="st">"Final project assessments"</span>][<span class="st">'grade fraction'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>0.1</code></pre>
+</section>
+<section id="loops-and-functions" class="level2">
+<h2 class="anchored" data-anchor-id="loops-and-functions">Loops and functions</h2>
+<p>A central feature in programming is using the computer to do tedious and repetitive processes. We often do this by using loops – we will look at two kinds of loops in this lab: for loops and while loops.</p>
+<section id="for-loops" class="level4">
+<h4 class="anchored" data-anchor-id="for-loops">For loops</h4>
+<p>For loops are given a set number of iterations up front. You can give the loop an existing list or array and ask it to loop over every element inside that list,</p>
+<pre><code>book_list = ["The Fifth Season", "A Wizard of Earthsea", "Jade City", "The Light Brigade"]
+for book in book_list:
+    print(book)
+
+&gt; "The Fifth Season"
+&gt; "A Wizard of Earthsea"
+&gt; "Jade City"
+&gt; "The Light Brigade"</code></pre>
+<p>You can do something similar with dictionaries:</p>
+<pre><code>for pet in pets_detailed:
+    print(pet+" is "+str(pets_detailed[pet]['age'])+" years old")
+
+&gt; Aspen is 7 years old
+&gt; Sox is 9 years old
+&gt; Autumn is 9 years old</code></pre>
+<p>or you can just give it a numerical range in a number of ways:</p>
+<pre><code>x_sum = 0
+for x in range(0,10):
+    x_sum += x
+x_sum
+
+&gt; 45</code></pre>
+<p>or</p>
+<pre><code>x_sum = 0
+for x in range(0,10,2):
+    x_sum += x
+x_sum
+
+&gt; 20</code></pre>
+<div class="alert alert-warning">
+<p>If you don’t understand what that last loop did, be sure to <a href="https://wesmckinney.com/book/python-basics.html">review your Python</a>.</p>
+</div>
+</section>
+<section id="while-loops" class="level4">
+<h4 class="anchored" data-anchor-id="while-loops">While loops</h4>
+<p>While loops don’t have a built in range, so you have to be careful how you write them. You have to construct an end condition and then make sure that condition is reached.</p>
+<pre><code>x_sum = 0
+while x_sum &gt; 0:
+    x_sum += 1</code></pre>
+<p>This won’t even run because the condition (x &gt; 0) immediately evaluates to false, and the loop only runs while that condition is true. However:</p>
+<pre><code>x_sum = 1
+while x_sum &gt; 0:
+    x_sum += 1</code></pre>
+<p>This will run forever, because the condition will always be true.</p>
+<pre><code>x_sum = 0
+while x_sum &lt; 10:
+    x_sum += 1</code></pre>
+<p>This will only run until x_sum reaches the value 10, and then it will stop.</p>
+<div class="alert alert-info">
+<p>Exercise 8:</p>
+<p>Use the list you made earlier of the course objectives, and write a program that loops over that list and prints each learning objective to the screen. Write this program two ways:</p>
+<ul>
+<li>
+using a for loop
+</li>
+<li>
+using a while loop (hint: use the len() function to find out how many objectives there are
+</li>
+</ul>
+</div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># solution</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> objective <span class="kw">in</span> course_objectives:</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(objective)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>write your own functions and packages in Python
+utilize class structures in Python to create reproducible, organized processes for data manupulation
+understand when to use functions and when to use classes
+submit a pull request to GitHub
+create clear and helpful documentation for your code
+use the Pandas library to organize, manage, and manipulate data
+explore a dataset visually with seaborn
+tell a story with data through effective visualizations
+write a complete Python package</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># solution</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>num_objectives <span class="op">=</span> <span class="bu">len</span>(course_objectives)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> count <span class="op">&lt;</span> num_objectives:</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(course_objectives[count])</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    count <span class="op">+=</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>write your own functions and packages in Python
+utilize class structures in Python to create reproducible, organized processes for data manupulation
+understand when to use functions and when to use classes
+submit a pull request to GitHub
+create clear and helpful documentation for your code
+use the Pandas library to organize, manage, and manipulate data
+explore a dataset visually with seaborn
+tell a story with data through effective visualizations
+write a complete Python package</code></pre>
+</section>
+<section id="functions" class="level4">
+<h4 class="anchored" data-anchor-id="functions">Functions</h4>
+<p>Functions put together a number of operations and wrap them up in a neat package (so to speak). We will use functions often in this class, because they make it very easy to write flexible code that can be applied to a variety of data sets.</p>
+<p>If you don’t remember how to write a function, definitely review your Python. Remember that a function must have a specific format. In its simplest form, this looks like</p>
+<pre><code>def function_name([optional input parameters]):
+    [code to execute]
+    return [value/variable etc]</code></pre>
+<p>The return statement is optional. Some functions just do things without returning any value. It’s up to you to decide what the best format is for a function you’re trying to write.</p>
+<div class="alert alert-info">
+<p>Exercise 9:</p>
+<ul>
+<li>
+write a function that takes as input a nested dictionary (like the one you created earlier for grades) prints the due date of that assignment
+</li>
+<li>
+write a function that takes as input a nested dictionary and one course component as a string and returns percent of the final grade that assignment is worth
+</li>
+</ul>
+</div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> what_percent(component, grade_dict):</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>    grade_percent <span class="op">=</span> (grade_dict[component][<span class="st">'grade fraction'</span>])</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> grade_percent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>fp_grade <span class="op">=</span> what_percent(<span class="st">"Final project final draft"</span>,grades_detailed)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>fp_grade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>0.2</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> when_is_this_due(component, grade_dict):</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    due_date <span class="op">=</span> grade_dict[component][<span class="st">'due'</span>]</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(component<span class="op">+</span><span class="st">" is due on "</span><span class="op">+</span>due_date)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#solution</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>when_is_this_due(<span class="st">"Final project final draft"</span>,grades_detailed)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Final project final draft is due on 12/14</code></pre>
+</section>
+</section>
+</section>
+<section id="post-lab-production-and-reflection" class="level1">
+<h1>Post-Lab: Production and Reflection</h1>
+<p>When you are done with this lab, make sure you save and export it as an HTML. This HTML file is what you will turn in through Moodle. In addition, don’t forget to fill out the <a href="https://forms.gle/nAJeHRedav8kPyCi8"> post-lab reflection form</a>. You must turn in both an HTML that demonstrates you have completed the lab and a self-reflection to get credit.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

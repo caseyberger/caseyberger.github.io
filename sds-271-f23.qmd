@@ -49,8 +49,10 @@ You can find all labs in Moodle, or in this [Google Drive Folder](https://drive.
 
 You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.research.google.com/drive/1w4aK3JO1ifkciSFsfkBdUUlgqYBZWBN2).
 
+[Lab 1 solutions](SDS271/F23/Lab1_solutions.qmd)
+
 ## Lab 2
 
 [Lab 2](SDS271/F23/Lab2_clean.qmd) gives you a chance to dig deeper into Python; learn how to import and use Python packages like random, matplotlib, and numpy; and apply your previous statistical knowledge to explore the dangers of making uninformed wagers.
 
-[Lab 2 Solutions - 9/12](SDS271/F23/Lab2_solutions_09_12.qmd)
+[Lab 2 Solutions](SDS271/F23/Lab2_solutions.qmd)
