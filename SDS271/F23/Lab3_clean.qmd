@@ -1,0 +1,250 @@
+# SDS 271 Lab 3: Intro to Pandas
+
+## Pandas: basic structures and operations
+
+::: {.alert .alert-info}
+Exercise 1: Import the following packages that you've already seen to this notebook:
+
+<ul>
+
+<li>numpy (as np)</li>
+
+<li>pyplot from matplotlib (as plt)</li>
+
+</ul>
+:::
+
+::: {.alert .alert-info}
+Exercise 2:
+
+Now, import this new package called Pandas. Traditionally, it's imported with "nickname" pd
+
+``` python
+import pandas as pd
+```
+:::
+
+### Series
+
+The heart of Pandas is an object called a "<a href = "https://pandas.pydata.org/docs/reference/api/pandas.Series.html">Series</a>." This is kind of like a numpy array, but with the labeling of a dictionary.
+
+::: {.alert .alert-info}
+Exercise 3:
+
+Generate a numpy array of random numbers of some medium-sized length (say, 30 - you can do this with <a href = "https://numpy.org/doc/stable/reference/random/generated/numpy.random.rand.html">numpy</a> or with the <a href = "https://docs.python.org/3/library/random.html">random</a> module you've imported for previous labs. Note that you will need to import random if you want to use that module, but numpy is already imported.
+
+Now that you have the numpy array, convert it to a pandas Series using the <a href = "https://pandas.pydata.org/docs/reference/api/pandas.Series.html ">pd.Series()</a> function.
+
+Finally, explore that series. If you look at the Series documentation, you will see that a Series type has dozens of built-in function you can use. To simplify, start with:
+
+<ul>
+
+<li>describe()</li>
+
+<li>head()</li>
+
+<li>tail()</li>
+
+<li>count()</li>
+
+<li>one additional function of your choice from the list on the left of the documentation</li>
+
+</ul>
+
+Note: you can also convert this series back to a numpy array using the to_numpy() function!
+:::
+
+#### Series and dictionaries
+
+You can also make a series from a dictionary. In Moodle, you will find a link to a Google Sheet which stores the information we gathered on the first day of class: names, majors and minors, class year, and hometown.
+
+::: {.alert .alert-info}
+Exercise 3:
+
+Go to the Google Sheet and take a look. Then make a dictionary: the key should be the name (combine first and last here to avoid duplicates) and the value should be the class year (e.g. for Casey, we need to use "np.NAN" to indicate there is no number). Name this dictionary whatever you want.
+
+Then, use the pd.Series() function to convert this dictionary to a series. Examine it just as you examined the other string -- what is different?
+:::
+
+Be careful with indexing in pandas series. It's more like a dictionary than an array. To find the ith element, use the iloc attribute, for example (I named my series "class_year"):
+
+``` python
+class_year.iloc[4]
+```
+
+In general, it's better to use keys and .loc than indexing and .iloc. If I want to find what my class year is, I would do:
+
+``` python
+class_year["Casey Berger"]
+
+> 'NaN'
+```
+
+This is fine to do in a simple dataset, but the best practice is to use [.loc](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html):
+
+``` python
+class_year.loc["Casey Berger"]
+```
+
+#### Filtering a series
+
+You can filter a series by index or by values. For example, maybe I only want the list of seniors graduating in May in the class. That's class year 2024. I can create a "mask" that will select only students with that class year:
+
+``` python
+senior_mask = class_year == 2024
+```
+
+``` python
+senior_mask
+```
+
+Don't forget that in Python, a single equals sign is an assignment while a double equals sign insists on equivalence!
+
+If you print the mask, you can see that it's created a boolean filter -- everything is either "true" if the class year is 2024 or "false" otherwise.
+
+Now, I can filter the list by plugging that "mask" into the series:
+
+``` python
+seniors = class_year[senior_mask]
+print(seniors)
+```
+
+You can use masks with the .loc technique as well (for more details, including an explanation of the difference between .loc and .iloc, check out [this great article from Towards Data Science](https://towardsdatascience.com/everything-you-need-to-know-about-loc-and-iloc-of-pandas-79b386cac776)), so you will want to work with this formulation when you are doing complicated, multi-step filtering, cleaning, and manipulating on a dataset.
+
+``` python
+seniors = class_year.loc[senior_mask]
+print(seniors)
+```
+
+::: {.alert .alert-info}
+Exercise 4:
+
+Create a mask that filters the series by students that are graduating AFTER spring 2024 (all non-seniors).
+:::
+
+::: {.alert .alert-success}
+Stop when you get here. Check in with <a href = "https://app.sli.do/event/oW3TqWDfB2CyvKPYBG8YJD/embed/polls/d5aeb700-8b15-4246-a7b5-0fee73fdafa0"> slido</a>, then help your neighbor, work on a project, etc.
+:::
+
+### DataFrames
+
+A DataFrame is a stack of Series. While every object in a series must have the same type, you can stack together series of different types to make a dataframe. You can filter dataframes just like you can filter series, and the use of keys can be very helpful here!
+
+With series, we created them from numpy arrays and dictionaries, but most of the time with dataframes, we will start by importing a file (most often .csv). This is very easy to do in Pandas.
+
+::: {.alert .alert-info}
+Exercise 5:
+
+Upload the .csv file in Moodle (this is the same data as the Google sheet) to your JupyterHub in the same directory as this notebook. Then, create a dataframe (let's call it "class_data" for simplicity) using the read_csv function.
+
+``` python
+class_data = pd.read_csv("SDS271_class_data.csv")
+```
+
+You can use many of the same functions to examine a dataframe as a series: try this with describe(), head(), and tail()
+
+But there's more going on here. Try the following:
+
+``` python
+class_data.columns
+class_data.dtypes
+class_data.shape
+```
+:::
+
+Now, I can filter this data, but I need to specify which column (or series) my filter applies to.
+
+``` python
+non_senior_mask = class_data["Class year"] > 2024
+```
+
+``` python
+non_senior_df = class_data[non_senior_mask]
+non_senior_df
+```
+
+::: {.alert .alert-info}
+Exercise 6:
+
+Try creating some masks for this dataframe. What are some of the limitations you encounter as you try to filter things?
+:::
+
+::: {.alert .alert-success}
+Once you've got the hang of making masks, check-in with <a href = "https://app.sli.do/event/oW3TqWDfB2CyvKPYBG8YJD/embed/polls/78afb36d-e857-496a-8eaa-fc4e05cc36da"> slido</a>. Then, make some more masks, help your neighbor, whatever will help you get more comfortable with this material.
+:::
+
+## More advanced operations with Pandas
+
+When working with small, simple datasets, we can use reasonably simple operations. But as our datasets get larger and more complicated, we need to use new methods to ensure that we are making the changes we expect.
+
+To learn some of these techniques, we are going to use a new dataset.
+
+::: {.alert .alert-info}
+Exercise 7:
+
+Download the Pokemon dataset from Moodle and read it in here. Take a few minutes to explore the dataset. What do you notice about it? What is in it? How is it organized?
+
+Discuss with your neighbor for a few minutes. Together, come up with a way to answer this question: what is the most common primary type of the Pokemon in the dataset?
+:::
+
+### Working with lists in columns
+
+Motivating question: What is the most common ability among the Pokemon in our dataset?
+
+::: {.alert .alert-info}
+Exercise 8:
+
+Try using the same method you used to find the most common type to determine the most common ability. What goes wrong?
+:::
+
+::: {.alert .alert-success}
+Describe this to the best of your ability in <a href = "https://app.sli.do/event/fRBPow4oPaDLqj5NGDJiW2/embed/polls/c21a7d24-35e6-47ff-a248-47253d033dd1"> sli.do</a>. You can answer together with your neighbor if you want.
+:::
+
+Let's take a closer look at the column together to see what's happening.
+
+What is the type of these entries? Pandas says object, which often means string. Let's check with Python.
+
+We need to use the Python [eval](https://realpython.com/python-eval-function/#understanding-pythons-eval) function here to read the string as a list. We can do this by applying the eval function to each entry in the column.
+
+``` python
+pk_df.loc[:,"abilities"].apply(eval)
+```
+
+``` python
+pk_df.loc[:,"abilities"] = pk_df.loc[:,"abilities"].apply(eval)
+pk_df["abilities"]
+```
+
+Now that we have a list object instead of a string, we can use value_counts. But first, we have to use the [explode](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.explode.html) function so that it pulls out each entry in each list and counts it separately. We can chain these operations together.
+
+``` python
+pk_df["abilities"].explode().value_counts()
+```
+
+### Creating a new column from old columns
+
+We've now been able to determine the most common abilities in the dataset, but how many abilities does each Pokemon have on average? Do they all have the same number, or does it vary? We can create a new column with this information using a [lambda function](https://realpython.com/python-lambda/) and apply.
+
+*note: you can define a whole function yourself to apply here, but it's shorter and more efficient to use a lambda function*
+
+``` python
+pk_df.loc[:,"num_abilities"] = pk_df.apply(lambda x: len(x['abilities']),axis = 1)
+```
+
+Alternative version:
+
+``` python
+def count_abilities(x):
+    return len(x["abilities"])
+
+pk_df.loc[:,"num_abilities_alt"] = pk_df.apply(count_abilities,axis = 1)
+```
+
+If you want, try both versions and see that they do the same thing. If you are more comfortable defining a function and applying it than using lambda functions, that is okay. But over time, you should start to get more comfortable with lambda functions.
+
+![](./graphics/pokemon-happy-pikachu.gif)
+
+# Post-Lab: Production and Reflection
+
+When you are done with this lab, make sure you save and export it as an HTML. This HTML file is what you will turn in through Moodle. In addition, don't forget to fill out the [post-lab reflection form](https://forms.gle/1rQ9GLgEyuReK1xj7). You must turn in both an HTML that demonstrates you have completed the lab and a self-reflection to get credit.
