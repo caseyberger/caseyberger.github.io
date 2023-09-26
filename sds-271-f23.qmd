@@ -22,9 +22,19 @@ The course schedule can be found [here](https://docs.google.com/spreadsheets/d/1
 
 ## Office Hours
 
+### Casey
+
 Mondays 10AM-11AM and Tuesdays 1PM-2PM, McConnell 214\
 \
 Or by appointment (link in Moodle)
+
+### Alina
+Tuesdays 8:30AM-10:30AM over zoom (message her on Slack!)
+
+### Clara
+Wednesdays 6PM-7PM 
+
+by appointment via zoom (times vary; reach out via Slack if no available times work for you)
 
 ## Accessing Compute Resources and Reporting Issues
 
