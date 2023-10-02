@@ -117,7 +117,7 @@ cookieconsent.run({
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -197,8 +197,24 @@ cookieconsent.run({
  <span class="dropdown-text">Lab 1: Getting Started</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab1_solutions.html" rel="" target="">
+ <span class="dropdown-text">Lab 1 solutions: Welcome to SDS 271!</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../SDS271/F23/Lab2_clean.html" rel="" target="">
  <span class="dropdown-text">Lab 2: Statistics and Betting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab2_solutions.html" rel="" target="">
+ <span class="dropdown-text">Lab 2 solutions: Statistics and Betting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab3_clean.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Lab 3: Intro to Pandas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab4_clean.html" rel="" target="">
+ <span class="dropdown-text">Lab 4: Data Science Libraries in Python</span></a>
   </li>  
     </ul>
   </li>
@@ -208,17 +224,76 @@ cookieconsent.run({
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../SDS271/F23/Lab2_solutions.html">Lab 2 solutions: Statistics and Betting</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sds-271-f23.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SDS 271 Fall 2023</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab1_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1: Getting Started</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab1_solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1 solutions: Welcome to SDS 271!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab2_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2: Statistics and Betting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab2_solutions.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lab 2 solutions: Statistics and Betting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab3_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SDS 271 Lab 3: Intro to Pandas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab4_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 4: Data Science Libraries in Python</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sds-271-lab-2-solutions-statistics-and-betting" id="toc-sds-271-lab-2-solutions-statistics-and-betting" class="nav-link active" data-scroll-target="#sds-271-lab-2-solutions-statistics-and-betting">SDS 271 Lab 2 solutions: Statistics and Betting</a>
+  <li><a href="#lab-2-solutions-statistics-and-betting" id="toc-lab-2-solutions-statistics-and-betting" class="nav-link active" data-scroll-target="#lab-2-solutions-statistics-and-betting">Lab 2 solutions: Statistics and Betting</a>
   <ul class="collapse">
   <li><a href="#a-simple-scenario-flipping-a-coin" id="toc-a-simple-scenario-flipping-a-coin" class="nav-link" data-scroll-target="#a-simple-scenario-flipping-a-coin">A simple scenario: flipping a coin</a>
   <ul class="collapse">
@@ -248,8 +323,8 @@ cookieconsent.run({
 
 
 
-<section id="sds-271-lab-2-solutions-statistics-and-betting" class="level1">
-<h1>SDS 271 Lab 2 solutions: Statistics and Betting</h1>
+<section id="lab-2-solutions-statistics-and-betting" class="level1">
+<h1>Lab 2 solutions: Statistics and Betting</h1>
 <p>This lab will dig a little more deeply into your previous Python experience as we examine two case studies in statistical simulations: the Monty Hall Problem and why the House always wins in gambling.</p>
 <section id="a-simple-scenario-flipping-a-coin" class="level2">
 <h2 class="anchored" data-anchor-id="a-simple-scenario-flipping-a-coin">A simple scenario: flipping a coin</h2>

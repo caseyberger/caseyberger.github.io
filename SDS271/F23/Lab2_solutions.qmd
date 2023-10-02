@@ -1,4 +1,4 @@
-# SDS 271 Lab 2 solutions: Statistics and Betting
+# Lab 2 solutions: Statistics and Betting
 
 This lab will dig a little more deeply into your previous Python experience as we examine two case studies in statistical simulations: the Monty Hall Problem and why the House always wins in gambling.
 

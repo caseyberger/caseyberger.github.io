@@ -1,4 +1,4 @@
-# SDS 271 Lab 3: Intro to Pandas
+# Lab 3: Intro to Pandas
 
 ## Pandas: basic structures and operations
 

@@ -29,10 +29,12 @@ Mondays 10AM-11AM and Tuesdays 1PM-2PM, McConnell 214\
 Or by appointment (link in Moodle)
 
 ### Alina
+
 Tuesdays 8:30AM-10:30AM over zoom (message her on Slack!)
 
 ### Clara
-Wednesdays 6PM-7PM 
+
+Wednesdays 6PM-7PM
 
 by appointment via zoom (times vary; reach out via Slack if no available times work for you)
 
@@ -67,13 +69,10 @@ You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.
 
 [Lab 2 Solutions](SDS271/F23/Lab2_solutions.qmd)
 
-
 ## Lab 3
 
 [Lab 3](SDS271/F23/Lab3_clean.qmd) introduces the data science package Pandas, which allows you to organize, filter, sort, and do simple statistics on large datasets.
 
-
 ## Lab 4
 
 [Lab 4](SDS271/F23/Lab4_clean.qmd) digs deeper into pandas and matplotlib using data from nuclear physics. It also introduces the seaborn visualization package.
-
