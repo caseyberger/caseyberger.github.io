@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Casey E. Berger – lab4_clean</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"headline",
+  "consent_type":"express",
+  "palette":"dark",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Casey E. Berger</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about-me" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">About Me</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about-me">    
+        <li>
+    <a class="dropdown-item" href="../../bio.html" rel="" target="">
+ <span class="dropdown-text">About Me</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../cv_and_pubs.html" rel="" target="">
+ <span class="dropdown-text">CV and Publications</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-teaching-and-pedagogy" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Teaching and Pedagogy</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-teaching-and-pedagogy">    
+        <li>
+    <a class="dropdown-item" href="../../teaching_philosophy.html" rel="" target="">
+ <span class="dropdown-text">Teaching Philosophy</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../inclusive_classroom.html" rel="" target="">
+ <span class="dropdown-text">Building an Inclusive Classroom</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-data-science-in-the-physics-classroom" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Data Science in the Physics Classroom</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-data-science-in-the-physics-classroom">    
+        <li>
+    <a class="dropdown-item" href="../../beginning_python.html" rel="" target="">
+ <span class="dropdown-text">Beginning Python</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../python_data_science.html" rel="" target="">
+ <span class="dropdown-text">Teaching Data Science to Physics Students</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-sds-271-fall-2023" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">SDS 271 Fall 2023</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-sds-271-fall-2023">    
+        <li>
+    <a class="dropdown-item" href="../../sds-271-f23.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Fall 2023</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab1_clean.html" rel="" target="">
+ <span class="dropdown-text">Lab 1: Getting Started</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab1_solutions.html" rel="" target="">
+ <span class="dropdown-text">Lab 1 solutions: Welcome to SDS 271!</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab2_clean.html" rel="" target="">
+ <span class="dropdown-text">Lab 2: Statistics and Betting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab2_solutions.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Lab 2 solutions: Statistics and Betting</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab3_clean.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Lab 3: Intro to Pandas</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../SDS271/F23/Lab4_clean.html" rel="" target="">
+ <span class="dropdown-text">SDS 271 Lab 4: Data Science Libraries in Python</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../SDS271/F23/Lab4_clean.html">SDS 271 Lab 4: Data Science Libraries in Python</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../sds-271-f23.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SDS 271 Fall 2023</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab1_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1: Getting Started</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab1_solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 1 solutions: Welcome to SDS 271!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab2_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 2: Statistics and Betting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab2_solutions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SDS 271 Lab 2 solutions: Statistics and Betting</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab3_clean.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">SDS 271 Lab 3: Intro to Pandas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../SDS271/F23/Lab4_clean.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">SDS 271 Lab 4: Data Science Libraries in Python</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sds-271-lab-4-data-science-libraries-in-python" id="toc-sds-271-lab-4-data-science-libraries-in-python" class="nav-link active" data-scroll-target="#sds-271-lab-4-data-science-libraries-in-python">SDS 271 Lab 4: Data Science Libraries in Python</a>
+  <ul class="collapse">
+  <li><a href="#introduction-to-data-science-libraries" id="toc-introduction-to-data-science-libraries" class="nav-link" data-scroll-target="#introduction-to-data-science-libraries">Introduction to Data Science Libraries</a></li>
+  <li><a href="#introduction-to-the-data-set" id="toc-introduction-to-the-data-set" class="nav-link" data-scroll-target="#introduction-to-the-data-set">Introduction to the Data Set</a>
+  <ul class="collapse">
+  <li><a href="#isotopes-and-nucleons" id="toc-isotopes-and-nucleons" class="nav-link" data-scroll-target="#isotopes-and-nucleons">Isotopes and Nucleons</a></li>
+  <li><a href="#atomic-mass" id="toc-atomic-mass" class="nav-link" data-scroll-target="#atomic-mass">Atomic Mass</a></li>
+  <li><a href="#binding-energy" id="toc-binding-energy" class="nav-link" data-scroll-target="#binding-energy">Binding Energy</a></li>
+  <li><a href="#uncertainties" id="toc-uncertainties" class="nav-link" data-scroll-target="#uncertainties">Uncertainties</a></li>
+  </ul></li>
+  <li><a href="#imports" id="toc-imports" class="nav-link" data-scroll-target="#imports">Imports</a>
+  <ul class="collapse">
+  <li><a href="#importing-the-data-as-a-dataframe" id="toc-importing-the-data-as-a-dataframe" class="nav-link" data-scroll-target="#importing-the-data-as-a-dataframe">Importing the Data as a Dataframe</a></li>
+  <li><a href="#access-the-data-columns" id="toc-access-the-data-columns" class="nav-link" data-scroll-target="#access-the-data-columns">Access the Data Columns</a></li>
+  <li><a href="#initial-formatting-of-the-data" id="toc-initial-formatting-of-the-data" class="nav-link" data-scroll-target="#initial-formatting-of-the-data">Initial Formatting of the Data</a></li>
+  <li><a href="#masks" id="toc-masks" class="nav-link" data-scroll-target="#masks">Masks</a></li>
+  <li><a href="#data-manipulation-in-pandas" id="toc-data-manipulation-in-pandas" class="nav-link" data-scroll-target="#data-manipulation-in-pandas">Data manipulation in Pandas</a></li>
+  <li><a href="#extracting-the-data-columns" id="toc-extracting-the-data-columns" class="nav-link" data-scroll-target="#extracting-the-data-columns">Extracting the Data Columns</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#seaborn" id="toc-seaborn" class="nav-link" data-scroll-target="#seaborn">Seaborn</a>
+  <ul class="collapse">
+  <li><a href="#exploratory-plotting-with-seaborn" id="toc-exploratory-plotting-with-seaborn" class="nav-link" data-scroll-target="#exploratory-plotting-with-seaborn">Exploratory plotting with Seaborn</a>
+  <ul class="collapse">
+  <li><a href="#pairplot" id="toc-pairplot" class="nav-link" data-scroll-target="#pairplot">Pairplot</a></li>
+  <li><a href="#pairplot-with-hue" id="toc-pairplot-with-hue" class="nav-link" data-scroll-target="#pairplot-with-hue">Pairplot with Hue</a></li>
+  <li><a href="#plotting-a-relationship" id="toc-plotting-a-relationship" class="nav-link" data-scroll-target="#plotting-a-relationship">Plotting a relationship</a></li>
+  <li><a href="#regplot" id="toc-regplot" class="nav-link" data-scroll-target="#regplot">Regplot</a></li>
+  <li><a href="#curve_fit" id="toc-curve_fit" class="nav-link" data-scroll-target="#curve_fit">Curve_fit</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#matplotlib" id="toc-matplotlib" class="nav-link" data-scroll-target="#matplotlib">Matplotlib</a>
+  <ul class="collapse">
+  <li><a href="#plot" id="toc-plot" class="nav-link" data-scroll-target="#plot">Plot</a></li>
+  <li><a href="#scatter-plot" id="toc-scatter-plot" class="nav-link" data-scroll-target="#scatter-plot">Scatter Plot</a></li>
+  <li><a href="#plotting-multiple-data-sets" id="toc-plotting-multiple-data-sets" class="nav-link" data-scroll-target="#plotting-multiple-data-sets">Plotting Multiple Data Sets</a></li>
+  <li><a href="#plotting-data-and-a-fit" id="toc-plotting-data-and-a-fit" class="nav-link" data-scroll-target="#plotting-data-and-a-fit">Plotting data and a fit</a></li>
+  <li><a href="#plotting-three-dimensional-data" id="toc-plotting-three-dimensional-data" class="nav-link" data-scroll-target="#plotting-three-dimensional-data">Plotting Three-Dimensional Data</a></li>
+  <li><a href="#three-dimensional-scatter-plots" id="toc-three-dimensional-scatter-plots" class="nav-link" data-scroll-target="#three-dimensional-scatter-plots">Three-Dimensional Scatter Plots</a></li>
+  <li><a href="#surface-plot" id="toc-surface-plot" class="nav-link" data-scroll-target="#surface-plot">Surface Plot</a></li>
+  <li><a href="#heat-maps" id="toc-heat-maps" class="nav-link" data-scroll-target="#heat-maps">Heat Maps</a></li>
+  <li><a href="#error-bars-and-uncertainty" id="toc-error-bars-and-uncertainty" class="nav-link" data-scroll-target="#error-bars-and-uncertainty">Error Bars and Uncertainty</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#further-resources" id="toc-further-resources" class="nav-link" data-scroll-target="#further-resources">Further Resources</a></li>
+  </ul></li>
+  <li><a href="#post-lab-production-and-reflection" id="toc-post-lab-production-and-reflection" class="nav-link" data-scroll-target="#post-lab-production-and-reflection">Post-Lab: Production and Reflection</a></li>
+  <li><a href="#extended-practice" id="toc-extended-practice" class="nav-link" data-scroll-target="#extended-practice">Extended Practice</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="sds-271-lab-4-data-science-libraries-in-python" class="level1">
+<h1>SDS 271 Lab 4: Data Science Libraries in Python</h1>
+<p>Note: parts of this lab were adapted from the <a href="https://dsecop.org"> DSECOP</a> module “Introduction to Data Science Libraries: Using Pandas, Matplotlib, and Seaborn to Analyze Physics Data” by <a href="https://www.juliebutler.blog/"> Julie Butler</a>.</p>
+<p>The goal of this notebook is to introduce you to three libraries that are commonly used in data science to analyze, format, and display data sets that are stored in files. The second half of this notebook is also framed around exploring data sets specific to physics.</p>
+<section id="introduction-to-data-science-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-data-science-libraries">Introduction to Data Science Libraries</h2>
+<p>This notebook will introduce you to three libraries commonly used in data science and help analyze physics data. Pandas (which you have already seen) provide ways to easily import data from a file and save it a Pandas Dataframe, which allows us to easily display the data as a table, access the different columns of data, and begin formatting the data for later analysis. The other two libraries used in this notebook, Seaborn and Matplotlib (which you’ve also seen already), are used to create graphs from the data set. We will learn about Seaborn and dig into more advanced plotting with Matplotlib in this lab. Each graphing library has its strengths and reasons to use, which will be discussed later in the notebook.</p>
+<p>It maybe easier to think about these libraries by thinking about their relationships to each other. NumPy, one of the standard Python libraries, provides an implementation of a data structure called arrays, which allows us to easily manipulate one and two dimensional data sets. However, it can be hard to display a matrix of data and extract different column, especially since NumPy does not provide headers for its columns. Pandas is simply a wrapper for NumPy arrays which provides an easy way to display, access, and manipulate two dimensional data sets. However, underneath the hood it is simply using NumPy arrays.</p>
+<p>Likewise, Matplotlib is the simplest graphing library avaliable in Python and its default graphs are quite plain. Seaborn is a wrapper of the Matplotlib class which adds more formatting to the default graphs and also provides the creation of some compound graphs, such as <code>pairplot</code> that we will look at below.</p>
+</section>
+<section id="introduction-to-the-data-set" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-data-set">Introduction to the Data Set</h2>
+<p>The data set we will investigate in this notebook contains the following data for every measurable isotope: number of neutrons, number of protons, number of nucleons, binding energy, the uncertainty of binding energy measurement, atomic mass, and uncertainty on mass measurement. This notebook section will help you better understand this data set and why nuclear scientists may want to study it.</p>
+<section id="isotopes-and-nucleons" class="level3">
+<h3 class="anchored" data-anchor-id="isotopes-and-nucleons">Isotopes and Nucleons</h3>
+<p>The nucleus of an atom contains two types of particles: positively charged particles called <strong>protons</strong> and neutral particles called <strong>neutrons</strong>. The total number of protons in the nucleus is Z, and the total number of neutrons is N. Protons and neutrons are both types of <strong>nucleons</strong>, so the total number of nucleons in the nucleus is A = Z + N.</p>
+<p>The number of protons in the nucleus determines what <strong>element</strong> it is. For example, all nuclei with 12 protons are carbon nuclei, all nuclei with 1 proton are hydrogen, and all nuclei with 20 protons are calcium. However, the number of neutrons in a nucleus does not define an element. So there are carbon atoms with 11 neutrons, 12 neutrons, 13 neutrons, and so on. Nuclei that have the same number of protons but different numbers of neutrons are referred to as <strong>isotopes</strong> of each other.</p>
+</section>
+<section id="atomic-mass" class="level3">
+<h3 class="anchored" data-anchor-id="atomic-mass">Atomic Mass</h3>
+<p>An atom’s <strong>atomic mass</strong> is the atom’s total mass (i.e., the nucleus and the protons). Note that it is not the same as the sum of the masses of the particles that make up the atom. This will be explored in the next section.</p>
+</section>
+<section id="binding-energy" class="level3">
+<h3 class="anchored" data-anchor-id="binding-energy">Binding Energy</h3>
+<p>The mass of an atomic nucleus will be less than the total mass of its constituent particles. This difference in mass is called the binding energy, as it is the energy required to hold the atom together. Remember that mass and energy are related by the famous equation from Einstein: <span class="math inline">\(E = mc^2\)</span>.</p>
+<p>To calculate the theoretical binding energies using Einstein’s equation, we can define the binding energy as:</p>
+<p><span class="math display">\[BE = Mc^2 - mc^2,\]</span></p>
+<p>where M is the total mass of all of the particles in the atom, m is the actual atomic mass of the atom, and c is the speed of light in a vacuum. We can define M as:</p>
+<p><span class="math display">\[M = Z(m_p + m_e) + Nm_n,\]</span></p>
+<p>where m<span class="math inline">\(_p\)</span> is the mass of a proton, m<span class="math inline">\(_e\)</span> is the mass of an electron, and m<span class="math inline">\(_n\)</span> is the mass of a neutron. So, we can rewrite the binding energy as:</p>
+<p><span class="math display">\[BE = ((m_p + m_e)Z + m_nN - m)c^2.\]</span></p>
+<p>Next, we can define the atomic mass of hydrogen as one proton plus one electron: <span class="math display">\[m_h = m_p + m_e,\]</span></p>
+<p>which means we can rewrite the binding energy as:</p>
+<p><span class="math display">\[BE = (m_hZ + m_nN - m)c^2,\]</span></p>
+<p>where <span class="math inline">\(m_h\)</span> = 1.007 MeV, <span class="math inline">\(m_n\)</span> = 1.008 MeV and <span class="math inline">\(c^2\)</span> = 931.49 MeV/u.</p>
+<p>The binding energies in the data set are experimental binding energies. Later in this notebook, we will determine how well the experimental binding energies correspond to the theoretical ones we defined in this section.</p>
+</section>
+<section id="uncertainties" class="level3">
+<h3 class="anchored" data-anchor-id="uncertainties">Uncertainties</h3>
+<p>The atomic masses and binding energies in this data set were collected through experiments. Any data collected through experimentation has uncertainty in it. Though these are usually relatively small, they are also presented in this data set.</p>
+</section>
+</section>
+<section id="imports" class="level2">
+<h2 class="anchored" data-anchor-id="imports">Imports</h2>
+<div class="alert alert-info">
+
+<p>Exercise 1: Import the following packages that you’ve already seen to this notebook:</p>
+<ul>
+<li>
+numpy (as np)
+</li>
+<li>
+pyplot from matplotlib (as plt)
+</li>
+<li>
+<p>pandas (as pd)</p>
+</li></ul>
+</div>
+<section id="importing-the-data-as-a-dataframe" class="level3">
+<h3 class="anchored" data-anchor-id="importing-the-data-as-a-dataframe">Importing the Data as a Dataframe</h3>
+<p>The data set is saved in the file “NuclearData.tsv”, which you can find in Moodle. Upload that file to the same directory in JupyterHub where you have this notebook saved.</p>
+<p>We’re going to read in this data using the <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">read_csv()</a> function that you used in the last lab. But note that the data is a “.tsv” file, which means the data is separated by tabs and not commas.</p>
+<div class="alert alert-info">
+<p>Exercise 2:</p>
+<p>Read the documentation for the <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html"> read_csv()</a> function and figure out what you need to do to make this work for a tab-separated file. Then, import the data into a dataframe – call this dataframe “nuclear_data” as we will be working with a mix of examples and exercises and it will be easiest if we all use the same name.</p>
+<p>Hint: remember the regex shorthands you learned in SDS 192.</p>
+</div>
+<p>First, lets confirm that <code>nuclear_data</code> is a Pandas Dataframe by printing its type.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(nuclear_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>pandas.core.frame.DataFrame</code></pre>
+<p>Now lets print <code>nuclear_data</code> to see what the DataFrame looks like.</p>
+<p>Note, you can also print just the head() or tail(), and if you have a very large DataFrame, it will be easier to do that if you just want to see the basic structure. But let’s go ahead and print the whole thing.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>nuclear_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<p>31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AE8AQQBCAGwAQQBHAFkAQQBOAFEAQgBoAEEARABjAEEATgB3AEEAeQBBAEMAMABBAFoAQQBCAGsAQQBEAFkAQQBNAHcAQQB0AEEARABRAEEATgBnAEEAeQBBAEQASQBBAEwAUQBBADQAQQBEAFEAQQBZAGcAQgBtAEEAQwAwAEEAWQBRAEIAbQBBAEQARQBBAE8AUQBBADUAQQBEAFUAQQBZAFEAQQB4AEEARwBJAEEATQBnAEIAaQBBAEQAawBBAAoAcABvAHMAaQB0AGkAbwBuADoATgB3AEEAegBBAEQAVQBBAE0AdwBBAD0ACgBwAHIAZQBmAGkAeAA6AAoAcwBvAHUAcgBjAGUAOgBQAEEAQgAwAEEARwBFAEEAWQBnAEIAcwBBAEcAVQBBAEkAQQBCAGkAQQBHADgAQQBjAGcAQgBrAEEARwBVAEEAYwBnAEEAOQBBAEMASQBBAE0AUQBBAGkAQQBDAEEAQQBZAHcAQgBzAEEARwBFAEEAYwB3AEIAegBBAEQAMABBAEkAZwBCAGsAQQBHAEUAQQBkAEEAQgBoAEEARwBZAEEAYwBnAEIAaABBAEcAMABBAFoAUQBBAGkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFoAUQBCAGgAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBIAEkAQQBJAEEAQgB6AEEASABRAEEAZQBRAEIAcwBBAEcAVQBBAFAAUQBBAGkAQQBIAFEAQQBaAFEAQgA0AEEASABRAEEATABRAEIAaABBAEcAdwBBAGEAUQBCAG4AQQBHADQAQQBPAGcAQQBnAEEASABJAEEAYQBRAEIAbgBBAEcAZwBBAGQAQQBBADcAQQBDAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBvAEEARAA0AEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQgBPAEEARAB3AEEATAB3AEIAMABBAEcAZwBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBXAGcAQQA4AEEAQwA4AEEAZABBAEIAbwBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBFAEUAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAEYAQQBFAHcAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAEMAQQBFAFUAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAEMAQQBFAFUAQQBaAEEAQQA4AEEAQwA4AEEAZABBAEIAbwBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBFADAAQQBRAFEAQgBUAEEARgBNAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQgBOAEEARQBFAEEAVQB3AEIAVABBAEcAUQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQgBsAEEARwBFAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBpAEEARwA4AEEAWgBBAEIANQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBEAEEAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEIAdQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAE0AQQBBAHcAQQBEAGcAQQBOAGcAQQAyAEEARABRAEEATABnAEEANQBBAEQARQBBAE4AUQBBADQAQQBEAEkAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHcAQQBDADQAQQBNAEEAQQB3AEEARABBAEEATgBBAEEANQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAGcAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBTAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARABBAEEATQBBAEEAMwBBAEQAZwBBAE0AZwBBADEAQQBDADQAQQBNAEEAQQB6AEEARABJAEEATQBnAEEAMABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAQQBBAE0AQQBBAHcAQQBEAEEAQQBPAFEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEATAB3AEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBNAGcAQQA4AEEAQwA4AEEAZABBAEIAbwBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEUAZwBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQARQBBAE0AUQBBAHkAQQBDADQAQQBNAGcAQQA0AEEARABNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB3AEEAQwA0AEEATQBBAEEAdwBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAQQBBAE0AUQBBADAAQQBEAEUAQQBNAEEAQQB4AEEAQwA0AEEATgB3AEEAMwBBAEQAZwBBAE0AUQBBAHgAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAEEAQQB3AEEARABFAEEATQBnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAEwAdwBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBvAEEARAA0AEEATQB3AEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABJAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAHcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFAGcAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBEAGcAQQBNAGcAQQAzAEEAQwA0AEEATQBnAEEAMgBBAEQAVQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBAHcAQQBEAEEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHoAQQBEAEEAQQBNAFEAQQAyAEEARABBAEEATgBBAEEANQBBAEMANABBAE0AZwBBADQAQQBEAEUAQQBPAFEAQQA1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATQBBAEEAdwBBAEQASQBBAE0AdwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBMAHcAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAbwBBAEQANABBAE4AQQBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQBnAEEAWgBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABJAEEATgBRAEEAMwBBAEQASQBBAEwAZwBBADIAQQBEAGcAQQBNAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABBAEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABNAEEATQBBAEEAeABBAEQAWQBBAE0AQQBBAHkAQQBEAGsAQQBMAGcAQQB6AEEARABJAEEATQBnAEEAMgBBAEQAVQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBAHcAQQBEAEEAQQBNAGcAQQB5AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQQB1AEEAQwA0AEEATABnAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEAQwA0AEEATABnAEEAdQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATABnAEEAdQBBAEMANABBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdQBBAEMANABBAEwAZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEMANABBAEwAZwBBAHUAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAEwAZwBBAHUAQQBDADQAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHUAQQBDADQAQQBMAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBDADQAQQBMAGcAQQB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBMAGcAQQB1AEEAQwA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBhAEEAQQArAEEARABNAEEATgBBAEEAegBBAEQARQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAYwBBAE4AZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAE0AUQBBADMAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AZwBBADUAQQBEAE0AQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBCAEYAQQBHAGcAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBADMAQQBEAEEAQQBPAFEAQQAxAEEAQwBNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB6AEEAQwBNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB5AEEARABrAEEATQB3AEEAeQBBAEQAQQBBAE8AQQBBADIAQQBEAGcAQQBNAEEAQQBqAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBPAEEAQQAzAEEARABBAEEASQB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAEwAdwBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBvAEEARAA0AEEATQB3AEEAMABBAEQATQBBAE0AZwBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAE4AdwBBADEAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBAHgAQQBEAGcAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBEAGsAQQBNAHcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFAFUAQQBhAFEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAGMAQQBNAEEAQQAzAEEARABjAEEASQB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABJAEEASQB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABJAEEATwBRAEEAegBBAEQASQBBAE0AUQBBAHoAQQBEAFEAQQBPAFEAQQA0AEEAQwBNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQAzAEEARABVAEEATQB3AEEAagBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEEAegBBAEQAUQBBAE0AdwBBAHoAQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBADMAQQBEAGMAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAEUAQQBOAHcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEkAQQBPAFEAQQAwAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBSAFEAQgBvAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBOAHcAQQB3AEEARABrAEEATQBnAEEAagBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEAagBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEANQBBAEQAUQBBAE0AZwBBAHgAQQBEAEEAQQBPAFEAQQAzAEEARABRAEEASQB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABjAEEATQBBAEEANABBAEMATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQATQBBAE4AQQBBAHoAQQBEAFEAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAGMAQQBOAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBNAFEAQQA0AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA1AEEARABRAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBGAEEARwBrAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQAzAEEARABBAEEATgB3AEEANQBBAEMATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEMATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAawBBAE4AQQBBAHkAQQBEAEUAQQBOAEEAQQB4AEEARABNAEEATQBnAEEAagBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATgB3AEEAeABBAEQASQBBAEkAdwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBMAHcAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAbwBBAEQANABBAE0AdwBBADAAQQBEAE0AQQBOAFEAQQA4AEEAQwA4AEEAZABBAEIAbwBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBOAHcAQQAzAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAFEAQQB4AEEARABnAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB5AEEARABrAEEATgBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQBVAEEAYQBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABjAEEATQBBAEEAMwBBAEQAVQBBAEkAdwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAEkAdwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAE8AUQBBADEAQQBEAEkAQQBNAFEAQQAyAEEARABNAEEATQB3AEEAeQBBAEMATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAMgBBAEQAawBBAE0AZwBBAGoAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQQB2AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBEAHcAQQBMAHcAQgAwAEEARwBJAEEAYgB3AEIAawBBAEgAawBBAFAAZwBBAEsAQQBEAHcAQQBMAHcAQgAwAEEARwBFAEEAWQBnAEIAcwBBAEcAVQBBAFAAZwBBAD0ACgBzAHUAZgBmAGkAeAA6AA==:31b8e172-b470-440e-83d8-e6b185028602</p>
+<p>
+3436 rows × 8 columns
+</p>
+</div>
+<p>A DataFrame allows us to easily display the different columns and rows of the data file in a table. It even used the column labels from the data file to name the other columns.</p>
+<p>The columns from left to right are the number of neutrons, number of protons, number of nucleons (i.e., the total number of protons and neutrons or A = N+Z), the elemental symbol, the binding energy per nucleon, the uncertainty on the binding energy, the atomic mass, and the uncertainty on the atomic mass.</p>
+</section>
+<section id="access-the-data-columns" class="level3">
+<h3 class="anchored" data-anchor-id="access-the-data-columns">Access the Data Columns</h3>
+<p>A Pandas Dataframe can behave like a dictionary where the column headings are the keys, and the columns are the values.</p>
+<p>Last lab, we used .columns to print the columns, but we can do this another way as well, using the .keys() function, just like with a dictionary.</p>
+<p>Why bother with two actions that do the same thing? A Pandas dataframe is an object, which means it has attributes and built in functions. Things like .columns and .shape return attributes of the object, while things like .keys() and .head() perform some action defined by an internal function.</p>
+<div class="alert alert-info">
+<p>Exercise 3:</p>
+<p>Print the list of the columns in this dataframe using both methods: .columns and .keys() and verify that they give you the same thing.</p>
+</div>
+<div class="alert alert-info">
+<p>Exercise 4:</p>
+<p>Explore accessing the various columns of data using the column headers. Make sure you can access all of the different columns.</p>
+</div>
+</section>
+<section id="initial-formatting-of-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="initial-formatting-of-the-data">Initial Formatting of the Data</h3>
+<p>After a data set is imported, we need to start formatting it so it’s ready for analysis. Most of the time, this will include ensuring the data is the correct type (i.e., numeric or words) and that every entry in the Dataframe is filled out. Every column of the Dataframe should be numeric except for the element symbol. However, when <code>nuclear_data</code> is printed, some of the rows contain “#”s next to the number. This indicates that the value results from an extrapolation instead of an experimental result, but adding the “#” does mean that that entry is no longer a number. We need the expected numeric data for later analysis, so the following code cell will force the last four columns to be numeric. This will convert the entries with “#” to “NaN,” which stands for “not a number.” This makes these entries easier to remove.</p>
+<p>The process shown in this notebook section is quite common when working with physics data sets. But, first, Python must recognize the columns we wish to perform calculations with as numeric values. If you complete this step, it will make much of the later analysis in this notebook possible.</p>
+<p>To learn more about the to_numeric() function, you can read the documentation <a href="https://pandas.pydata.org/docs/reference/api/pandas.to_numeric.html">here</a>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nuclear_data.loc[:,<span class="st">'BE'</span>] <span class="op">=</span> pd.to_numeric(nuclear_data.loc[:,<span class="st">'BE'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>nuclear_data.loc[:,<span class="st">'BEd'</span>] <span class="op">=</span> pd.to_numeric(nuclear_data.loc[:,<span class="st">'BEd'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>nuclear_data.loc[:,<span class="st">'MASS'</span>] <span class="op">=</span> pd.to_numeric(nuclear_data.loc[:,<span class="st">'MASS'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>nuclear_data.loc[:,<span class="st">'MASSd'</span>] <span class="op">=</span> pd.to_numeric(nuclear_data.loc[:,<span class="st">'MASSd'</span>], errors<span class="op">=</span><span class="st">'coerce'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If we now print <code>nuclear_data</code> we should see that most of the later data (which previously contained “#”s) should read “NaN”.</p>
+<p>As we learned last lab, pandas can handle “NaN” when formatted correctly, which this function does.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nuclear_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<p>31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AE8AQQBCAGwAQQBHAFkAQQBOAFEAQgBoAEEARABjAEEATgB3AEEAeQBBAEMAMABBAFoAQQBCAGsAQQBEAFkAQQBNAHcAQQB0AEEARABRAEEATgBnAEEAeQBBAEQASQBBAEwAUQBBADQAQQBEAFEAQQBZAGcAQgBtAEEAQwAwAEEAWQBRAEIAbQBBAEQARQBBAE8AUQBBADUAQQBEAFUAQQBZAFEAQQB4AEEARwBJAEEATQBnAEIAaQBBAEQAawBBAAoAcABvAHMAaQB0AGkAbwBuADoATQBRAEEAegBBAEQAUQBBAE8AUQBBAHkAQQBBAD0APQAKAHAAcgBlAGYAaQB4ADoACgBzAG8AdQByAGMAZQA6AFAAQQBCADAAQQBHAEUAQQBZAGcAQgBzAEEARwBVAEEASQBBAEIAaQBBAEcAOABBAGMAZwBCAGsAQQBHAFUAQQBjAGcAQQA5AEEAQwBJAEEATQBRAEEAaQBBAEMAQQBBAFkAdwBCAHMAQQBHAEUAQQBjAHcAQgB6AEEARAAwAEEASQBnAEIAawBBAEcARQBBAGQAQQBCAGgAQQBHAFkAQQBjAGcAQgBoAEEARwAwAEEAWgBRAEEAaQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAWgBRAEIAaABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAEkAQQBCAHoAQQBIAFEAQQBlAFEAQgBzAEEARwBVAEEAUABRAEEAaQBBAEgAUQBBAFoAUQBCADQAQQBIAFEAQQBMAFEAQgBoAEEARwB3AEEAYQBRAEIAbgBBAEcANABBAE8AZwBBAGcAQQBIAEkAQQBhAFEAQgBuAEEARwBnAEEAZABBAEEANwBBAEMASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAE8AQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAbwBBAEQANABBAFcAZwBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEUARQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIARgBBAEUAdwBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIAQwBBAEUAVQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIAQwBBAEUAVQBBAFoAQQBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEUAMABBAFEAUQBCAFQAQQBGAE0AQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAE4AQQBFAEUAQQBVAHcAQgBUAEEARwBRAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBCAGwAQQBHAEUAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGkAQQBHADgAQQBaAEEAQgA1AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATQBBAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEMANABBAE0AQQBBAHcAQQBEAGcAQQBOAGcAQQAyAEEARABVAEEAWgBRAEEAcgBBAEQAQQBBAE4AZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQAQQBBAEwAZwBBAHcAQQBEAEEAQQBNAEEAQQAwAEEARABrAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBhAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAFEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBCAEkAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEAQwA0AEEATQBBAEEAdwBBAEQAYwBBAE8AQQBBAHkAQQBEAFUAQQBaAFEAQQByAEEARABBAEEATgBnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAdwBBAEQAQQBBAE0AQQBBAHcAQQBEAGsAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEAQwA4AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBEAEkAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEIASQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBRAEEAeABBAEQARQBBAE0AZwBBAHUAQQBEAEkAQQBPAEEAQQB6AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB5AEEAQwA0AEEATQBBAEEAeABBAEQAUQBBAE0AUQBBAHcAQQBEAEkAQQBaAFEAQQByAEEARABBAEEATgBnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAdwBBAEQAQQBBAE0AQQBBAHgAQQBEAEkAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEAQwA4AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBEAE0AQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEIASQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEANABBAEQASQBBAE4AdwBBAHUAQQBEAEkAQQBOAGcAQQAxAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB6AEEAQwA0AEEATQBBAEEAeABBAEQAWQBBAE0AQQBBADAAQQBEAGsAQQBaAFEAQQByAEEARABBAEEATgBnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAdwBBAEQAQQBBAE0AQQBBAHkAQQBEAE0AQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEAQwA4AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBEAFEAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEIASQBBAEcAVQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAVQBBAE4AdwBBAHkAQQBDADQAQQBOAGcAQQA0AEEARABBAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB3AEEAQwA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABNAEEATABnAEEAdwBBAEQARQBBAE4AZwBBAHcAQQBEAEkAQQBPAFEAQgBsAEEAQwBzAEEATQBBAEEAMgBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAQQBBAE0AQQBBAHcAQQBEAEkAQQBNAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEATAB3AEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBMAGcAQQB1AEEAQwA0AEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB1AEEAQwA0AEEATABnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEAQwA0AEEATABnAEEAdQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATABnAEEAdQBBAEMANABBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdQBBAEMANABBAEwAZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEMANABBAEwAZwBBAHUAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAEwAZwBBAHUAQQBDADQAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHUAQQBDADQAQQBMAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBDADQAQQBMAGcAQQB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQQB6AEEARABRAEEATQB3AEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAGcAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBRAEEAMwBBAEQAWQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQARQBBAE4AdwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAE8AUQBBAHoAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAFIAUQBCAG8AQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAFQAZwBCAGgAQQBFADQAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBCAE8AQQBHAEUAQQBUAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFADQAQQBZAFEAQgBPAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBUAGcAQgBoAEEARQA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBhAEEAQQArAEEARABNAEEATgBBAEEAegBBAEQASQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAYwBBAE4AUQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAE0AUQBBADQAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AZwBBADUAQQBEAE0AQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBCAEYAQQBHAGsAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBCAE8AQQBHAEUAQQBUAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFADQAQQBZAFEAQgBPAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBUAGcAQgBoAEEARQA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBPAEEARwBFAEEAVABnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAEwAdwBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBvAEEARAA0AEEATQB3AEEAMABBAEQATQBBAE0AdwBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAE4AdwBBADMAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBAHgAQQBEAGMAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBEAGsAQQBOAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFAFUAQQBhAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFADQAQQBZAFEAQgBPAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBUAGcAQgBoAEEARQA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBPAEEARwBFAEEAVABnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQA0AEEAWQBRAEIATwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEEAegBBAEQAUQBBAE0AdwBBADAAQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBADMAQQBEAFkAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAEUAQQBPAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEkAQQBPAFEAQQAwAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBSAFEAQgBwAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBUAGcAQgBoAEEARQA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBPAEEARwBFAEEAVABnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQA0AEEAWQBRAEIATwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEAVABnAEIAaABBAEUANABBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQATQBBAE4AQQBBAHoAQQBEAFUAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAGMAQQBOAHcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBNAFEAQQA0AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA1AEEARABVAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBGAEEARwBrAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBPAEEARwBFAEEAVABnAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQA0AEEAWQBRAEIATwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEAVABnAEIAaABBAEUANABBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEIATwBBAEcARQBBAFQAZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBMAHcAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgBpAEEARwA4AEEAWgBBAEIANQBBAEQANABBAEMAZwBBADgAQQBDADgAQQBkAEEAQgBoAEEARwBJAEEAYgBBAEIAbABBAEQANABBAAoAcwB1AGYAZgBpAHgAOgA=:31b8e172-b470-440e-83d8-e6b185028602</p>
+<p>
+3436 rows × 8 columns
+</p>
+</div>
+<p>Pandas makes it very easy to remove “NaN” values from a Dataframe, so now the data will be easy to format. If you are unsure if there are “NaN” values in your Dataframe you can use the below line of code to check. It will return <code>True</code> if any entries in the Dataframe are “NaN”.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>nuclear_data.isnull().values.<span class="bu">any</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>True</code></pre>
+<p>Before we remove the “NaN”s, lets print the number of rows in the Dataframe, using the ‘len’ function, to see how many data points we started out with.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(nuclear_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>3436</code></pre>
+<p><code>dropna</code> will remove a row from the Dataframe if any entry in that row is “NaN”. This will reduce the amount of data we have in our Dataframe but it ensures that the remaining data is numeric. You can read more about <code>dropna</code> <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html">here</a>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>nuclear_data <span class="op">=</span> nuclear_data.dropna()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finally, let’s print the number of remaining data points and the Dataframe to make sure the data still looks reasonable.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(nuclear_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>2498</code></pre>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>nuclear_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<p>31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AE8AQQBCAGwAQQBHAFkAQQBOAFEAQgBoAEEARABjAEEATgB3AEEAeQBBAEMAMABBAFoAQQBCAGsAQQBEAFkAQQBNAHcAQQB0AEEARABRAEEATgBnAEEAeQBBAEQASQBBAEwAUQBBADQAQQBEAFEAQQBZAGcAQgBtAEEAQwAwAEEAWQBRAEIAbQBBAEQARQBBAE8AUQBBADUAQQBEAFUAQQBZAFEAQQB4AEEARwBJAEEATQBnAEIAaQBBAEQAawBBAAoAcABvAHMAaQB0AGkAbwBuADoATQBRAEEAMwBBAEQATQBBAE0AQQBBADEAQQBBAD0APQAKAHAAcgBlAGYAaQB4ADoACgBzAG8AdQByAGMAZQA6AFAAQQBCADAAQQBHAEUAQQBZAGcAQgBzAEEARwBVAEEASQBBAEIAaQBBAEcAOABBAGMAZwBCAGsAQQBHAFUAQQBjAGcAQQA5AEEAQwBJAEEATQBRAEEAaQBBAEMAQQBBAFkAdwBCAHMAQQBHAEUAQQBjAHcAQgB6AEEARAAwAEEASQBnAEIAawBBAEcARQBBAGQAQQBCAGgAQQBHAFkAQQBjAGcAQgBoAEEARwAwAEEAWgBRAEEAaQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAWgBRAEIAaABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAEkAQQBCAHoAQQBIAFEAQQBlAFEAQgBzAEEARwBVAEEAUABRAEEAaQBBAEgAUQBBAFoAUQBCADQAQQBIAFEAQQBMAFEAQgBoAEEARwB3AEEAYQBRAEIAbgBBAEcANABBAE8AZwBBAGcAQQBIAEkAQQBhAFEAQgBuAEEARwBnAEEAZABBAEEANwBBAEMASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAE8AQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAbwBBAEQANABBAFcAZwBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEUARQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIARgBBAEUAdwBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIAQwBBAEUAVQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIAQwBBAEUAVQBBAFoAQQBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEUAMABBAFEAUQBCAFQAQQBGAE0AQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAE4AQQBFAEUAQQBVAHcAQgBUAEEARwBRAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBCAGwAQQBHAEUAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGkAQQBHADgAQQBaAEEAQgA1AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATQBBAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAQQBBAE0AQQBBAHcAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBAHUAQQBEAEEAQQBNAEEAQQA0AEEARABZAEEATgBnAEEAMQBBAEcAVQBBAEsAdwBBAHcAQQBEAFkAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHcAQQBDADQAQQBNAEEAQQB3AEEARABBAEEATgBBAEEANQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAGcAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBTAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABBAEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAdwBBAEQAQQBBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAEwAZwBBAHcAQQBEAEEAQQBOAHcAQQA0AEEARABJAEEATgBRAEIAbABBAEMAcwBBAE0AQQBBADIAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAEEAQQB3AEEARABBAEEATwBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAEwAdwBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBvAEEARAA0AEEATQBnAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFAGcAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAEUAQQBNAFEAQQB5AEEAQwA0AEEATQBnAEEANABBAEQATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBAHcAQQBEAEEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBDADQAQQBNAEEAQQB4AEEARABRAEEATQBRAEEAdwBBAEQASQBBAFoAUQBBAHIAQQBEAEEAQQBOAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABBAEEATQBBAEEAeABBAEQASQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQATQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBJAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA0AEEARABJAEEATgB3AEEAdQBBAEQASQBBAE4AZwBBADEAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAHcAQQB1AEEARABBAEEATQBRAEEAMgBBAEQAQQBBAE4AQQBBADUAQQBHAFUAQQBLAHcAQQB3AEEARABZAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB3AEEAQwA0AEEATQBBAEEAdwBBAEQAQQBBAE0AZwBBAHoAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQQB2AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBBADAAQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAegBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEAUwBBAEIAbABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEAMQBBAEQAYwBBAE0AZwBBAHUAQQBEAFkAQQBPAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATQBBAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQB3AEEAdQBBAEQAQQBBAE0AUQBBADIAQQBEAEEAQQBNAGcAQQA1AEEARwBVAEEASwB3AEEAdwBBAEQAWQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBAHcAQQBEAEEAQQBNAGcAQQB5AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQQB1AEEAQwA0AEEATABnAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEAQwA0AEEATABnAEEAdQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATABnAEEAdQBBAEMANABBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdQBBAEMANABBAEwAZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEMANABBAEwAZwBBAHUAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAEwAZwBBAHUAQQBDADQAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHUAQQBDADQAQQBMAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBDADQAQQBMAGcAQQB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBMAGcAQQB1AEEAQwA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBhAEEAQQArAEEARABNAEEATQB3AEEAdwBBAEQAVQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAVQBBAE4AZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAE0AQQBBADQAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AZwBBADIAQQBEAFEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBCAEkAQQBIAE0AQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBADMAQQBEAEkAQQBPAFEAQQA0AEEAQwA0AEEATQB3AEEAMwBBAEQAVQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AUQBBAHcAQQBEAGsAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBDADQAQQBOAGcAQQAwAEEARABFAEEATQBnAEEANABBAEQAUQBBAFoAUQBBAHIAQQBEAEEAQQBPAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAE0AQQBNAFEAQQB1AEEARABBAEEATQBBAEEAMQBBAEQAQQBBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBMAHcAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAbwBBAEQANABBAE0AdwBBAHoAQQBEAEUAQQBNAFEAQQA4AEEAQwA4AEEAZABBAEIAbwBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBOAFEAQQAzAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAFEAQQB3AEEARABnAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB5AEEARABZAEEATgBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQBnAEEAYwB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABjAEEATQBnAEEANQBBAEQAWQBBAEwAZwBBAHkAQQBEAFEAQQBOAHcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABrAEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABJAEEATABnAEEAMgBBAEQAVQBBAE0AUQBBAHkAQQBEAGsAQQBPAEEAQgBsAEEAQwBzAEEATQBBAEEANABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEAMQBBAEMANABBAE4AdwBBAHgAQQBEAGsAQQBNAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQQB6AEEARABNAEEATQBRAEEANABBAEQAdwBBAEwAdwBCADAAQQBHAGcAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBRAEEAMQBBAEQAZwBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAQQBBAE8AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAE4AZwBBADIAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAFMAQQBCAHoAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE4AdwBBAHkAQQBEAGsAQQBPAEEAQQB1AEEARABJAEEATgB3AEEAegBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQARQBBAE4AQQBBADEAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AZwBBAHUAQQBEAFkAQQBOAGcAQQB4AEEARABNAEEATQBBAEEAdwBBAEcAVQBBAEsAdwBBAHcAQQBEAGcAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBADAAQQBEAEUAQQBMAGcAQQAxAEEARABRAEEATQBBAEEAdwBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQATQBBAE0AdwBBAHoAQQBEAGsAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAFUAQQBPAFEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEUAQQBNAFEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQAyAEEARABrAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBFAEEASABNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQAzAEEARABJAEEATgBRAEEAdwBBAEMANABBAE0AUQBBADEAQQBEAFEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHcAQQBDADQAQQBNAFEAQQB4AEEARABjAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB5AEEAQwA0AEEATgBnAEEANQBBAEQARQBBAE4AQQBBADAAQQBEAGcAQQBaAFEAQQByAEEARABBAEEATwBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABNAEEATQB3AEEAdQBBAEQAYwBBAE0AUQBBAHkAQQBEAEEAQQBNAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEATAB3AEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBNAHcAQQB6AEEARABRAEEATgBRAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEATgBnAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBRAEEAeABBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAYwBBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEUAUQBBAGMAdwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQAYwBBAE0AZwBBADEAQQBEAE0AQQBMAGcAQQAzAEEARABjAEEATgBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAeABBAEQAYwBBAE8AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAEwAZwBBADMAQQBEAEEAQQBNAFEAQQAwAEEARABRAEEATgBnAEIAbABBAEMAcwBBAE0AQQBBADQAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE4AUQBBAHgAQQBDADQAQQBOAFEAQQAwAEEARABJAEEATQBBAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEQAdwBBAEwAdwBCADAAQQBHAEkAQQBiAHcAQgBrAEEASABrAEEAUABnAEEASwBBAEQAdwBBAEwAdwBCADAAQQBHAEUAQQBZAGcAQgBzAEEARwBVAEEAUABnAEEAPQAKAHMAdQBmAGYAaQB4ADoA:31b8e172-b470-440e-83d8-e6b185028602</p>
+<p>
+2498 rows × 8 columns
+</p>
+</div>
+</section>
+<section id="masks" class="level3">
+<h3 class="anchored" data-anchor-id="masks">Masks</h3>
+<p>As we learned in the last lab, masks are a way to create a smaller Dataframe where only certain conditions are true. We do this by putting a conditional expression (an expression that evaluates to either <code>True</code> or <code>False</code>) after the name of the Dataframe. Only the rows of the Dataframe that result in a <code>True</code> value will be returned.</p>
+<p>For example, the following code cell creates a smaller Dataframe called <code>nuclear_data_A_below_60</code>, where entries from <code>nuclear_data</code> are added if they have 60 or fewer nucleons (A).</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>A_below_60 <span class="op">=</span> nuclear_data[<span class="st">"A"</span>] <span class="op">&lt;=</span> <span class="dv">60</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>nuclear_data_A_below_60 <span class="op">=</span> nuclear_data[A_below_60]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can print <code>nuclear_data_A_below_60</code> in order to ensure that it only gives us entries were A <span class="math inline">\(\leq\)</span> 60.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>nuclear_data_A_below_60</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<p>31b8e172-b470-440e-83d8-e6b185028602:dAB5AHAAZQA6AE8AQQBCAGwAQQBHAFkAQQBOAFEAQgBoAEEARABjAEEATgB3AEEAeQBBAEMAMABBAFoAQQBCAGsAQQBEAFkAQQBNAHcAQQB0AEEARABRAEEATgBnAEEAeQBBAEQASQBBAEwAUQBBADQAQQBEAFEAQQBZAGcAQgBtAEEAQwAwAEEAWQBRAEIAbQBBAEQARQBBAE8AUQBBADUAQQBEAFUAQQBZAFEAQQB4AEEARwBJAEEATQBnAEIAaQBBAEQAawBBAAoAcABvAHMAaQB0AGkAbwBuADoATQBnAEEAdwBBAEQAawBBAE0AQQBBAHcAQQBBAD0APQAKAHAAcgBlAGYAaQB4ADoACgBzAG8AdQByAGMAZQA6AFAAQQBCADAAQQBHAEUAQQBZAGcAQgBzAEEARwBVAEEASQBBAEIAaQBBAEcAOABBAGMAZwBCAGsAQQBHAFUAQQBjAGcAQQA5AEEAQwBJAEEATQBRAEEAaQBBAEMAQQBBAFkAdwBCAHMAQQBHAEUAQQBjAHcAQgB6AEEARAAwAEEASQBnAEIAawBBAEcARQBBAGQAQQBCAGgAQQBHAFkAQQBjAGcAQgBoAEEARwAwAEEAWgBRAEEAaQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAWgBRAEIAaABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAEkAQQBCAHoAQQBIAFEAQQBlAFEAQgBzAEEARwBVAEEAUABRAEEAaQBBAEgAUQBBAFoAUQBCADQAQQBIAFEAQQBMAFEAQgBoAEEARwB3AEEAYQBRAEIAbgBBAEcANABBAE8AZwBBAGcAQQBIAEkAQQBhAFEAQgBuAEEARwBnAEEAZABBAEEANwBBAEMASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAE8AQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAbwBBAEQANABBAFcAZwBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEUARQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIARgBBAEUAdwBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIAQwBBAEUAVQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEIAQwBBAEUAVQBBAFoAQQBBADgAQQBDADgAQQBkAEEAQgBvAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEUAMABBAFEAUQBCAFQAQQBGAE0AQQBQAEEAQQB2AEEASABRAEEAYQBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBCAE4AQQBFAEUAQQBVAHcAQgBUAEEARwBRAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBCAGwAQQBHAEUAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGkAQQBHADgAQQBaAEEAQgA1AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQAQQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATQBBAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAQQBBAE0AQQBBAHcAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBAHUAQQBEAEEAQQBNAEEAQQA0AEEARABZAEEATgBnAEEAMQBBAEcAVQBBAEsAdwBBAHcAQQBEAFkAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHcAQQBDADQAQQBNAEEAQQB3AEEARABBAEEATgBBAEEANQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBBAHYAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBjAGcAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBnAEEAUABnAEEAeABBAEQAdwBBAEwAdwBCADAAQQBHAGcAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBTAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABBAEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAdwBBAEQAQQBBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQARQBBAEwAZwBBAHcAQQBEAEEAQQBOAHcAQQA0AEEARABJAEEATgBRAEIAbABBAEMAcwBBAE0AQQBBADIAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAEEAQQB3AEEARABBAEEATwBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAEwAdwBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBIAEkAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBvAEEARAA0AEEATQBnAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABFAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBFAGcAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHgAQQBEAEUAQQBNAFEAQQB5AEEAQwA0AEEATQBnAEEANABBAEQATQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBAHcAQQBEAEEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHkAQQBDADQAQQBNAEEAQQB4AEEARABRAEEATQBRAEEAdwBBAEQASQBBAFoAUQBBAHIAQQBEAEEAQQBOAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABBAEEATQBBAEEAeABBAEQASQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgB5AEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYQBBAEEAKwBBAEQATQBBAFAAQQBBAHYAQQBIAFEAQQBhAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAeQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBRAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABNAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBJAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA0AEEARABJAEEATgB3AEEAdQBBAEQASQBBAE4AZwBBADEAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAHcAQQB1AEEARABBAEEATQBRAEEAMgBBAEQAQQBBAE4AQQBBADUAQQBHAFUAQQBLAHcAQQB3AEEARABZAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB3AEEAQwA0AEEATQBBAEEAdwBBAEQAQQBBAE0AZwBBAHoAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQQB2AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBBADAAQQBEAHcAQQBMAHcAQgAwAEEARwBnAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AUQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQASQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAegBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEAUwBBAEIAbABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEAMQBBAEQAYwBBAE0AZwBBAHUAQQBEAFkAQQBPAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATQBBAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQB3AEEAdQBBAEQAQQBBAE0AUQBBADIAQQBEAEEAQQBNAGcAQQA1AEEARwBVAEEASwB3AEEAdwBBAEQAWQBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdwBBAEMANABBAE0AQQBBAHcAQQBEAEEAQQBNAGcAQQB5AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQQB1AEEAQwA0AEEATABnAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEAQwA0AEEATABnAEEAdQBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATABnAEEAdQBBAEMANABBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAdQBBAEMANABBAEwAZwBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEMANABBAEwAZwBBAHUAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAEwAZwBBAHUAQQBDADQAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHUAQQBDADQAQQBMAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBDADQAQQBMAGcAQQB1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBMAGcAQQB1AEEAQwA0AEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEMAOABBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAHkAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBhAEEAQQArAEEARABVAEEATgBBAEEAegBBAEQAdwBBAEwAdwBCADAAQQBHAGcAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQB3AEEAMABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBnAEEAMgBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATgBnAEEAdwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEAUgBnAEIAbABBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATwBBAEEAMwBBAEQAVQBBAE4AUQBBAHUAQQBEAGcAQQBOAFEAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABBAEEATgBRAEEAMwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATgBRAEEAdQBBAEQAawBBAE8AUQBBAHoAQQBEAFEAQQBNAEEAQQAzAEEARwBVAEEASwB3AEEAdwBBAEQAYwBBAFAAQQBBAHYAQQBIAFEAQQBaAEEAQQArAEEAQQBvAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQgAwAEEARwBRAEEAUABnAEEAegBBAEMANABBAE4AZwBBADEAQQBEAGsAQQBNAEEAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEEAdgBBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGMAZwBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAGcAQQBQAGcAQQAxAEEARABRAEEATgBBAEEAOABBAEMAOABBAGQAQQBCAG8AQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABNAEEATQB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABJAEEATgB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABZAEEATQBBAEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARQBNAEEAYgB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABnAEEATgB3AEEAMABBAEQAWQBBAEwAZwBBADMAQQBEAFkAQQBOAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAEEAQQBMAGcAQQB3AEEARABBAEEATgB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABVAEEATABnAEEANQBBAEQAawBBAE0AdwBBAHoAQQBEAGcAQQBNAGcAQgBsAEEAQwBzAEEATQBBAEEAMwBBAEQAdwBBAEwAdwBCADAAQQBHAFEAQQBQAGcAQQBLAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBkAEEAQgBrAEEARAA0AEEATQBBAEEAdQBBAEQAUQBBAE4AUQBBADEAQQBEAEEAQQBNAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEATAB3AEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEgASQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAG8AQQBEADQAQQBOAFEAQQAwAEEARABVAEEAUABBAEEAdgBBAEgAUQBBAGEAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB6AEEARABJAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB5AEEARABnAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQAyAEEARABBAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQgBPAEEARwBrAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQA0AEEARABjAEEATwBBAEEAdwBBAEMANABBAE4AdwBBADMAQQBEAFEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAUQBBAFAAZwBBAHcAQQBDADQAQQBNAEEAQQB3AEEARABZAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQAxAEEAQwA0AEEATwBRAEEANQBBAEQATQBBAE0AQQBBADMAQQBEAGsAQQBaAFEAQQByAEEARABBAEEATgB3AEEAOABBAEMAOABBAGQAQQBCAGsAQQBEADQAQQBDAGcAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAEkAQQBBADgAQQBIAFEAQQBaAEEAQQArAEEARABBAEEATABnAEEAMABBAEQAQQBBAE0AdwBBAHcAQQBEAEEAQQBQAEEAQQB2AEEASABRAEEAWgBBAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEAQwA4AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAeQBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAGEAQQBBACsAQQBEAFUAQQBOAEEAQQAyAEEARAB3AEEATAB3AEIAMABBAEcAZwBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAHcAQQB4AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAGcAQQA1AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBOAGcAQQB3AEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBRAHcAQgAxAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBPAEEAQQAyAEEARABZAEEATgBRAEEAdQBBAEQAWQBBAE0AQQBBAHkAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEARAB3AEEAZABBAEIAawBBAEQANABBAE0AQQBBAHUAQQBEAEEAQQBNAGcAQQAzAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBOAFEAQQB1AEEARABrAEEATwBRAEEAegBBAEQAYwBBAE0AdwBBADIAQQBHAFUAQQBLAHcAQQB3AEEARABjAEEAUABBAEEAdgBBAEgAUQBBAFoAQQBBACsAQQBBAG8AQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEMAQQBBAFAAQQBCADAAQQBHAFEAQQBQAGcAQQB4AEEAQwA0AEEATgB3AEEAegBBAEQAWQBBAE0AQQBBAHcAQQBEAHcAQQBMAHcAQgAwAEEARwBRAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBQAEEAQQB2AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAYwBnAEEAKwBBAEEAbwBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEAUABBAEIAMABBAEcAZwBBAFAAZwBBADEAQQBEAFEAQQBOAHcAQQA4AEEAQwA4AEEAZABBAEIAbwBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAE0AQQBNAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAE0AQQBNAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAFkAQQBNAEEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBGAG8AQQBiAGcAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAGcAQQBOAFEAQQA0AEEARABNAEEATABnAEEAdwBBAEQAVQBBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBDAEEAQQBJAEEAQQA4AEEASABRAEEAWgBBAEEAKwBBAEQAQQBBAEwAZwBBAHcAQQBEAEEAQQBPAFEAQQA4AEEAQwA4AEEAZABBAEIAawBBAEQANABBAEMAZwBBAGcAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAOABBAEgAUQBBAFoAQQBBACsAQQBEAFUAQQBMAGcAQQA1AEEARABrAEEATgBBAEEAeABBAEQAZwBBAE4AQQBCAGwAQQBDAHMAQQBNAEEAQQAzAEEARAB3AEEATAB3AEIAMABBAEcAUQBBAFAAZwBBAEsAQQBDAEEAQQBJAEEAQQBnAEEAQwBBAEEASQBBAEEAZwBBAEQAdwBBAGQAQQBCAGsAQQBEADQAQQBNAEEAQQB1AEEARABZAEEATQBBAEEAMQBBAEQAQQBBAE0AQQBBADgAQQBDADgAQQBkAEEAQgBrAEEARAA0AEEAQwBnAEEAZwBBAEMAQQBBAEkAQQBBAGcAQQBEAHcAQQBMAHcAQgAwAEEASABJAEEAUABnAEEASwBBAEMAQQBBAEkAQQBBADgAQQBDADgAQQBkAEEAQgBpAEEARwA4AEEAWgBBAEIANQBBAEQANABBAEMAZwBBADgAQQBDADgAQQBkAEEAQgBoAEEARwBJAEEAYgBBAEIAbABBAEQANABBAAoAcwB1AGYAZgBpAHgAOgA=:31b8e172-b470-440e-83d8-e6b185028602</p>
+<p>
+428 rows × 8 columns
+</p>
+</div>
+<p>Masks have a variety of uses, and the conditions can be as complicated as needed. For example, the above mask could be extended to separate A <span class="math inline">\(\leq\)</span> 60 and A <span class="math inline">\(\geq\)</span> 180. You could create a mask that extracts the isotopes of carbon, oxygen, and nitrogen by filtering for specific values of Z or element symbol.</p>
+<div class="alert alert-info">
+<p>Exercise 5:</p>
+<p>Create any mask you want and then apply it to the <code>nuclear_data</code> dataframe. Save the results as a new dataframe with a descriptive name. Then, print the new dataframe.</p>
+<p>Now, check with one other classmate. Did you make the same mask? If yes, then together, come up with another mask that does something different. Save the results as a new dataframe with a descriptive name and print the new dataframe.</p>
+</div>
+<div class="alert alert-success">
+<p>STOP and do a quick check-in with sli.do – tell us what your mask did! If you and your neighbor made a second mask together, make sure you submit that one, too. You can do that <a href="https://app.sli.do/event/fVdhda4XVyH6DsN4RmS2nh/embed/polls/42ad04e5-08fa-4b11-9f44-f91925add966"> here</a>.</p>
+</div>
+</section>
+<section id="data-manipulation-in-pandas" class="level3">
+<h3 class="anchored" data-anchor-id="data-manipulation-in-pandas">Data manipulation in Pandas</h3>
+<p>You can add new columns to a Pandas dataframe, either taken from a new series, dictionary, or numpy array that you’ve created, or by modifying another column.</p>
+<p>One thing to consider when using numerical data is what units are associated with the data and whether they are the correct units for further analysis. The binding energies and uncertainties are given in units of keV (kiloelectron volts) per nucleon. By convention, however, binding energies are usually given in units of MeV (megaelectron volts) per nucleon. It is easy to convert keV to MeV simply by dividing by 1000.</p>
+<p>We can create a new column in the dataframe that uses the units we want. For example, we want to work with the binding energy and its uncertainty in MeV.</p>
+<p>The binding energy is the column marked “BE” and its uncertainty is “BEd”. Let’s make two new columns, which we will call “BE (MeV)” and “BEd (MeV)” and have the correct units:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>nuclear_data[<span class="st">"BE (MeV)"</span>] <span class="op">=</span> nuclear_data[<span class="st">"BE"</span>]<span class="op">/</span><span class="fl">1000.</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>nuclear_data[<span class="st">"BEd (MeV)"</span>] <span class="op">=</span> nuclear_data[<span class="st">"BEd"</span>]<span class="op">/</span><span class="fl">1000.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You may have just gotten a very scary-looking warning message from Pandas, if you tried to do this with just labels and not using .loc. This warning is trying to let you know that you’re working with copies of data. The documentation linked in the warning is really helpful for understanding what’s happening under the hood, but as can happen sometimes with documentation, the examples provided aren’t necessarily incredibly illuminating for the exact scenario we are working with.</p>
+<p>So let’s dig a little deeper into how to use .loc to do masking and manipulation:</p>
+<p>Here is the trick: you want to adjust the way we index both the new column and the old column we’re manipulating, using .loc instead of just using the labels. So instead of:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"new column name"</span>] <span class="op">=</span> df[<span class="st">"old column name"</span>]<span class="op">/</span><span class="fl">1000.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>we want</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df.loc[:,<span class="st">"new column name"</span>] <span class="op">=</span> df[:,<span class="st">"old column name"</span>]<span class="op">/</span><span class="fl">1000.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>It’s a small change, but it makes a big difference to ensure that you are correctly indexing and modifying the dataframe. As you learned last time, the .loc method:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df.loc[<span class="st">"row index"</span>,<span class="st">"column index"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>is generally preferred, and as you start to do more complicated things with Pandas, you will want to start using it.</p>
+<p>The cell below modifies the above code to work without producing the SettingWithCopyWarning (Google it to see how common this is!).</p>
+<p><em>NOTE</em> you may still get the warning when you run the cell. Run it again and it will go away. I don’t know what is causing this, but I think it is a Jupyter Notebook issue and not a pandas issue.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>nuclear_data.loc[:,<span class="st">"BE (MeV)"</span>] <span class="op">=</span> nuclear_data.loc[:,<span class="st">"BE"</span>]<span class="op">/</span><span class="fl">1000.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>/opt/jupyterhub/lib/python3.8/site-packages/pandas/core/indexing.py:1667: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  self.obj[key] = value</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>nuclear_data.loc[:,<span class="st">"BEd (MeV)"</span>] <span class="op">=</span> nuclear_data.loc[:,<span class="st">"BEd"</span>]<span class="op">/</span><span class="fl">1000.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="alert alert-warning">
+<p>Now go back and comment out the original attempt to create a new column. Then restart the kernel and run up to the current cell, just to make sure there are no lingering copies or errors in the dataframe. It’s always good to periodically check that your code runs linearly from the start of the notebook to the end, so that you can reproduce your work!</p>
+</div>
+<p>Next, the mass and its uncertainty are given in terms of <span class="math inline">\(\mu\)</span>u (micro-atomic units), but it’s easier to have them in atomic units (u). Therefore we multiply the mass and its uncertainty by 1x10<span class="math inline">\(^{-6}\)</span> to get the correct units.</p>
+<div class="alert alert-info">
+<p>Exercise 6:</p>
+<p>Create a new column that has the mass and the uncertainty of the masses in atomic units by multiplying both <code>mass</code> and <code>mass_uncertainty</code> by 1x10<span class="math inline">\(^{-6}\)</span>.</p>
+<p>Make sure you use the .loc method! And make sure you check that your DataFrame looks right when you’re done.</p>
+</div>
+</section>
+<section id="extracting-the-data-columns" class="level3">
+<h3 class="anchored" data-anchor-id="extracting-the-data-columns">Extracting the Data Columns</h3>
+<p>While a Pandas Dataframe helps do some of the data formatting and analysis, having the data separated by column is also advantageous, especially regarding some of the data manipulation required for graphing. This section formats the data from our Dataframe to help create graphs.</p>
+<p>You can extract data from a dataframe and save it as its own variable in Python.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> nuclear_data[<span class="st">"N"</span>]</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(N)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>0         1
+1         0
+2         1
+3         2
+4         1
+       ... 
+3305    156
+3311    157
+3318    158
+3339    159
+3345    160
+Name: N, Length: 2498, dtype: int64</code></pre>
+<p>If we print the type of the column we extracted above, we will see that the type is <code>pandas.core.series.Series</code>.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(N)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>pandas.core.series.Series</code></pre>
+<div class="alert alert-info">
+<p>Exercise 7:</p>
+<p>Extract the various columns of the Dataframe (as was done above with “N”) and save them using the variable names shown in the below table.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Column Name</th>
+<th>Variable Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>N</td>
+<td>N</td>
+</tr>
+<tr class="even">
+<td>Z</td>
+<td>Z</td>
+</tr>
+<tr class="odd">
+<td>A</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>BE (MeV)</td>
+<td>BE</td>
+</tr>
+<tr class="odd">
+<td>BEd (MeV)</td>
+<td>BE_uncertainty</td>
+</tr>
+<tr class="even">
+<td>MASS (u)</td>
+<td>mass</td>
+</tr>
+<tr class="odd">
+<td>MASSd (u)</td>
+<td>mass_uncertainty</td>
+</tr>
+</tbody>
+</table>
+<p>You must use the names specified in the above table, as the rest of the code relies on them.</p>
+</div>
+<div class="alert alert-success">
+<p>We’re done with the data manipulation part of this notebook. Check in with <a href="https://app.sli.do/event/fVdhda4XVyH6DsN4RmS2nh/embed/polls/9c36bd42-718c-4ba1-8467-34fde26276b2"> slido</a> and then work on whatever you need to until we’re ready to move on to the plotting part of the notebook.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="seaborn" class="level1">
+<h1>Seaborn</h1>
+<p>Seaborn is one of two libraries explored in this notebook for displaying data in graphs. Seaborn is convenient for two reasons:</p>
+<ol type="1">
+<li>The graphs come pre-formatted with axis labels, colors, legends, etc.</li>
+<li>Seaborn can make plots from Pandas Dataframes without converting them to NumPy arrays.</li>
+</ol>
+<p>Seaborn can create many different types of graphs. In this notebook, we will explore one functionality of Seaborn that is particularly useful when dealing with new datasets: the <code>pairplot.</code></p>
+<div class="alert alert-info">
+<p>Exercise 8: You have to import the seaborn library, and the usual “nickname” given is “sns”. Go ahead and import seaborn as sns so you can explore its plotting capabilities.</p>
+</div>
+<section id="exploratory-plotting-with-seaborn" class="level2">
+<h2 class="anchored" data-anchor-id="exploratory-plotting-with-seaborn">Exploratory plotting with Seaborn</h2>
+<section id="pairplot" class="level3">
+<h3 class="anchored" data-anchor-id="pairplot">Pairplot</h3>
+<p>The Seaborn function <code>pairplot</code> allows you to plot every column of your Pandas Dataframe against every other column, creating a matrix of graphs. <code>pairplot</code> is useful when you are working with a data set that you are unfamiliar with because it can help you see the patterns within your data and figure out which of the relationships you should analyze further. You can read more about <code>pairplot</code> <a href="https://seaborn.pydata.org/generated/seaborn.pairplot.html">here</a>.</p>
+<div class="alert alert-warning">
+<p><strong>Warning</strong>: The <code>pairplot</code> cells below will take a while each to run due to the amount of data being graphed. Be patient!</p>
+</div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(nuclear_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;seaborn.axisgrid.PairGrid at 0x7f624fe9b280&gt;</code></pre>
+<p><img src="./graphics/output_60_1.png" class="img-fluid"></p>
+<div class="alert alert-success">
+<p>STOP and check-in with <a href="https://app.sli.do/event/8FR9MhA5wGZRG6YBFDJjTx/embed/polls/897ed8c2-779d-43ff-84bf-1423793b55de"> sli.do</a>. We are going to discuss what we see here before moving on.</p>
+</div>
+</section>
+<section id="pairplot-with-hue" class="level3">
+<h3 class="anchored" data-anchor-id="pairplot-with-hue">Pairplot with Hue</h3>
+<p>If your data comes with labels for different classes, creating a <code>pairplot</code> is possible where the labels will be different colors. This is accomplished by setting the <code>hue</code> attribute equal to the column name containing the label. For the case of this nuclear data set, plotting the data such that each element is a different color may be helpful. This element symbol column (“EL”) is our label. The below code cell creates a pairplot using the Dataframe only containing data with A <span class="math inline">\(\leq\)</span> 60 (to reduce the number of points). When a value of <code>hue</code> is passed, it automatically creates a legend on the side of the graph with the different labels.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(nuclear_data_A_below_60,hue<span class="op">=</span><span class="st">"EL"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;seaborn.axisgrid.PairGrid at 0x7f623a3cf280&gt;</code></pre>
+<p><img src="./graphics/output_64_1.png" class="img-fluid"></p>
+<div class="alert alert-info">
+<p>Exercise 9:</p>
+<p>Create a <code>pairplot</code> with the masked Dataframe you created in Exercise 5. Set the <code>hue</code> attribute to a relevant value for your Dataframe. The element symbols may make the most sense or another column depending on the mask you applied.</p>
+</div>
+<p>Besides <code>pairplot,</code> Seaborn contains a variety of helpful plotting tools. See some examples of graphs in <a href="https://seaborn.pydata.org/examples/index.html">this gallery</a>. The nice thing about Seaborn is that the graphs come preformatted with labels and legends, and color scales. This can be nice for saving time, but it does take some of the customizations out of the process. The following library we will investigate, Matplotlib, provides a lot of customization for the graphs, but it all must be done manually instead of using prebuilt style guides.</p>
+</section>
+<section id="plotting-a-relationship" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-a-relationship">Plotting a relationship</h3>
+<p>For the next section of this notebook, we will focus on the graph of binding energy as a function of A as this graph has quite a bit of importance in nuclear physics and engineering, so displaying it in a pleasing and easy-to-understand manner is essential.</p>
+</section>
+<section id="regplot" class="level3">
+<h3 class="anchored" data-anchor-id="regplot">Regplot</h3>
+<p>Another important Seaborn plot is <code>regplot</code> which is a scatterplot. It takes three main arguments: the Pandas Dataframe, the name of the column to plot on the x axis, and the name of the column to plot on the y axis. In the below example we have also used the argument <code>fit_reg</code> and set it to False. If this is not done then Seaborn will attempt to create a line of best fit for the data being plotted. However, a line is obviously not the best fit for this graph so we will leave it off of the plot. There are many other arguments that can be used to format this plot and the documentation can be found <a href="https://seaborn.pydata.org/generated/seaborn.regplot.html">here</a>.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sns.regplot(data<span class="op">=</span>nuclear_data, x<span class="op">=</span><span class="st">"N"</span>, y<span class="op">=</span><span class="st">"BE"</span>, fit_reg<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>&lt;AxesSubplot:xlabel='N', ylabel='BE'&gt;</code></pre>
+<p><img src="./graphics/output_71_1.png" class="img-fluid"></p>
+<p><code>regplot</code> is simply a Seaborn wrapper for the Matplotlib function <code>plot.scatter</code> which will be investigated later in this notebook. While the <code>regplot</code> graph looks decent by default (come back and compare this graph to the first <code>plt.scatter</code> plot we will create below) it is much harder to make changes and personalize the graph when we compare it ot the Matplotlib library we will look at next.</p>
+<div class="alert alert-info">
+<p>Exercise 10:</p>
+<p>Use <code>regplot</code> to create a plot using your masked Dataframe. You can use your above <code>pairplot</code> to decide which graph will be the most interesting. Play around with the different arguments found in the documentation until you have a graph you are happy with.</p>
+</div>
+</section>
+<section id="curve_fit" class="level3">
+<h3 class="anchored" data-anchor-id="curve_fit">Curve_fit</h3>
+<p>The problem with regplot is that there’s no way to get the function it fit. You can see the line, but you don’t know its slope. What if you wanted to know how steep this relationship is? You need another option.</p>
+<p>The function you need here is <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html">curve_fit</a>, which is in the package scipy.</p>
+<p>You can import the whole scipy package, but it’s faster and easier to select just curve fit</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> curve_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="alert alert-info">
+<p>Exercise 11:</p>
+<ol type="1">
+<li><p>Import curve_fit:</p></li>
+<li><p>Define a linear function</p></li>
+<li><p>Select your x and y data from the dataframe</p></li>
+<li><p>Run the curve fit and look at the parameters it returned.</p></li>
+</ol>
+<p>We will talk about plotting these results in the next section.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="matplotlib" class="level1">
+<h1>Matplotlib</h1>
+<p>Now we will investigate the second plotting library: Matplotlib. You’ve used Matplotlib before, but we’re going to dive deeper this time.</p>
+<p>Matplotlib is the most commonly used plotting library in Python, and there are many examples and tutorials on the internet for making your graphs look a certain way. For example, see <a href="https://matplotlib.org/stable/gallery/index.html">this gallery</a>. Matplotlib allows for a lot more customization than Seaborn, but it does require us to use the NumPy arrays we created earlier instead of just passing the Pandas Dataframe as we could do with Seaborn. Below, we will explore some typical plots in Matplotlib in two and three dimensions.</p>
+<section id="plot" class="level3">
+<h3 class="anchored" data-anchor-id="plot">Plot</h3>
+<p>Matplotlib makes it easy to make a simple line graph using the <code>plot</code> function, which you can read about <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html">here</a>. For example, in the code cell below, we plot the binding energy per nucleon as a function of the number of nucleons.</p>
+<div class="alert alert-warning">
+<pre><code>If you don't want the Jupyter Notebook to print out the matplotlib object</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>[<span class="op">&lt;</span>matplotlib.lines.Line2D at <span class="bn">0x7efff9b25400</span><span class="op">&gt;</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>just use plt.show() at the end of your plotting code to suppress that.</p>
+</div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>plt.plot(A,BE)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_82_0.png" class="img-fluid"></p>
+<p>The graph is quite plain with the basic <code>plot</code> statement and does not help a viewer understand the data. However, using the documentation for <code>plot,</code> we can make some changes to make the graph look better and display the data clearer.</p>
+<p>The first thing we will do is change the color of the graph. A list of colors available in Matplotlib can be found <a href="https://matplotlib.org/stable/gallery/color/named_colors.html">here</a>.</p>
+<div class="alert alert-info">
+<p>Exercise 12:</p>
+<p>Set the variable <code>color</code> in the below cell to your chosen Matplotlib color. Make sure you make the color name a string (enclosed in <code>"</code> or <code>'</code>), and spell it exactly as it is found in the documentation.</p>
+<p>Next, run the updated plot statement and make sure the color of the plot has changed.</p>
+</div>
+<p>Next, we can change the line style of the plot from a solid line if desired. A list of available line styles is found <a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html">here</a>.</p>
+<div class="alert alert-info">
+<p>Exercise 13:</p>
+<p>Choose a line style you like and create and assign a <code>linestyle</code> variable below. Ensure you are spelling the line style as shown in the documentation.</p>
+<p>Next, add the linestyle variable to the <code>plot</code> function just like the color was added earlier. Then run the cell and make sure the graph looks as it should.</p>
+</div>
+<p>We may also want to change the line width on our plot. We can do this by setting the <code>linewidth</code> argument, where a larger number represents a thicker line.</p>
+<div class="alert alert-info">
+<p>Exercise 14:</p>
+<p>Add a linewidth argument to your plot function and play around with different line widths until you are satisfied with the plot’s appearance. You can also change the color and line style to make the plot look how you want.</p>
+</div>
+<p>Now that the plot looks nice, we must make it easier to read. When we make a plot in physics, we always want to add labels to the x and y axes that tell what is being plotted and in what units (if applicable). In Matplotlib, we can add labels to the axes using <code>xlabel</code> and <code>ylabel.</code> See the documentation of <code>xlabel</code> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html">here</a>. We can format the axes labels (font size, font style, etc.). Here, we will only change the font size.</p>
+<div class="alert alert-info">
+<p>Exercise 15:</p>
+<p>Create the variables <code>x_label</code> and <code>y_label</code> below and set them to strings that you want to use as the x and y axes labels. Remember that the x-axis is the number of nucleons, and the y-axis is the binding energy per nucleon, measured in MeV. Also, create the <code>fontsize</code> variable and set it to a font size you think is appropriate and readable.</p>
+<p>Run the plot function again with all the added variables to ensure everything looks how you want.</p>
+</div>
+</section>
+<section id="scatter-plot" class="level3">
+<h3 class="anchored" data-anchor-id="scatter-plot">Scatter Plot</h3>
+<p>A line plot (where the data points are connected) may not always be the best way to display data. Another common way to display two-dimensional data is a scatter plot, where a marker represents each point, and the points are not connected. Matplotlib allows scatter plots to be created using the <code>scatter</code> function, which you can read about <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html">here</a>. Here is an example of a scatter plot using the data set we were looking at above.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(A, BE)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(x_label, fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(y_label, fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_93_0.png" class="img-fluid"></p>
+<p>Like with the <code>plot,</code> we can change the look of a scatterplot by passing the <code>scatter</code> function a few simple values. But first, we can change the color of the markers.</p>
+<div class="alert alert-info">
+<p>Exercise 16:</p>
+<p>Create and set the color variable to any color you want. As with the <code>plot</code> statement, the available colors can be found <a href="https://matplotlib.org/stable/gallery/color/named_colors.html">here</a>.</p>
+<p>Next, run the scatter plot cell and make sure the color of the markers has changed. Be sure to include the xlabel and ylabel!</p>
+</div>
+<p>The shape of the markers can also be changed using the <code>marker</code> keyword. The marker is altered by passing a symbol that represents the shape of the marker. A list of the possible markers can be found <a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/marker_reference.html#sphx-glr-gallery-lines-bars-and-markers-marker-reference-py">here</a>.</p>
+<div class="alert alert-info">
+<p>Exercise 17:</p>
+<p>Create and set a <code>markerstyle</code> variable below to reflect the marker style you would like to make the plot with. Remember that you must make the marker style a string. An example of a possible marker style is <code>'^'</code>.</p>
+<p>Next, add the markerstyle variable to the plotting code and run the cell. Make sure the color and the marker style have changed to reflect your preferences.</p>
+</div>
+<p>Finally, you can change the size of each marker by changing the <code>s</code> attribute of the <code>scatter</code> function. The attribute <code>s</code> is an integer where the larger the value of <code>s,</code> the larger the markers will appear.</p>
+<div class="alert alert-info">
+<p>Exercise 18:</p>
+<p>Create and set a size variable below to reflect the size you want the markers to change. Next, update the plot code and run the cell to make sure your changes appear.</p>
+</div>
+</section>
+<section id="plotting-multiple-data-sets" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-multiple-data-sets">Plotting Multiple Data Sets</h3>
+<p>We often want to graph several data sets on the same plot so they can be compared. Matplotlib makes this easy, as we need to add the different <code>plot</code> (and/or <code>scatter</code>) statements in the same code cell to get them graphed on the same plot.</p>
+<p>For example, we often want to plot an experimental (or actual) result against a theoretical result. As we mentioned early in this notebook, the theoretical equation for the binding energies is: <span class="math display">\[BE = (m_hZ + m_nN - m)c^2,\]</span></p>
+<p>where <span class="math inline">\(m_h\)</span> = 1.007 MeV, <span class="math inline">\(m_n\)</span> = 1.008 MeV and <span class="math inline">\(c^2\)</span> = 931.49 MeV/u. However, the data we have been working with was collected through experiments, so plotting the theoretical and experimental values of the same plot could be useful to see how they compare.</p>
+<p>First, we will create the theoretical binding energies from the above equation and then divide them by A so they are the binding energies per nucleon to match our experimental data.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>c_squared <span class="op">=</span> <span class="fl">931.49</span> <span class="co"># MeV/u</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>m_hydrogen <span class="op">=</span> <span class="fl">1.007</span> <span class="co">#u</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>m_neutron <span class="op">=</span> <span class="fl">1.008</span> <span class="co">#u</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>BE_theoretical <span class="op">=</span> ((m_hydrogen<span class="op">*</span>Z <span class="op">+</span> m_neutron<span class="op">*</span>N <span class="op">-</span> mass)<span class="op">*</span>c_squared)<span class="op">/</span>A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next, we can plot these theoretical binding energies with the experimental ones on the same plot using the below code, where the experimental energies will be a scatter plot and the theoretical values will be a line plot.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(A, BE, color<span class="op">=</span>color, marker<span class="op">=</span>markerstyle, s<span class="op">=</span>size)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>plt.plot(A, BE_theoretical, linewidth<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'red'</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(x_label, fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(y_label, fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_104_0.png" class="img-fluid"></p>
+<p>Since we created the plot, we know which data set is which is not apparent to another person viewing the graph. To help with telling the two plots apart, we will want to add a legend. We will do this by adding the <code>label</code> attribute to each plotting statement (<code>plot</code> and <code>scatter</code>), and then we will add a <code>plt.legend</code> statement at the end of the cell. We can set the font size of the legend using the <code>fontsize</code> attribute. There are other attributes of the legend statement that you can find <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#matplotlib-pyplot-legend">here</a>.</p>
+<p>The below code cell adds legends and labels to our graph to make it more readable.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(A, BE, color<span class="op">=</span>color, marker<span class="op">=</span>markerstyle, s<span class="op">=</span>size, label<span class="op">=</span><span class="st">"Experimental"</span>)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>plt.plot(A, BE_theoretical, linewidth<span class="op">=</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">"Theoretical"</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(x_label, fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(y_label, fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>plt.legend(fontsize<span class="op">=</span>fontsize)</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_106_0.png" class="img-fluid"></p>
+<p>The liquid drop model is a semi-empirical formula for calculating the binding energies of the various nuclei using only N and Z (remember that A = N + Z). A semi-empirical formula is a formula whose form is partially based on theory but with coefficients that fit using experimental data. For example, the liquid drop model can be defined as:</p>
+<p><span class="math display">\[BE_{liquid\ drop}(N,Z) = a_vA - a_sA^{2/3} - a_c \frac{Z(Z-1)}{A^{1/3}} - a_A\frac{(N-Z)^2}{A} + \delta (N,Z),\]</span></p>
+<p>where the coefficients <span class="math inline">\(a_v\)</span>, <span class="math inline">\(a_s\)</span>, <span class="math inline">\(a_c\)</span>, <span class="math inline">\(a_A\)</span> and the function <span class="math inline">\(\delta(N,Z)\)</span> are determined using experimental data. Numerical values for these and an explanation for each term in the equation can be found <a href="https://en.wikipedia.org/wiki/Semi-empirical_mass_formula#The_liquid-drop_model">here</a>.</p>
+<p>The code cell below uses the liquid drop model to calculate the binding energy per nucleon for all the nuclei given in the dataframe</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>aV <span class="op">=</span> <span class="fl">15.76</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>aS <span class="op">=</span> <span class="fl">17.81</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>aC <span class="op">=</span> <span class="fl">0.711</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>aA <span class="op">=</span> <span class="fl">23.702</span></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>BE_liquid_drop <span class="op">=</span> []</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(BE)):</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    A <span class="op">=</span> np.asarray(A)</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> np.asarray(N)</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>    Z <span class="op">=</span> np.asarray(Z)</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>    energy <span class="op">=</span> aV<span class="op">*</span>A[i] <span class="op">-</span> aS<span class="op">*</span>A[i]<span class="op">**</span>(<span class="dv">2</span><span class="op">/</span><span class="dv">3</span>) <span class="op">-</span> aC<span class="op">*</span>Z[i]<span class="op">*</span>(Z[i]<span class="op">-</span><span class="dv">1</span>)<span class="op">/</span>A[i]<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">3</span>) <span class="op">-</span> aA<span class="op">*</span>(N[i]<span class="op">-</span>Z[i])<span class="op">**</span><span class="dv">2</span><span class="op">/</span>A[i]</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> Z[i]<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span> <span class="kw">and</span> N[i]<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">0</span>:</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>        energy <span class="op">+=</span> <span class="dv">34</span><span class="op">/</span>A[i]<span class="op">**</span>(<span class="dv">3</span><span class="op">/</span><span class="dv">4</span>)</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> Z[i]<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">1</span> <span class="kw">and</span> N[i]<span class="op">%</span><span class="dv">2</span><span class="op">==</span><span class="dv">1</span>:</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>        energy <span class="op">-=</span> <span class="dv">34</span><span class="op">/</span>A[i]<span class="op">**</span>(<span class="dv">3</span><span class="op">/</span><span class="dv">4</span>)</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>        energy <span class="op">+=</span> <span class="dv">0</span></span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>    BE_liquid_drop.append(energy)</span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>BE_liquid_drop <span class="op">/=</span> A</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="alert alert-info">
+<p>Exercise 19: In the code cell below, plot the experimental binding energies per nucleon, the theoretical binding energies per nucleon, and the binding energies per nucleon from the liquid drop model.</p>
+<p>You can use any combination of <code>plot</code> and <code>scatter,</code> along with colors, line widths, marker sizes, and styles. Make a graph that you find visually appealing. Ensure you add a readable x label, y label, and legend.</p>
+<p>If you are struggling to see everything, you can try adjusting the opacity by adding an “alpha” – this sets opacity from 0 (totally transparent) to 1.0 (totally opaque).</p>
+</div>
+</section>
+<section id="plotting-data-and-a-fit" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-data-and-a-fit">Plotting data and a fit</h3>
+<p>Remember the curve_fit exercise you did earlier? Well, let’s see how good that fit to the data is.</p>
+<p>You have all the pieces you need to do this. You can extract data from a dataframe into a numpy array, you can scatterplot data, you can fit the data to a curve, you can extract the parameters from the fit, and you can add that to the plot.</p>
+<div class="alert alert-info">
+<p>Exercise 20:</p>
+<ol type="1">
+<li><p>Extract the atomic number (“Z”) and the Binding Energy (“BE”) from the dataframe</p></li>
+<li><p>Use numpy’s arange function to generate a string of x values between the smallest and largest Z value. Make the spacing between values small – this is supposed to approximate a “continuous” range of values</p></li>
+<li><p>Grab m and b from your earlier curve_fit results</p></li>
+<li><p>Scatterplot the data for “Z” and “BE” – be careful: make sure you’re taking the data from the dataframe you used above for your regplot</p></li>
+<li><p>On the same plot, do a lineplot of the fit results (using your generated “continuous” Z values, the linear function you defined above, and the parameters from your fit)</p></li>
+<li><p>Make sure you have a clear legend and plot labels, including the actual fit function with the correct parameters! (Don’t worry about error)</p></li>
+</ol>
+</div>
+</section>
+<section id="plotting-three-dimensional-data" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-three-dimensional-data">Plotting Three-Dimensional Data</h3>
+<p>Previously we have only created two-dimensional graphs with one independent variable (the number of nucleons) and one dependent variable (the binding energy per nucleon). However, sometimes we want to make three dimension plots with two independent variables and one dependent variable. In this case, we want to see how the binding energy per nucleon varies as a function of the number of neutrons and protons in the nucleus.</p>
+<p>The below code cell creates the two-dimensional NumPy array where each row corresponds to increasing protons (the first row is zero protons, the second row is one proton, and so on). Each column corresponds to an increasing number of neutrons. Each element the in the matrix is the binding energy per nucleon for that row’s number of neutrons and that column’s number of neutrons. Then, the number of protons and neutrons is formatted for three-dimensional graphing.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>BE_dict <span class="op">=</span> {}</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(N)):</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    BE <span class="op">=</span> np.asarray(BE)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    value <span class="op">=</span> [Z[i], N[i]]</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>    BE_dict[BE[i]] <span class="op">=</span> value</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>BE_2D <span class="op">=</span> np.zeros((np.<span class="bu">max</span>(Z)<span class="op">+</span><span class="dv">1</span>,np.<span class="bu">max</span>(N)<span class="op">+</span><span class="dv">1</span>))</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(BE)):</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>    z,n <span class="op">=</span> BE_dict[BE[i]]</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>    BE_2D[z][n] <span class="op">=</span> BE[i]</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> BE_2D</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>nrows, ncols <span class="op">=</span> BE_2D.shape</span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>Z_2D <span class="op">=</span> np.linspace(np.<span class="bu">min</span>(Z), np.<span class="bu">max</span>(Z), ncols)</span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>N_2D <span class="op">=</span> np.linspace(np.<span class="bu">min</span>(N), np.<span class="bu">max</span>(N), nrows)</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>Z_2D, N_2D <span class="op">=</span> np.meshgrid(Z_2D, N_2D)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="three-dimensional-scatter-plots" class="level3">
+<h3 class="anchored" data-anchor-id="three-dimensional-scatter-plots">Three-Dimensional Scatter Plots</h3>
+<p>There are many types of three-dimensional plots you can make in Matplotlib. See <a href="https://matplotlib.org/stable/gallery/mplot3d/index.html">this page</a> for some examples. The first three-dimensional plot we will look at is the three-dimensional scatter plot, which you can read about <a href="https://matplotlib.org/stable/gallery/mplot3d/scatter3d.html#sphx-glr-gallery-mplot3d-scatter3d-py">here</a>. The below code cell makes a three-dimensional scatter plot with our data, using the same <code>scatter</code> statement we were previously using. However, first, we must use a <code>subplots</code> statement to set the projection of our graph to <code>3d</code>. The only other change from our previous scatter plots is now we must use <code>ax.scatter</code> instead of <code>plt.scatter</code> to make the plot three-dimensional.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span><span class="bu">dict</span>(projection<span class="op">=</span><span class="st">'3d'</span>))</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>ax.scatter(Z_2D,N_2D,BE_2D)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_118_0.png" class="img-fluid"></p>
+<p>We can make several improvements to this graph to make it easier to read. In addition to the previous modifications (adding labels, changing the color, marker size, and marker style), we can make other improvements. Since only some combinations of Z and N yield a nucleus, there are a lot of zeros in this plot that are distracting. Let’s remove these and see if that makes for a better graph. The below cell makes a copy of <code>BE_2D_no_zeros</code>, which eliminates all of the zeros by setting them to NaN (not a number), and thus they will not be plotted.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>BE_2D_no_zeros <span class="op">=</span> BE_2D.copy()</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>BE_2D_no_zeros[ BE_2D_no_zeros<span class="op">==</span><span class="dv">0</span> ] <span class="op">=</span> np.nan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="alert alert-info">
+<p>Exercise 21</p>
+<p>Create a three-dimensional scatter plot with the new matrix (<code>BE_2D_no_zeros</code>) in the code cell below. Set the color, marker style, and marker size to values you like, and then add x, y, and z labels. Note that to set axes labels in 3D you will need to use code like this:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Z'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'N'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">"BE/A (MeV)"</span>, fontsize<span class="op">=</span><span class="dv">14</span>, rotation<span class="op">=</span><span class="dv">60</span>)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>ax.set_box_aspect(aspect<span class="op">=</span><span class="va">None</span>, zoom<span class="op">=</span><span class="fl">0.8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="surface-plot" class="level3">
+<h3 class="anchored" data-anchor-id="surface-plot">Surface Plot</h3>
+<p>Another type of three-dimensional plot is called a surface plot. Surface plots can be helpful because they use color to help show the values of the z data (in this case, the binding energies per nucleon). The <code>colorbar</code> on the right of the plot gives numbers for what each of the colors represents.</p>
+<p>In order to use the colorbar and color maps, we need to import another package.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a three dimensional plot</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">"projection"</span>: <span class="st">"3d"</span>})</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a surface plot where the colors are "cool warm".  This is</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="co"># set by setting the cmap (color map).</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>surf <span class="op">=</span> ax.plot_surface(Z_2D, N_2D, BE_2D_no_zeros, cmap<span class="op">=</span>cm.coolwarm)</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Add a color bar which maps values to colors.</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>fig.colorbar(surf)</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>/tmp/ipykernel_3563232/228278955.py:6: UserWarning: Z contains NaN values. This may result in rendering artifacts.
+  surf = ax.plot_surface(Z_2D, N_2D, BE_2D_no_zeros, cmap=cm.coolwarm)</code></pre>
+<p><img src="./graphics/output_125_1.png" class="img-fluid"></p>
+<p>What do you notice about the colors plotted? Print the data you’re plotting (we called the dataframe BE_2D). What’s the problem with your colormap and these numbers?</p>
+<p>Hint: find the minimum and maximum values in BE_2D</p>
+<div class="alert alert-info">
+<p>Exercise 22:</p>
+<p>You can adjust the colorbar min max by adding arguments vmin = and vmax = to the code that creates the surface plot. These arguments can go after the cmap specification.</p>
+<p>Take what you learned from the min and max of BE_2D and adjust the min and max for the color map and see how that changes the plot.</p>
+</div>
+<p>These figures may seem a little small, especially now that we’re working with three dimensions. Luckily, you can change that. All you have to do is add another argument to</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">"projection"</span>: <span class="st">"3d"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>At the end, but still inside the parentheses, add the argument</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>figsize <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>so that you have</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(subplot_kw<span class="op">=</span>{<span class="st">"projection"</span>: <span class="st">"3d"</span>}, figsize <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You can also change the colormap. Look <a href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">here</a> for a list of the colormaps you can use.</p>
+<div class="alert alert-info">
+<p>Exercise 23:</p>
+<p>Copy the code that created the 3D surface plot above and change the figure size and the color map. Play around with it until you’re happy.</p>
+</div>
+</section>
+<section id="heat-maps" class="level3">
+<h3 class="anchored" data-anchor-id="heat-maps">Heat Maps</h3>
+<p>The final form of three-dimensional plotting we will look at is a heat map, a typical plot used to visualize the values in a matrix. The matrix is represented with a plane of squares, with the color of a square corresponding to the value of the matrix element in the exact location. For example, we can create a heat map of our binding energies matrix <code>BE_2D</code> using the <code>matshow</code> function to create a heat map. You can read about <code>matshow</code> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.matshow.html">here</a>.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.matshow(BE_2D)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_132_0.png" class="img-fluid"></p>
+<p>While we have a heat map, we do not have any context for the colors. We can add a color bar that shows the numerical values associated with each color (the same as for the surface plot).</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.matshow(BE_2D)</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>plt.colorbar(cax)</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_134_0.png" class="img-fluid"></p>
+<div class="alert alert-info">
+<p>Exercise 24:</p>
+<p>Create a heat map of <code>BE_2D</code> in the code cell below with a heat map of your choosing. Add a color bar, an x label, an y label, and a title to the graph (using <code>plt.title</code>).</p>
+</div>
+</section>
+<section id="error-bars-and-uncertainty" class="level3">
+<h3 class="anchored" data-anchor-id="error-bars-and-uncertainty">Error Bars and Uncertainty</h3>
+<p>Many physical data sets have an associated error or uncertainty on each data point. For the binding energies the uncertainties for each point are stored in the array <code>BE_uncertainty.</code> There are two ways to display these uncertainties graphically: we can add error bars to each point (using the <code>errorbar</code> function shown <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.errorbar.html">here</a>) or by added a shaded region to represent the uncertainty (using the <code>fill_between</code> function shown <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.fill_between.html">here</a>).</p>
+<p>The below two code cells set up these two different types of graphs.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>plt.errorbar(A,BE,BE_uncertainty)</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_138_0.png" class="img-fluid"></p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(A,BE)</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>plt.fill_between(A.ravel(),BE <span class="op">-</span> BE_uncertainty, BE <span class="op">+</span> BE_uncertainty, alpha<span class="op">=</span><span class="fl">0.75</span>)</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_139_0.png" class="img-fluid"></p>
+<p>Fortunately for nuclear scientists, but unfortunately for us, the uncertainties on these binding energy measurements are pretty small and do not show up well in the graphs. To better understand how these plots can look, let’s make some fake uncertainty data that will be large enough to show up in the plots.</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>BE_uncertainty_fake <span class="op">=</span> BE<span class="op">*</span>(np.random.random(<span class="bu">len</span>(BE))<span class="op">*</span><span class="fl">.25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>plt.errorbar(A,BE,BE_uncertainty_fake)</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_142_0.png" class="img-fluid"></p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(A,BE)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>plt.fill_between(A.ravel(),BE <span class="op">-</span> BE_uncertainty_fake, BE <span class="op">+</span> BE_uncertainty_fake, alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img src="./graphics/output_143_0.png" class="img-fluid"></p>
+<p>Now, lets create both types of uncertainty plots using the fake uncertainites to see the difference.</p>
+<div class="alert alert-info">
+<p>Exercise 25:</p>
+<p>Create either an <code>errorbar</code> plot or a scatter plot with the <code>fill_between</code> function to show the uncertainty.</p>
+<p>Change the figure size, colors, marker sizes, etc., to get a graph you like. You can also set new attributes, such as <code>capsize</code> for the <code>errorbar</code> plot or <code>alpha</code> for the <code>fill_inbetween</code> function.</p>
+<p>Add an x label and a y label. If you use <code>fill_between,</code> you can also add a legend where the <code>scatter</code> statement and the <code>fill_between</code> have different labels.</p>
+</div>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this notebook, we have explored how the three libraries Pandas, Seaborn, and Matplotlib can be used to examine and display a data set. These libraries have many applications across data science and other fields, and you will encounter them many times while using Python.</p>
+<p>This was a LOT! I hope you feel as cool as Joe MacMillan thinks he is.</p>
+<p><img src="./graphics/hcf-joe-sunglasses.gif" class="img-fluid"></p>
+</section>
+<section id="further-resources" class="level2">
+<h2 class="anchored" data-anchor-id="further-resources">Further Resources</h2>
+<p>If you want to learn more about any of the libraries presented here, the websites for each library are a great place to start.</p>
+<ul>
+<li><a href="https://pandas.pydata.org">Pandas website</a></li>
+<li><a href="https://pandas.pydata.org/docs/getting_started/index.html">Getting Started with Pandas</a></li>
+<li><a href="https://seaborn.pydata.org">Seaborn website</a></li>
+<li><a href="https://seaborn.pydata.org/examples/index.html">Seaborn Examples</a></li>
+<li><a href="https://seaborn.pydata.org/tutorial.html">Seaborn User Guide and Tutorials</a></li>
+<li><a href="https://matplotlib.org/stable/index.html">Matplotlib website</a></li>
+<li><a href="https://matplotlib.org/stable/gallery/index.html">Matplotlib Examples</a></li>
+<li><a href="https://matplotlib.org/stable/tutorials/index.html">Matplotlib Tutorials</a></li>
+</ul>
+<div class="alert alert-success">
+<p>Check-in with <a href="https://app.sli.do/event/8FR9MhA5wGZRG6YBFDJjTx/embed/polls/6620f8c2-5c8e-41e3-b939-2a041e041906"> sli.do</a>. Then feel free to continue with the extended practice or work on your own projects.</p>
+</div>
+</section>
+</section>
+<section id="post-lab-production-and-reflection" class="level1">
+<h1>Post-Lab: Production and Reflection</h1>
+<p>When you are done with this lab, make sure you save and export it as an HTML. This HTML file is what you will turn in through Moodle. In addition, don’t forget to fill out the <a href="https://forms.gle/n1EcrPRoeZNVQaX96">post-lab reflection form</a>. You must turn in both an HTML that demonstrates you have completed the lab and a self-reflection to get credit.</p>
+</section>
+<section id="extended-practice" class="level1">
+<h1>Extended Practice</h1>
+<p>The below set of exercises are more open ended than the above exercises and are designed to give you a chance to practice what you have learned in this notebook without being walked through the different steps. This will also give you a chance to test out different types of graphs if you like.</p>
+<div class="alert alert-info">
+<p>Extended Practice Exercise 1:</p>
+<p>Create a mask below of the <code>nuclear_data</code> Dataframe which only contains entries where the number of protons is greater than 103. We call these nuclei <em>super heavy elements</em>.</p>
+</div>
+<div class="alert alert-info">
+<p>Extended Practice Exercise 2:</p>
+<p>Create a <code>pairplot</code> of your masked Dataframe. Set the hue equal to the number of protons.</p>
+</div>
+<div class="alert alert-info">
+<p>Extended Practice Exercise 3:</p>
+<p>Choose on of the graphs from the above <code>pairplot</code> where the y-axis is the mass of the atoms. In the below code cell, recreate this graph using Seaborn. You can use the <code>regplot</code> function we used earlier in this notebook or any others found in the Seaborn documentatation.</p>
+</div>
+<div class="alert alert-info">
+<p>Extended Practice Exercise 4:</p>
+<p>Using Matplotlib, create a plot with the mass of the super heavy elements on the y-axis and the number of protons on the x-axis. Add the uncertainty of the mass to the plot (you are allowed to increase the size of the uncertainty if needed as with the binding energies). You can use plots suchs as <code>plot</code> or <code>scatter</code> which were shown in this notebook or another type of plot found in the Matplotlib documentation.</p>
+</div>
+<div class="alert alert-info">
+<p>Extended Practice Exercise 5:</p>
+<p>Using Matplotlib, create a three dimensional plot with the mass of the super heavy elements on the z axis, the number of protons on the x axis, and the number of neutrons on the z axis. You can use one of the graphs in this notebook as a template or pick a new type of graph from the Matplotlib documentation.</p>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

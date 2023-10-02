@@ -72,3 +72,8 @@ You can find the .ipynb for this lab in Moodle, or at [this link](https://colab.
 
 [Lab 3](SDS271/F23/Lab3_clean.qmd) introduces the data science package Pandas, which allows you to organize, filter, sort, and do simple statistics on large datasets.
 
+
+## Lab 4
+
+[Lab 4](SDS271/F23/Lab4_clean.qmd) digs deeper into pandas and matplotlib using data from nuclear physics. It also introduces the seaborn visualization package.
+
