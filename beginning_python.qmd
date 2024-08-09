@@ -24,8 +24,6 @@ In both cases, I recommend working with Jupyter notebooks to begin. A Jupyter no
 # Installing Python and JupyterLab
 
 # Accessing Google Colab
-
-
 :::
 
 # Using a Notebook (Jupyter or Colab)

@@ -3,10 +3,10 @@ project:
   output-dir: docs
  
 website:
-  cookie-consent:
-    type: express
-    style: headline
-    palette: dark  
+#  cookie-consent:
+#    type: express
+#    style: headline
+#    palette: dark  
   title: "Casey E. Berger"
   navbar:
     background: primary #color of background is primary color in palette
