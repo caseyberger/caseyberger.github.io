@@ -10,7 +10,7 @@ format:
     colorlinks: true
     self-contained: true
 editor: visual
-jupyter: python3
+
 ---
 
 Assistant Professor\
@@ -20,3 +20,5 @@ Smith College
 ## Interdisciplinary Science
 
 Life is more interesting on the boundaries!
+
+Hello world

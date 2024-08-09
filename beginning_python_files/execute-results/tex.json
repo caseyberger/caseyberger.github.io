@@ -1,0 +1,10 @@
+{
+  "hash": "25826a9b16ede8d2d10e7878987ced97",
+  "result": {
+    "markdown": "---\ntitle: Beginning Python\nformat:\n  html:\n    toc: true\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    self-contained: true\neditor: visual\n---\n\n# The Basics of Python\n\n",
+    "supporting": [
+      "beginning_python_files/figure-pdf"
+    ],
+    "filters": []
+  }
+}
