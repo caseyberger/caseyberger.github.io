@@ -3,10 +3,6 @@ project:
   output-dir: docs
  
 website:
-#  cookie-consent:
-#    type: express
-#    style: headline
-#    palette: dark  
   title: "Casey E. Berger"
   navbar:
     background: primary #color of background is primary color in palette
@@ -18,7 +14,6 @@ website:
       - sidebar:about
       - sidebar:teaching
       - sidebar:python-data-science
-      - sidebar:sds-271-f23
             
   sidebar:
     - id: about
@@ -45,22 +40,8 @@ website:
         - beginning_python.qmd
         - python_data_science.qmd
         
-    - id: sds-271-f23
-      title: "SDS 271 Fall 2023"
-      style: "docked"
-      background: light
-      contents: 
-        - sds-271-f23.qmd
-        - SDS271/F23/Lab1_clean.qmd
-        - SDS271/F23/Lab1_solutions.qmd
-        - SDS271/F23/Lab2_clean.qmd
-        - SDS271/F23/Lab2_solutions.qmd
-        - SDS271/F23/Lab3_clean.qmd
-        - SDS271/F23/Lab4_clean.qmd
 format:
   html:
-    theme: flatly
+    theme: cosmo
     css: styles.css
     toc: true
-
-editor: visual
