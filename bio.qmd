@@ -8,8 +8,7 @@ format:
     number-sections: true
     colorlinks: true
     self-contained: true
-editor: visual
-jupyter: python3
+editor: source
 ---
 
 # Academic Bio

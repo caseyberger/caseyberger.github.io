@@ -8,7 +8,7 @@ format:
     number-sections: true
     colorlinks: true
     self-contained: true
-editor: visual
+editor: source
 ---
 
 # CV
