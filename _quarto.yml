@@ -42,6 +42,7 @@ website:
         
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: 
+      - lux
+      - custom.scss
     toc: true
