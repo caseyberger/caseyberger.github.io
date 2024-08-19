@@ -4,21 +4,24 @@
     "href": "index.html",
     "title": "Casey E Berger",
     "section": "",
-    "text": "Assistant Professor\nPhysics and Statistical and Data Sciences\nSmith College"
+    "text": "Assistant Professor\nPhysics and Astronomy\nBates College"
   },
   {
     "objectID": "index.html#interdisciplinary-science",
     "href": "index.html#interdisciplinary-science",
     "title": "Casey E Berger",
     "section": "Interdisciplinary Science",
-    "text": "Interdisciplinary Science\nLife is more interesting on the boundaries!\nHello world"
+    "text": "Interdisciplinary Science\nLife is more interesting on the boundaries!"
   },
   {
     "objectID": "cv_and_pubs.html",
     "href": "cv_and_pubs.html",
     "title": "CV and Publications",
     "section": "",
-    "text": "CV\nMy up-to-date academic CV as of August 2023 can be found here\n\n\nAcademic Publications"
+    "text": "CV\nMy up-to-date academic CV as of August 2024 can be found here\n\n\nAcademic Publications",
+    "crumbs": [
+      "CV and Publications"
+    ]
   },
   {
     "objectID": "inclusive_classroom.html",
@@ -32,42 +35,60 @@
     "href": "teaching_philosophy.html",
     "title": "Teaching Philosophy",
     "section": "",
-    "text": "Traditional lecture-heavy lesson planning is not the most effective way to facilitate student learning. My teaching philosophy incorporates research-backed methods to help students build efficacy and cultivate a set of tools they can use beyond my classroom.\nUsing research-backed methods in the classroom takes time and effort. It’s challenging, and there are lots of barriers to implementation. But it’s worth it.\n\n\nLearning is an active process. If I stand in front of the classroom and deliver a perfect lecture, the best case is that students will absorb the information I’ve provided and be able to regurgitate it later on an exam. But this style of teaching gives the students no opportunities to practice applying that information. Active learning improves retention of knowledge, and it facilitates the acquisition of a deeper understanding: not just a memorization of facts, but an ability to apply the knowledge in more complex ways.\nActive learning is effective not only at the introductory level, but also in advanced graduate coursework.\n\n\n\nStudents benefit greatly from working with their peers. Those who may need a little extra support are able to watch their peers model their thinking process and are likely to share the same questions, which reinforces a growth mindset. Students who are already on top of the material benefit as well, as walking a peer through how they arrived at the answer strengthens their own understanding of the concept and can help reveal nuance. Groups should be kept small enough that all students are able to contribute, but large enough to balance out possible power dynamics. The most successful groups have been shown to be around 3-5 students.\nBut the community is not just between students and their peers: it includes the instructor as well. My practice is to trust my students and to work with them on an individual level. We are all still learning how to learn (even those of us who have been doing this a long time), and taking ownership of your own education is far more valuable than performing well in a classroom with rigid expectations. The trust between student and instructor takes time to develop, but it’s essential to supporting students in a way that prepares them for the world outside the classroom.\n\n\n\nShort-term memory is extremely limited. The human brain is built to process information, but it can only handle so much at one time. Every embellishment – from complicated visuals to interesting side stories – steals attention away from the concepts being presented and minimizing the ability of students to absorb the information.\n\n\n\nJargon is a useful shorthand. But in order for the shorthand to be effective, the people using the jargon need to understand the underlying concepts.\nJargon is for experts, not learners. Introducing shorthand words – even if they are standard in the field – only obfuscates the concepts.\n\n\n\nIf students feel unsafe or like they don’t belong, their ability to learn and grow will be limited.\nThere are many things you can do to make your classroom safer and more inclusive."
+    "text": "Traditional lecture-heavy lesson planning is not the most effective way to facilitate student learning. My teaching philosophy incorporates research-backed methods to help students build efficacy and cultivate a set of tools they can use beyond my classroom.\nUsing research-backed methods in the classroom takes time and effort. It’s challenging, and there are lots of barriers to implementation. But it’s worth it.\n\n\nLearning is an active process. If I stand in front of the classroom and deliver a perfect lecture, the best case is that students will absorb the information I’ve provided and be able to regurgitate it later on an exam. But this style of teaching gives the students no opportunities to practice applying that information. Active learning improves retention of knowledge, and it facilitates the acquisition of a deeper understanding: not just a memorization of facts, but an ability to apply the knowledge in more complex ways.\nActive learning is effective not only at the introductory level, but also in advanced graduate coursework.\n\n\n\nStudents benefit greatly from working with their peers. Those who may need a little extra support are able to watch their peers model their thinking process and are likely to share the same questions, which reinforces a growth mindset. Students who are already on top of the material benefit as well, as walking a peer through how they arrived at the answer strengthens their own understanding of the concept and can help reveal nuance. Groups should be kept small enough that all students are able to contribute, but large enough to balance out possible power dynamics. The most successful groups have been shown to be around 3-5 students.\nBut the community is not just between students and their peers: it includes the instructor as well. My practice is to trust my students and to work with them on an individual level. We are all still learning how to learn (even those of us who have been doing this a long time), and taking ownership of your own education is far more valuable than performing well in a classroom with rigid expectations. The trust between student and instructor takes time to develop, but it’s essential to supporting students in a way that prepares them for the world outside the classroom.\n\n\n\nShort-term memory is extremely limited. The human brain is built to process information, but it can only handle so much at one time. Every embellishment – from complicated visuals to interesting side stories – steals attention away from the concepts being presented and minimizing the ability of students to absorb the information.\n\n\n\nJargon is a useful shorthand. But in order for the shorthand to be effective, the people using the jargon need to understand the underlying concepts.\nJargon is for experts, not learners. Introducing shorthand words – even if they are standard in the field – only obfuscates the concepts.\n\n\n\nIf students feel unsafe or like they don’t belong, their ability to learn and grow will be limited.\nThere are many things you can do to make your classroom safer and more inclusive.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
   },
   {
     "objectID": "teaching_philosophy.html#active-learning",
     "href": "teaching_philosophy.html#active-learning",
     "title": "Teaching Philosophy",
     "section": "",
-    "text": "Learning is an active process. If I stand in front of the classroom and deliver a perfect lecture, the best case is that students will absorb the information I’ve provided and be able to regurgitate it later on an exam. But this style of teaching gives the students no opportunities to practice applying that information. Active learning improves retention of knowledge, and it facilitates the acquisition of a deeper understanding: not just a memorization of facts, but an ability to apply the knowledge in more complex ways.\nActive learning is effective not only at the introductory level, but also in advanced graduate coursework."
+    "text": "Learning is an active process. If I stand in front of the classroom and deliver a perfect lecture, the best case is that students will absorb the information I’ve provided and be able to regurgitate it later on an exam. But this style of teaching gives the students no opportunities to practice applying that information. Active learning improves retention of knowledge, and it facilitates the acquisition of a deeper understanding: not just a memorization of facts, but an ability to apply the knowledge in more complex ways.\nActive learning is effective not only at the introductory level, but also in advanced graduate coursework.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
   },
   {
     "objectID": "teaching_philosophy.html#building-community",
     "href": "teaching_philosophy.html#building-community",
     "title": "Teaching Philosophy",
     "section": "",
-    "text": "Students benefit greatly from working with their peers. Those who may need a little extra support are able to watch their peers model their thinking process and are likely to share the same questions, which reinforces a growth mindset. Students who are already on top of the material benefit as well, as walking a peer through how they arrived at the answer strengthens their own understanding of the concept and can help reveal nuance. Groups should be kept small enough that all students are able to contribute, but large enough to balance out possible power dynamics. The most successful groups have been shown to be around 3-5 students.\nBut the community is not just between students and their peers: it includes the instructor as well. My practice is to trust my students and to work with them on an individual level. We are all still learning how to learn (even those of us who have been doing this a long time), and taking ownership of your own education is far more valuable than performing well in a classroom with rigid expectations. The trust between student and instructor takes time to develop, but it’s essential to supporting students in a way that prepares them for the world outside the classroom."
+    "text": "Students benefit greatly from working with their peers. Those who may need a little extra support are able to watch their peers model their thinking process and are likely to share the same questions, which reinforces a growth mindset. Students who are already on top of the material benefit as well, as walking a peer through how they arrived at the answer strengthens their own understanding of the concept and can help reveal nuance. Groups should be kept small enough that all students are able to contribute, but large enough to balance out possible power dynamics. The most successful groups have been shown to be around 3-5 students.\nBut the community is not just between students and their peers: it includes the instructor as well. My practice is to trust my students and to work with them on an individual level. We are all still learning how to learn (even those of us who have been doing this a long time), and taking ownership of your own education is far more valuable than performing well in a classroom with rigid expectations. The trust between student and instructor takes time to develop, but it’s essential to supporting students in a way that prepares them for the world outside the classroom.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
   },
   {
     "objectID": "teaching_philosophy.html#reducing-distractions",
     "href": "teaching_philosophy.html#reducing-distractions",
     "title": "Teaching Philosophy",
     "section": "",
-    "text": "Short-term memory is extremely limited. The human brain is built to process information, but it can only handle so much at one time. Every embellishment – from complicated visuals to interesting side stories – steals attention away from the concepts being presented and minimizing the ability of students to absorb the information."
+    "text": "Short-term memory is extremely limited. The human brain is built to process information, but it can only handle so much at one time. Every embellishment – from complicated visuals to interesting side stories – steals attention away from the concepts being presented and minimizing the ability of students to absorb the information.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
   },
   {
     "objectID": "teaching_philosophy.html#concepts-first-jargon-later",
     "href": "teaching_philosophy.html#concepts-first-jargon-later",
     "title": "Teaching Philosophy",
     "section": "",
-    "text": "Jargon is a useful shorthand. But in order for the shorthand to be effective, the people using the jargon need to understand the underlying concepts.\nJargon is for experts, not learners. Introducing shorthand words – even if they are standard in the field – only obfuscates the concepts."
+    "text": "Jargon is a useful shorthand. But in order for the shorthand to be effective, the people using the jargon need to understand the underlying concepts.\nJargon is for experts, not learners. Introducing shorthand words – even if they are standard in the field – only obfuscates the concepts.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
   },
   {
     "objectID": "teaching_philosophy.html#safe-and-inclusive-classrooms",
     "href": "teaching_philosophy.html#safe-and-inclusive-classrooms",
     "title": "Teaching Philosophy",
     "section": "",
-    "text": "If students feel unsafe or like they don’t belong, their ability to learn and grow will be limited.\nThere are many things you can do to make your classroom safer and more inclusive."
+    "text": "If students feel unsafe or like they don’t belong, their ability to learn and grow will be limited.\nThere are many things you can do to make your classroom safer and more inclusive.",
+    "crumbs": [
+      "Teaching Philosophy"
+    ]
   },
   {
     "objectID": "bio.html",
@@ -81,7 +102,10 @@
     "href": "python_data_science.html",
     "title": "Teaching Data Science to Physics Students",
     "section": "",
-    "text": "So you want to teach your physics students some data science?\nFortunately, there are lots of resources to help you do just this! I’ve put together a handy guide that should help walk you through this process, whether you’re just hearing the words “Python programming language” for the first time or a seasoned pro.\nIf you are completely new to Python, you should start with The Basics of Python, where I walk through a basic Python bootcamp and provide links to other resources for practice.\n\nGetting StartedReady to Dive InDig Deeper\n\n\nIn this section are a number of resources to help walk you through some of the most widely-used (and accessible) tools for programming in the classroom. There, you can learn some basic Python, get comfortable with a free and easy to use (no downloads or installs required!) coding environment, and get some best practices tips for teaching students who are also just getting started.\nIf you don’t already have Python installed on your machine, or if you don’t already have access to a cloud-based programming environment (like JupyterHub or Posit), this notebook will walk you through Google Colab, which is an excellent, free option if you want to program with Python and don’t want to have to install a bunch of programs on your computer. All you need to start this process is a Google account.\nThis tutorial will walk you through the basics of Colab. Click on this link, and it should take you to a page that looks like this:\n\n\nIn this section, you can find modules developed by graduate and postdoctoral fellows in the Data Science Education Community of Practice (DSECOP), part of the American Physical Society’s topical Group on Data Science. These modules are designed to fit into physics courses and can be adapted for students at varying levels of coding ability\n\n\nIn this section, you will find more modules by the DSECOP fellows, which are intended for more advanced students. Once students have gained some familiarity with data science tools and processes (using the earlier modules, for example), they will be ready for these modules."
+    "text": "So you want to teach your physics students some data science?\nFortunately, there are lots of resources to help you do just this! I’ve put together a handy guide that should help walk you through this process, whether you’re just hearing the words “Python programming language” for the first time or a seasoned pro.\nIf you are completely new to Python, you should start with The Basics of Python, where I walk through a basic Python bootcamp and provide links to other resources for practice.\n\nGetting StartedReady to Dive InDig Deeper\n\n\nIn this section are a number of resources to help walk you through some of the most widely-used (and accessible) tools for programming in the classroom. There, you can learn some basic Python, get comfortable with a free and easy to use (no downloads or installs required!) coding environment, and get some best practices tips for teaching students who are also just getting started.\nIf you don’t already have Python installed on your machine, or if you don’t already have access to a cloud-based programming environment (like JupyterHub or Posit), this notebook will walk you through Google Colab, which is an excellent, free option if you want to program with Python and don’t want to have to install a bunch of programs on your computer. All you need to start this process is a Google account.\nThis tutorial will walk you through the basics of Colab. Click on this link, and it should take you to a page that looks like this:\n\n\nIn this section, you can find modules developed by graduate and postdoctoral fellows in the Data Science Education Community of Practice (DSECOP), part of the American Physical Society’s topical Group on Data Science. These modules are designed to fit into physics courses and can be adapted for students at varying levels of coding ability\n\n\nIn this section, you will find more modules by the DSECOP fellows, which are intended for more advanced students. Once students have gained some familiarity with data science tools and processes (using the earlier modules, for example), they will be ready for these modules.",
+    "crumbs": [
+      "Teaching Data Science to Physics Students"
+    ]
   },
   {
     "objectID": "python_data_science.html#python-basics",
@@ -102,7 +126,10 @@
     "href": "beginning_python.html",
     "title": "Beginning Python",
     "section": "",
-    "text": "If you’re brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of Additional References for more detail and opportunities to practice.\n\nShould I install Python or use a cloud-based environment?\nThis depends on your own needs. If you want to be able to work offline, then you’ll want to install Python on your local machine. But if you can reliably expect access to the internet, then an online service will be a lot quicker to start with and will prevent the need to manage updates, install special packages, or deal with software incompatibilities.\nIn both cases, I recommend working with Jupyter notebooks to begin. A Jupyter notebook allows you to run code in small chunks as well as leave clear notes and documentation throughout. If you have worked with Posit or RStudio, you will already be familiar with how this works. If you haven’t, don’t worry! We will walk through it below.\n\nInstalling Python and JupyterLabAccessing Google Colab\n\n\n\n\n\n\n\n\n\n\n\nUsing a Notebook (Jupyter or Colab)\n\n\nAdditional References\nPython’s guide to Python for Beginners"
+    "text": "If you’re brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of Additional References for more detail and opportunities to practice.\n\nShould I install Python or use a cloud-based environment?\nThis depends on your own needs. If you want to be able to work offline, then you’ll want to install Python on your local machine. But if you can reliably expect access to the internet, then an online service will be a lot quicker to start with and will prevent the need to manage updates, install special packages, or deal with software incompatibilities.\nIn both cases, I recommend working with Jupyter notebooks to begin. A Jupyter notebook allows you to run code in small chunks as well as leave clear notes and documentation throughout. If you have worked with Posit or RStudio, you will already be familiar with how this works. If you haven’t, don’t worry! We will walk through it below.\n\nInstalling Python and JupyterLabAccessing Google Colab\n\n\n\n\n\n\n\n\n\n\n\nUsing a Notebook (Jupyter or Colab)\n\n\nAdditional References\nPython’s guide to Python for Beginners",
+    "crumbs": [
+      "Beginning Python"
+    ]
   },
   {
     "objectID": "beginning_python.html#should-i-install-python-or-use-a-cloud-based-environment",

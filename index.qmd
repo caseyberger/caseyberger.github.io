@@ -14,11 +14,9 @@ editor: visual
 ---
 
 Assistant Professor\
-Physics and Statistical and Data Sciences\
-Smith College
+Physics and Astronomy\
+Bates College
 
 ## Interdisciplinary Science
 
 Life is more interesting on the boundaries!
-
-Hello world

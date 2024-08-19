@@ -9,11 +9,10 @@ format:
     colorlinks: true
     self-contained: true
 editor: visual
-jupyter: python3
 ---
 
 # CV
 
-My up-to-date academic CV as of August 2023 can be found [here](pdfs/CV.pdf)
+My up-to-date academic CV as of August 2024 can be found [here](pdfs/CV.pdf)
 
 # Academic Publications

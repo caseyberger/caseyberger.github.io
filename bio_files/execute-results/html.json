@@ -1,0 +1,11 @@
+{
+  "hash": "1f0de0bad5cc2b7a5cf8503cc7b4ce96",
+  "result": {
+    "markdown": "---\ntitle: About Me\nformat:\n  html:\n    toc: true\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n    self-contained: true\neditor: visual\n---\n\n# Academic Bio\n\nI am an assistant professor of physics and statistical and data sciences at Smith College. Previously, I was a postdoctoral research associate at Boston University in the physics department and the Hariri Institute for Computing. I earned my PhD from the University of North Carolina at Chapel Hill, where I was a Department of Energy Computational Science Graduate Fellow and a William Neal Reynolds fellow in the Royster Society of Fellows. My research is in computational and data science methods in many-body quantum mechanics.\\\n\\\nI also work on issues of diversity and equity in STEM, with an emphasis on improving representation and support of women, LGBTQ folks, BIPOC, and other underrepresented groups in STEM. When I'm not working in STEM and STEM-related pursuits, you can find me running, cooking, practicing photography, or writing.\n\n",
+    "supporting": [
+      "bio_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

@@ -42,7 +42,5 @@ website:
         
 format:
   html:
-    theme: 
-      - lux
-      - custom.scss
+    theme: lux_bates.scss
     toc: true

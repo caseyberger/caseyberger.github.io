@@ -9,7 +9,6 @@ format:
     colorlinks: true
     self-contained: true
 editor: visual
-jupyter: python3
 ---
 
 # How can you be sure students of all backgrounds feel comfortable in your class? {#inclusive-classroom}

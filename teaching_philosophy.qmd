@@ -9,7 +9,6 @@ format:
     colorlinks: true
     self-contained: true
 editor: visual
-jupyter: python3
 ---
 
 # Research-Backed Practices

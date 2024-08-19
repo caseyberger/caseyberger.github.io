@@ -9,7 +9,6 @@ format:
     colorlinks: true
     self-contained: true
 editor: visual
-jupyter: python3
 ---
 
 If you're brand new to Python, this page will walk you through everything from installation to basic Python syntax. You can also find a list of [Additional References] for more detail and opportunities to practice.
