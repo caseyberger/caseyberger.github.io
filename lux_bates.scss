@@ -187,6 +187,19 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
   }
 }
 
+.bates-btn {
+  background-color: $bates-light-gray;
+  border: 2px solid $black;
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: $bates-garnet;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 [class*="btn-outline-"] {
   border-width: 2px;
 }
