@@ -21,29 +21,53 @@ Bates College
 
 Life is more interesting on the boundaries!
 
-<a target="_blank" class="bates-btn" href=cv_and_pubs.qmd>My Research and Publications</a>
+<a target="_blank" class="btn-gray" href=cv_and_pubs.qmd>My Research and Publications</a>
 
-<a target="_blank" class="bates-btn" href=python-data-science.qmd>Data Science for Physicists</a>
+<a target="_blank" class="btn-gray" href=python-data-science.qmd>Data Science for Physicists</a>
 
 ::: {.grid}
 
-::: {.g-col-8}
+::: {.g-col-4}
 I talk all about my love of interdisciplinary science and the false STEM-humanities dichotomy in this Fellow Profile from the 2019 DEIXIS magazine.
 :::
 
-::: {.g-col-4}
+::: {.g-col-8}
  <a target="_blank" href="https://www.krellinst.org/doecsgf/docs/deixis/deixis2019.pdf"><img src="images/deixis2019.jpeg" alt="DEIXIS 2019" style="width:200px;height:200px;"></a>
 :::
 
 :::
 
-  
 
- 
+::: {.section-gray}
+
+## Facilitating learning
+
+<a target="_blank" class="btn-garnet" href=inclusive_classroom.qmd>Inclusive Classrooms</a>
+
+<a target="_blank" class="btn-garnet" href=teaching_philosophy.qmd>Teaching Philosophy</a>
+
+:::
 
 
+::: {.grid}
+
+::: {.g-col-6}
+<a target="_blank" href=social_justice.qmd><img src="images/SilenceIsViolence.jpg" alt="Silence is Violence" style="width:300px;height:200px;"></a>
+
+<a target="_blank" class="btn-gray" href=social_justice.qmd>Resources for Equity in STEM</a>
+
+:::
+
+::: {.g-col-6}
+
+## Equity in STEM 
+
+Academia in general and STEM fields in particular have a long way to go towards creating a welcoming environment where women, LGBTQ folks, BIPOC, and other underrepresented groups can thrive. We all have a responsibility to listen, learn, and be part of the solution.
 
 
+:::
+
+:::
 
 
 

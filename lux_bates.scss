@@ -187,7 +187,7 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
   }
 }
 
-.bates-btn {
+.btn-gray {
   background-color: $bates-light-gray;
   border: 2px solid $black;
   border-radius: 8px;
@@ -199,6 +199,20 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;6
   display: inline-block;
   font-size: 16px;
 }
+
+.btn-garnet {
+  background-color: $bates-garnet;
+  border: 2px solid $bates-dark-gray;
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: $white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 
 [class*="btn-outline-"] {
   border-width: 2px;
@@ -227,6 +241,10 @@ h6 {
 
 .text-secondary {
   color: $body-color !important;
+}
+
+.section-gray{
+  background-color: $bates-light-gray;
 }
 
 // Tables
