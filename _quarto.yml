@@ -44,3 +44,4 @@ format:
   html:
     theme: lux_bates.scss
     toc: true
+    

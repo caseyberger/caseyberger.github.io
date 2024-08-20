@@ -4,17 +4,20 @@ title: "Casey E Berger"
 format: 
   html:
     toc: true
+    page-layout: full
   pdf:
     toc: true
     number-sections: true
     colorlinks: true
     self-contained: true
-editor: visual
+editor: source
 
 ---
 
-Assistant Professor\
-Physics and Astronomy\
+Assistant Professor
+
+Physics and Astronomy
+
 Bates College
 
 ## Interdisciplinary Science
@@ -25,16 +28,9 @@ Life is more interesting on the boundaries!
 
 <a target="_blank" class="btn-gray" href=python-data-science.qmd>Data Science for Physicists</a>
 
-::: {.grid}
 
-::: {.g-col-4}
-I talk all about my love of interdisciplinary science and the false STEM-humanities dichotomy in this Fellow Profile from the 2019 DEIXIS magazine.
-:::
-
-::: {.g-col-8}
- <a target="_blank" href="https://www.krellinst.org/doecsgf/docs/deixis/deixis2019.pdf"><img src="images/deixis2019.jpeg" alt="DEIXIS 2019" style="width:200px;height:200px;"></a>
-:::
-
+::: {.column-margin}
+![I talk all about my love of interdisciplinary science and the false STEM-humanities dichotomy in this Fellow Profile from the 2019 DEIXIS magazine.](images/deixis2019.jpeg)
 :::
 
 
