@@ -29,6 +29,15 @@ Life is more interesting on the boundaries!
 
 ::: {.g-col-8}
 
+::: {layout-ncol=3}
+
+![](images/math_logo.png)
+
+![](images/physics_logo.png)
+
+![](images/data_science_logo.png)
+:::
+
 <a target="_blank" class="btn-gray" href=cv_and_pubs.qmd>My Research and Publications</a>
 
 <a target="_blank" class="btn-gray" href=python-data-science.qmd>Data Science for Physicists</a>
