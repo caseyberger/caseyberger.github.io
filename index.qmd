@@ -43,11 +43,16 @@ I talk all about my love of interdisciplinary science and the false STEM-humanit
 
 ::: {.section-gray}
 
+
 ## Facilitating learning
+
+::: {.center}
 
 <a target="_blank" class="btn-garnet" href=inclusive_classroom.qmd>Inclusive Classrooms</a>
 
 <a target="_blank" class="btn-garnet" href=teaching_philosophy.qmd>Teaching Philosophy</a>
+
+:::
 
 :::
 
