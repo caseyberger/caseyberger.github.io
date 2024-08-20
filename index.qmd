@@ -36,7 +36,7 @@ I talk all about my love of interdisciplinary science and the false STEM-humanit
 :::
 
 ::: {.g-col-6}
-<a target="_blank" href="https://www.krellinst.org/doecsgf/docs/deixis/deixis2019.pdf"><img src="images/deixis2019.jpg" alt="DEIXIS 2019" style="width:200px;height:200px;"></a>
+<a target="_blank" href="https://www.krellinst.org/doecsgf/docs/deixis/deixis2019.pdf"><img src="images/deixis2019.jpeg" alt="DEIXIS 2019" style="width:200px;height:200px;"></a>
 :::
 
 :::
