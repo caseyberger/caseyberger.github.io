@@ -69,6 +69,17 @@ Academia in general and STEM fields in particular have a long way to go towards 
 
 :::
 
+::: {.section-gray}
 
+## Professional Development Resources
+
+Our education -- especially those of us in STEM -- focuses on content and skill building in a narrow, deep area of interest. Rarely are we explicitly taught the so-called "soft skills" of communication and teamwork and problem solving and creative thinking, let alone the "life management" skills of time tracking, prioritization, and finding room for rest and recovery.
+
+I've assembled here a set of tools and resources for effective work and a reflective life.
+
+<a target="_blank" class="btn-garnet" href=professional_skills.qmd>Resources for Professional Skill Building</a>
+
+
+:::
 
 ## 
