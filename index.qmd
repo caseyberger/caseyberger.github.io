@@ -27,7 +27,7 @@ Life is more interesting on the boundaries!
 
 ::: {.grid}
 
-::: {.g-col-4}
+::: {.g-col-8}
 I talk all about my love of interdisciplinary science and the false STEM-humanities dichotomy in this Fellow Profile from the 2019 DEIXIS magazine.
 :::
 
