@@ -13,14 +13,15 @@ format:
 editor: source
 
 ---
+Assistant Professor, Physics and Astronomy, Bates College
 
 ![](images/bates-bobcat-primary3.jpg){width=400}
 
-Assistant Professor, Physics and Astronomy, Bates College
 
-$~$
 
-$~$
+
+
+
 
 ## Interdisciplinary Science
 
@@ -41,7 +42,7 @@ Life is more interesting on the boundaries!
 :::
 
 ::: {.center}
-<a target="_blank" class="btn-gray" href=cv_and_pubs.qmd>My Research and Publications</a>
+<a target="_blank" class="btn-gray" href=cv_and_pubs.qmd>Research and Publications</a>
 
 <a target="_blank" class="btn-gray" href=python-data-science.qmd>Data Science for Physicists</a>
 :::
@@ -72,24 +73,16 @@ I talk all about my love of interdisciplinary science and the false STEM-humanit
 :::
 
 
-::: {.grid}
-
-::: {.g-col-6}
-<a target="_blank" href=social_justice.qmd><img src="images/SilenceIsViolence.jpg" alt="Silence is Violence" style="width:300px;height:200px;"></a>
-
-<a target="_blank" class="btn-gray" href=social_justice.qmd>Resources for Equity in STEM</a>
-
-:::
-
-::: {.g-col-6}
 
 ## Equity in STEM 
 
+::: {layout="[ [2,1] ]"}
+
+<a target="_blank" href=social_justice.qmd><img src="images/SilenceIsViolence.jpg" alt="Silence is Violence" style="width:300px;height:200px;"></a>
+
 Academia in general and STEM fields in particular have a long way to go towards creating a welcoming environment where women, LGBTQ folks, BIPOC, and other underrepresented groups can thrive. We all have a responsibility to listen, learn, and be part of the solution.
 
-
-:::
-
+<a target="_blank" class="btn-gray" href=social_justice.qmd>Resources for Equity in STEM</a>
 :::
 
 ::: {.section-gray}
@@ -100,8 +93,9 @@ Our education -- especially those of us in STEM -- focuses on content and skill 
 
 I've assembled here a set of tools and resources for effective work and a reflective life.
 
+::: {.center}
 <a target="_blank" class="btn-garnet" href=professional_skills.qmd>Resources for Professional Skill Building</a>
-
+:::
 
 :::
 

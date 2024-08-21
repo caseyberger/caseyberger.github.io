@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -183,6 +154,7 @@ window.Quarto = {
   <ul>
   <li><a href="#interdisciplinary-science" id="toc-interdisciplinary-science" class="nav-link active" data-scroll-target="#interdisciplinary-science">Interdisciplinary Science</a></li>
   <li><a href="#facilitating-learning" id="toc-facilitating-learning" class="nav-link" data-scroll-target="#facilitating-learning">Facilitating learning</a></li>
+  <li><a href="#equity-in-stem" id="toc-equity-in-stem" class="nav-link" data-scroll-target="#equity-in-stem">Equity in STEM</a></li>
   <li><a href="#professional-development-resources" id="toc-professional-development-resources" class="nav-link" data-scroll-target="#professional-development-resources">Professional Development Resources</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
   </ul>
@@ -210,10 +182,8 @@ window.Quarto = {
 </header>
 
 
-<p><img src="images/bates-bobcat-primary3.jpg" class="img-fluid" width="400"></p>
 <p>Assistant Professor, Physics and Astronomy, Bates College</p>
-<p><span class="math inline">\(~\)</span></p>
-<p><span class="math inline">\(~\)</span></p>
+<p><img src="images/bates-bobcat-primary3.jpg" class="img-fluid" width="400"></p>
 <section id="interdisciplinary-science" class="level2">
 <h2 class="anchored" data-anchor-id="interdisciplinary-science">Interdisciplinary Science</h2>
 <p>Life is more interesting on the boundaries!</p>
@@ -236,7 +206,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="center">
-<p><a target="_blank" class="btn-gray" href="./cv_and_pubs.html">My Research and Publications</a></p>
+<p><a target="_blank" class="btn-gray" href="./cv_and_pubs.html">Research and Publications</a></p>
 <p><a target="_blank" class="btn-gray" href="python-data-science.qmd">Data Science for Physicists</a></p>
 </div>
 </div>
@@ -253,21 +223,34 @@ window.Quarto = {
 <p><a target="_blank" class="btn-garnet" href="./teaching_philosophy.html">Teaching Philosophy</a></p>
 </div>
 </section>
-<div class="grid">
-<div class="g-col-6">
+<section id="equity-in-stem" class="level2">
+<h2 class="anchored" data-anchor-id="equity-in-stem">Equity in STEM</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[ [2,1] ]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <p><a target="_blank" href="./social_justice.html"><img src="images/SilenceIsViolence.jpg" alt="Silence is Violence" style="width:300px;height:200px;"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p>Academia in general and STEM fields in particular have a long way to go towards creating a welcoming environment where women, LGBTQ folks, BIPOC, and other underrepresented groups can thrive. We all have a responsibility to listen, learn, and be part of the solution.</p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 66.7%;justify-content: flex-start;">
 <p><a target="_blank" class="btn-gray" href="./social_justice.html">Resources for Equity in STEM</a></p>
 </div>
-<section id="equity-in-stem" class="level2 g-col-6">
-<h2 class="anchored" data-anchor-id="equity-in-stem">Equity in STEM</h2>
-<p>Academia in general and STEM fields in particular have a long way to go towards creating a welcoming environment where women, LGBTQ folks, BIPOC, and other underrepresented groups can thrive. We all have a responsibility to listen, learn, and be part of the solution.</p>
-</section>
 </div>
+</div>
+</section>
 <section id="professional-development-resources" class="level2 section-gray">
 <h2 class="anchored" data-anchor-id="professional-development-resources">Professional Development Resources</h2>
 <p>Our education – especially those of us in STEM – focuses on content and skill building in a narrow, deep area of interest. Rarely are we explicitly taught the so-called “soft skills” of communication and teamwork and problem solving and creative thinking, let alone the “life management” skills of time tracking, prioritization, and finding room for rest and recovery.</p>
 <p>I’ve assembled here a set of tools and resources for effective work and a reflective life.</p>
+<div class="center">
 <p><a target="_blank" class="btn-garnet" href="./professional_skills.html">Resources for Professional Skill Building</a></p>
+</div>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section"></h2>
