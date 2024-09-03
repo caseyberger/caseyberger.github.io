@@ -10,9 +10,14 @@ format:
     self-contained: true
 editor: source
 ---
+![](images/headshot.jpg){width=300}
 
 # Academic Bio
 
-I am an assistant professor of physics at Bates College. I have previously held positions as an assistant professor of physics and data science at Smith College and a postdoctoral research associate at Boston University in the physics department and the Hariri Institute for Computing. I earned my PhD from the University of North Carolina at Chapel Hill, where I was a Department of Energy Computational Science Graduate Fellow and a William Neal Reynolds fellow in the Royster Society of Fellows. My research is in computational and data science methods in many-body quantum mechanics.\
-\
+I am an assistant professor of physics at Bates College. I have previously held positions as an assistant professor of physics and data science at Smith College and a postdoctoral research associate at Boston University in the physics department and the Hariri Institute for Computing. I earned my PhD from the University of North Carolina at Chapel Hill, where I was a Department of Energy Computational Science Graduate Fellow and a William Neal Reynolds fellow in the Royster Society of Fellows. My research is in computational and data science methods in many-body quantum mechanics.
+
 I also work on issues of diversity and equity in STEM, with an emphasis on improving representation and support of women, LGBTQ folks, BIPOC, and other underrepresented groups in STEM. When I'm not working in STEM and STEM-related pursuits, you can find me running, cooking, practicing photography, or writing.
+
+# About my books
+
+If you're interested in learning more about my published works of fiction, you can do that at my [author website](www.caseybergerbooks.com).
