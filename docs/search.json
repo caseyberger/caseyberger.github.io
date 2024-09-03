@@ -18,7 +18,7 @@
     "href": "cv_and_pubs.html",
     "title": "CV and Publications",
     "section": "",
-    "text": "CV\nMy up-to-date academic CV as of August 2024 can be found here\n\n\nAcademic Publications",
+    "text": "My up-to-date academic CV as of August 2024 can be found here",
     "crumbs": [
       "CV and Publications"
     ]
@@ -591,5 +591,25 @@
     "title": "Casey E Berger",
     "section": "Professional Development Resources",
     "text": "Professional Development Resources\nOur education – especially those of us in STEM – focuses on content and skill building in a narrow, deep area of interest. Rarely are we explicitly taught the so-called “soft skills” of communication and teamwork and problem solving and creative thinking, let alone the “life management” skills of time tracking, prioritization, and finding room for rest and recovery.\nI’ve assembled here a set of tools and resources for effective work and a reflective life.\n\nResources for Professional Skill Building"
+  },
+  {
+    "objectID": "cv_and_pubs.html#doctoral-dissertation",
+    "href": "cv_and_pubs.html#doctoral-dissertation",
+    "title": "CV and Publications",
+    "section": "Doctoral Dissertation",
+    "text": "Doctoral Dissertation\nCircumventing the sign problem in rotating quantum matter, C. E. Berger, Doctoral Dissertation, UNC Chapel Hill. ProQuest - (2020)\n\n\n\n\nProQuest",
+    "crumbs": [
+      "CV and Publications"
+    ]
+  },
+  {
+    "objectID": "cv_and_pubs.html#publications-and-preprints",
+    "href": "cv_and_pubs.html#publications-and-preprints",
+    "title": "CV and Publications",
+    "section": "Publications and Preprints",
+    "text": "Publications and Preprints\nQuantum technologies for climate change: Preliminary assessment, C. E. Berger, A. Di Paolo, T. Forrest, S. Hadfield, N. Sawaya, M. Stęchły, and K. Thibault, ArXiv pre-print, July 2021\n\n\nArXiV\nComplex Langevin and other approaches to the sign problem in quantum many-body physics, C. E. Berger, L. Rämmelmuller, A. C. Loheac, F. Ehmann, J. Braun, and J. E. Drut, Physics Reports, Vol 892, ISSN 0370-1573, January 2021\n\n\nDOI\nArXiV\nThermodynamics of rotating quantum matter in the virial expansion, C. E. Berger, K.J. Morrell, and J. E. Drut. Physical Review A, 102, 023309, August 2020\n\n\nDOI\nArXiV\nThird- and fourth-order virial coefficients of harmonically-trapped fermions in a semi-classical approximation, K. J. Morrell, C. E. Berger, and J. E. Drut. Physical Review A, 100, 063626, December 2019\n\n\nDOI\nArXiV\nInteracting bosons at finite angular momentum via complex Langevin, C. E. Berger and J. E. Drut, Proceedings of the 36th Annual International Symposium on Lattice Field Theory (2019)\n\n\nDOI\nHard-wall and non-uniform lattice Monte Carlo approaches to one-dimensional Fermi gases in a harmonic trap, C. E. Berger, J. E. Drut, and W. J. Porter. Computer Physics Communications 208, pp. 103-108 (2016)\n\n\nDOI\nArXiV\nHarmonically trapped fermions in two dimensions: ground-state energy and contact of SU(2 ) and SU(4 ) systems via nonuniform lattice Monte Carlo, Z-H. Luo, C. E. Berger, and J. E. Drut, Phys. Rev. A 93, 033604 - (2016)\n\n\nDOI\nArXiV\nEnergy, contact, and density profiles of one-dimensional fermions in a harmonic trap via nonuniform-lattice Monte Carlo calculations, C. E. Berger, E. R. Anderson, and J. E. Drut, Phys. Rev. A 91, 053618 - (2015)\n\n\nDOI\nArXiV",
+    "crumbs": [
+      "CV and Publications"
+    ]
   }
 ]

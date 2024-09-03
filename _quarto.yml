@@ -44,4 +44,6 @@ format:
   html:
     theme: lux_bates.scss
     toc: true
+    grid:
+      sidebar-width: 250px
     

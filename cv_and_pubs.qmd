@@ -16,3 +16,72 @@ editor: source
 My up-to-date academic CV as of August 2024 can be found [here](pdfs/CV.pdf)
 
 # Academic Publications
+
+## Publications and Preprints
+
+Quantum technologies for climate change: Preliminary assessment, **C. E. Berger**, A. Di Paolo, T. Forrest, S. Hadfield, N. Sawaya, M. Stęchły, and K. Thibault, ArXiv pre-print, July 2021
+
+::: column-margin
+[ArXiV](www.arxiv.org/abs/2107.05362)
+:::
+
+Complex Langevin and other approaches to the sign problem in quantum many-body physics, **C. E. Berger**, L. Rämmelmuller, A. C. Loheac, F. Ehmann, J. Braun, and J. E. Drut, Physics Reports, Vol 892, ISSN 0370-1573, January 2021
+
+::: column-margin
+[DOI](https://doi.org/10.1016/j.physrep.2020.09.002)
+
+[ArXiV](https://arxiv.org/abs/1907.10183)
+:::
+
+Thermodynamics of rotating quantum matter in the virial expansion, **C. E. Berger**, K.J. Morrell, and J. E. Drut. Physical Review A, 102, 023309, August 2020
+
+::: column-margin
+[DOI](https://doi.org/10.1103/PhysRevA.102.023309)
+
+[ArXiV](https://arxiv.org/abs/2004.02344)
+:::
+
+Third- and fourth-order virial coefficients of harmonically-trapped fermions in a semi-classical approximation, K. J. Morrell, **C. E. Berger**, and J. E. Drut. Physical Review A, 100, 063626, December 2019
+
+::: column-margin
+[DOI](https://doi.org/10.1103/PhysRevA.100.063626)
+
+[ArXiV](https://arxiv.org/abs/1908.00070)
+:::
+
+Interacting bosons at finite angular momentum via complex Langevin, **C. E. Berger** and J. E. Drut, Proceedings of the 36th Annual International Symposium on Lattice Field Theory (2019)
+
+::: column-margin
+[DOI](10.22323/1.334.0244)
+:::
+
+Hard-wall and non-uniform lattice Monte Carlo approaches to one-dimensional Fermi gases in a harmonic trap, **C. E. Berger**, J. E. Drut, and W. J. Porter. Computer Physics Communications 208, pp. 103-108 (2016)
+
+::: column-margin
+[DOI](https://doi.org/10.1016/j.cpc.2016.08.005)
+
+[ArXiV](https://arxiv.org/abs/1510.02976)
+:::
+
+Harmonically trapped fermions in two dimensions: ground-state energy and contact of SU(2 ) and SU(4 ) systems via nonuniform lattice Monte Carlo, Z-H. Luo, **C. E. Berger**, and J. E. Drut, Phys. Rev. A 93, 033604 - (2016)
+
+::: column-margin
+[DOI](https://doi.org/10.1103/PhysRevA.93.033604)
+
+[ArXiV](https://arxiv.org/abs/1510.02980)
+:::
+
+Energy, contact, and density profiles of one-dimensional fermions in a harmonic trap via nonuniform-lattice Monte Carlo calculations, **C. E. Berger**, E. R. Anderson, and J. E. Drut, Phys. Rev. A 91, 053618 - (2015)
+
+::: column-margin
+[DOI](https://doi.org/10.1103/PhysRevA.91.053618)
+
+[ArXiV](https://arxiv.org/abs/1410.8103)
+:::
+
+## Doctoral Dissertation
+Circumventing the sign problem in rotating quantum matter, **C. E. Berger**, Doctoral Dissertation, UNC Chapel Hill. ProQuest - (2020)
+
+::: column-margin
+[ProQuest](https://www.proquest.com/docview/2420824977?pq-origsite=gscholar&fromopenview=true&sourcetype=Dissertations%20&%20Theses)
+:::
