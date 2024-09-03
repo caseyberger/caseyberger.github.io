@@ -39,6 +39,11 @@ Jargon is a useful shorthand. But in order for the shorthand to be effective, th
 
 Jargon is for experts, not learners. Introducing shorthand words -- even if they are standard in the field -- [only obfuscates the concepts](https://iubmb.onlinelibrary.wiley.com/doi/full/10.1002/bmb.20922).
 
+
+## Universal Design
+
+The concept of universal design shows us how "making accommodations" for people with disabilities actually improves outcomes for everyone. It makes spaces -- whether physical or virtual -- available to all, and enhances everyone's ability to grow and thrive. This concept can be applied in the classroom, known as [Universal Design for Learning (UDL)](https://udlguidelines.cast.org/). 
+
 ## Safe and Inclusive Classrooms
 
 If students feel unsafe or like they don't belong, their ability to learn and grow will be limited.

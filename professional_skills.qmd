@@ -1,5 +1,5 @@
 ---
-title: "professional_skills"
+title: "Professional Development Skills and Mental Health Resources"
 format: 
   html:
     toc: true
@@ -10,3 +10,16 @@ format:
     self-contained: true
 editor: source
 ---
+# Study and Professional Skills Resources {#profdevresources}
+
+[Video: how to get the most out of studying](https://www.samford.edu/departments/academic-success-center/how-to-study)
+
+[Article: how to take notes](pdfs/HowToTakeNotes.pdf)
+
+[Article: the Urgent/Important Matrix for prioritization](https://www.mindtools.com/al1e0k5/eisenhowers-urgentimportant-principle)
+
+[Video: the Urgent/Important Matrix for prioritization](https://www.youtube.com/watch?v=jxiCV0vwVT8)
+
+# Mental Health Resources {#mentalhealthresources}
+
+[Self-care flow chart](https://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play/index.html)

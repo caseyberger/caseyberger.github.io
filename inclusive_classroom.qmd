@@ -11,4 +11,16 @@ format:
 editor: source
 ---
 
-# How can you be sure students of all backgrounds feel comfortable in your class? {#inclusive-classroom}
+**How can you be sure students of all backgrounds feel comfortable in your class?**
+
+Unfortunately, you can't guarantee that. But there are many things you can do to create a welcoming and inclusive environment in your classroom and office hours. Here are my suggestions, backed with evidence where possible, and in order of smallest steps to biggest changes.
+
+  - [Normalize using pronouns](https://ostem.blob.core.windows.net/webfiles/Resources/ostem_pronounguide_legal.pdf) -- include yours in your email signature and when you introduce yourself
+  - Don't try to learn your students names from the class roster. Instead, ask them to tell you what they would like you to call them. Write it down for yourself phonetically if you need to.
+  - Ask all students to (privately) identify to you which pronouns they would like you to use when referring to them. Do not single out students or make assumptions about their pronouns. 
+  - Add a [statement of diversity and inclusion to your syllabus](https://www.clemson.edu/otei/documents/Teaching%20Review%20Resources/Diversity_InclusionSyllabiSamples.pdf). Read it out loud on the first day of class and emphasize your commitment to what it states.
+  - Make sure students know what options are available to them through campus's accessibility services. Normalize asking for help when it's needed and make sure they know they can report any accessibility issues confidentially.
+Emphasize [growth mindset](https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means), and demonstrate this through your own teaching (don’t hide from mistakes — model how to correct them!). Make it explicit, especially through your grading practices like offering re-takes and chances for students to come back from “failures” and use them to learn. 
+  - Look into ungrading as a way to decentralize grades, which has been [shown to make learning more equitable](https://web.uri.edu/atl/grading-for-equitable-learning/).
+  - Decolonize your syllabus -- actively search for women, LGBTQ folks, and BIPOC who have contributed in the field and make sure their contributions are centered. Try to avoid the hero worship of "classic" white male contributors.
+  - Incorporate a variety of teaching techniques that work for students with different needs. One size does not fit all, and you will reach more students if you engage them in multiple ways. This is part of a larger concept known as [universal design](https://udlguidelines.cast.org/)

@@ -1,5 +1,5 @@
 ---
-title: "social_justice"
+title: "Resources for Equity, Inclusion, and Justice"
 format: 
   html:
     toc: true
@@ -11,3 +11,89 @@ format:
 editor: source
 ---
 
+This list of resources is by no means comprehensive and is a work in progress.
+
+
+# Antiracism {#antiracism}
+
+Being an ally is a lifelong process. The work never ends. Fortunately, there are many resources! These books are great places to start your antiracist research.
+
+This list is always in progress -- if you know of a great resource that is not on here, email me and tell me about it!
+
+## Articles
+
+  - [The dream of thriving in academia is still a nightmare for many Black professors](https://www.salon.com/2021/06/12/the-dream-of-thriving-in-academia-is-still-a-nightmare-for-many-black-professors/) --  D. Watkins, Salon, 2021 
+  - [Ten simple rules for building an anti-racist lab](https://ecoevorxiv.org/repository/view/4336/?fbclid=IwAR1aVIM3I3Ieyyb4VYSVXyCdjAcFNP0iy8dxu1HjAU9s66yrt8VAJCQH_PQ) -- by Bala Chaudhary and Asmeret Berhe
+  - [White Folks: It's Too Late for 'Allies'](https://colorlines.com/article/white-folks-its-too-late-allies-op-ed/) - Rev. Dr. Stephanie Rose Spaulding, Colorlines, 2020
+  - [What Black scientists want from colleagues and their institutions](https://www.nature.com/articles/d41586-020-01883-8) -- by Virginia Gewin, Nature, 2020​​
+  - [Who Gets to Be Afraid in America?](https://www.theatlantic.com/ideas/archive/2020/05/ahmaud-arbery/611539/) Ibram X. Kendi, The Atlantic, 2020
+  - [How Gender and Race Stereotypes Impact the Advancement of Scholars in STEM: Professors' Biased Evaluations of Physics and Biology Post-Doctoral Candidates](https://link.springer.com/article/10.1007/s11199-019-01052-w), Sex Roles, 2019 (cross-post with [feminist]{#feminism} resources)
+  - [Antiracism starter kit](https://www.humanrights-in-tourism.net/sites/default/files/media/file/2021/rc206the-antiracism-starter-kit-1894.pdf), L. Glenise Pike, 2019
+  - [Racial and gender biases plague postdoc hiring](https://www.science.org/content/article/racial-and-gender-biases-plague-postdoc-hiring), Science, 2019 (cross-post with [feminist]{#feminism} resources)
+  - [Double Jeopardy: Gender Bias Against Women of Color in Science](https://www.researchgate.net/publication/271529571_Double_Jeopardy_Gender_Bias_Against_Women_of_Color_in_Science), 2014 (cross-post with [feminist]{#feminism} resources)
+  - [White Privilege: Unpacking the Invisible Knapsack](https://www.nationalseedproject.org/key-seed-texts/white-privilege-unpacking-the-invisible-knapsack), Peggy McIntosh, 1989
+
+## Books
+
+  - [Me and White Supremacy](https://bookshop.org/p/books/me-and-white-supremacy-combat-racism-change-the-world-and-become-a-good-ancestor-layla-saad/12701424?ean=9781728209807) by Layla F. Saad
+  - [How to Be an Antiracist](https://bookshop.org/p/books/how-to-be-an-antiracist-ibram-x-kendi/12072476?ean=9780525509288) by Ibram X. Kendi
+  - [A People's History of the United States](https://bookshop.org/p/books/a-people-s-history-of-the-united-states-howard-zinn/6436127?ean=9780062397348) by Howard Zinn
+  - [Stamped from the Beginning](https://bookshop.org/p/books/stamped-from-the-beginning-the-definitive-history-of-racist-ideas-in-america-ibram-x-kendi/625165?ean=9781568585987) by Ibram X. Kendi
+  - [Who Do You Serve, Who Do You Protect?](https://bookshop.org/p/books/who-do-you-serve-who-do-you-protect-police-violence-and-resistance-in-the-united-states-maya-schenwar/10915380?ean=9781608466122) by Joe Macaré, Alana Yu-Lan Price, and Maya Schenwar, foreword by Alicia Garza 
+  - [So You Want to Talk About Race?](https://bookshop.org/p/books/so-you-want-to-talk-about-race-ijeoma-oluo/7214637?ean=9781580058827) by Ijeoma Oluo
+
+## Podcasts
+
+  - [Code Switch](https://www.npr.org/podcasts/510312/codeswitch) from NPR
+      - Discussions about race and identity
+  - [Forty Acres and a Lie](https://revealnews.org/podcast/40-acres-and-a-lie-part-1/)
+      - A closer look at post-Civil war legislation and the question of reparations
+  - [In the Dark: season 2](https://features.apmreports.org/in-the-dark/season-two/) from APM reports
+      - Explores the six trials of Curtis Flowers by the same district attorney in Mississippi.
+      - Examination of the racial inequities in our justice system.
+  - [Uncivil](https://gimletmedia.com/shows/uncivil) from Gimlet Media
+      - Stories you weren't told in high school about the U.S. Civil War
+
+
+# Feminism {#feminism}
+
+Women (and non-binary folx) still do not have equal rights under the US Constitution (Don't believe me? You can read all about it here). Womxn are underrepresented in institutions of power, from Congress to corporate leadership to academic institutions. 
+
+This page is under construction -- if you have recommendations for resources not included here, please let me know and I'll be happy to add them!
+
+## Articles
+  - [Stop telling women they have imposter syndrome](https://hbr.org/2021/02/stop-telling-women-they-have-imposter-syndrome) - by Ruchika Tulshyan and Jodi-Ann Burey, 2021
+  - [Sexism in the Academy](https://www.nplusonemag.com/issue-34/essays/sexism-in-the-academy/) -- by Troy Vettese, N+1, 2019
+  - [Sexual harassment is pervasive in US physics programmes](https://www.nature.com/articles/d41586-019-01303-6), Nature, 2019
+  - [Racial and gender biases plague postdoc hiring](https://www.science.org/content/article/racial-and-gender-biases-plague-postdoc-hiring), Science, 2019 (cross-post with [antiracism](#antiracism) resources)
+  - [It's time to recognize how men's careers benefit from sexually harassing women in academia](https://journals.sagepub.com/doi/10.1177/194277861901200110), Human Geography, 2019
+  - [How Gender and Race Stereotypes Impact the Advancement of Scholars in STEM: Professors' Biased Evaluations of Physics and Biology Post-Doctoral Candidates](https://link.springer.com/article/10.1007/s11199-019-01052-w), Sex Roles, 2019 (cross-post with [antiracism](#antiracism) resources)
+  - [(More) bias in science hiring](https://www.insidehighered.com/news/2019/06/07/new-study-finds-discrimination-against-women-and-racial-minorities-hiring-sciences), Inside Higher Ed, 2019 (cross-post with [antiracism](#antiracism) resources)
+  - [Student evaluations can't be used to assess professors](https://slate.com/human-interest/2018/03/student-evaluations-are-discriminatory-against-female-professors.html), Slate, 2018
+  - [How the entire scientific community can confront gender bias in the workplace](https://www.nature.com/articles/s41559-018-0747-4) Nature, 2018
+  - [Particles for Justice, statement on sexist talk given at CERN](https://www.particlesforjustice.org/statement-sexism), 2018
+  - [Why Men Don't Believe the Data on Gender Bias in Science](https://www.wired.com/story/why-men-dont-believe-the-data-on-gender-bias-in-science/), Wired, 2017
+  - [Quality of evidence revealing subtle gender biases in science is in the eye of the beholder](https://www.pnas.org/doi/10.1073/pnas.1510649112), PNAS, 2015
+  - [When Two Bodies Are (Not) a Problem: Gender and Relationship Status Discrimination in Academic Hiring](https://journals.sagepub.com/doi/full/10.1177/0003122417739294?journalCode=asra), American Sociological Review, 2014
+  - [Double Jeopardy: Gender Bias Against Women of Color in Science](https://www.researchgate.net/publication/271529571_Double_Jeopardy_Gender_Bias_Against_Women_of_Color_in_Science), 2014 (cross-post with [antiracism](#antiracism) resources)
+
+## Books
+
+  - [Inferior](https://bookshop.org/p/books/inferior-how-science-got-women-wrong-and-the-new-research-that-s-rewriting-the-story-angela-saini/7716355?ean=9780807010037) by Angela Saini
+  
+  
+# LGBQT+ {#queer}
+
+- [Pronouns and why they matter](https://ostem.blob.core.windows.net/webfiles/Resources/ostem_pronounguide_legal.pdf) -- from OSTEM
+  - [Here's what a good LGBTQ ally looks like](https://www.vox.com/identities/2019/6/22/18700875/lgbtq-good-ally) -- by Ana Valens, from Vox, Spring 2019
+  - [LGBTQ students on campus](https://www.higheredtoday.org/2017/04/10/lgbtq-students-higher-education/)  -- by Kristen Renn, from Higher Education Today, Spring 2017
+  - [College Guide for LGBTQ Students](https://www.affordablecollegesonline.org/lgbtq-college-student-guide/) -- affordablecolleges.com
+  - [LBGTQ+ Resources for College students](https://www.upromise.com/articles/lgbtq-resources-for-college-students/) -- upromise.com
+  
+  
+# Accessibility {#accessibility}
+
+  - [Exploring experiences of ableism in academia: a constructivist inquiry](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8325043/), PubMedCentral (2022)
+  - [Ableism in Academia](https://uclpress.co.uk/book/ableism-in-academia/), Nicole Brown and Jenniger Leigh, (2020)
+  - [Universal Design for Learning](https://udlguidelines.cast.org/)
+  - [UDL: What is is and how it works](https://www.understood.org/en/articles/universal-design-for-learning-what-it-is-and-how-it-works) Understood.org

@@ -31,6 +31,7 @@ website:
       contents:
        - teaching_philosophy.qmd
        - inclusive_classroom.qmd
+       - social_justice.qmd
        
     - id: python-data-science
       title: "Data Science in the Physics Classroom"
