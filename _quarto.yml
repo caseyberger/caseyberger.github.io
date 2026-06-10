@@ -13,7 +13,7 @@ website:
         text: Home
       - sidebar:about
       - sidebar:teaching
-      - sidebar:python-data-science
+      #- sidebar:python-data-science
             
   sidebar:
     - id: about
@@ -33,13 +33,13 @@ website:
        - inclusive_classroom.qmd
        - social_justice.qmd
        
-    - id: python-data-science
-      title: "Data Science in the Physics Classroom"
-      style: "docked"
-      background: light
-      contents:
-        - beginning_python.qmd
-        - python_data_science.qmd
+    #- id: python-data-science
+    #  title: "Data Science in the Physics Classroom"
+    #  style: "docked"
+    #  background: light
+    #  contents:
+    #    - beginning_python.qmd
+    #    - python_data_science.qmd
         
 format:
   html:
