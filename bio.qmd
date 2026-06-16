@@ -12,6 +12,10 @@ editor: source
 ---
 ![](images/headshot.jpg){width=300}
 
+# Contact
+
+[Bates College Contact Info](https://www.bates.edu/faculty/profile/casey-e-berger/)
+
 # Academic Bio
 
 I am an assistant professor of physics at Bates College. I have previously held positions as an assistant professor of physics and data science at Smith College and a postdoctoral research associate at Boston University in the physics department and the Hariri Institute for Computing. I earned my PhD from the University of North Carolina at Chapel Hill, where I was a Department of Energy Computational Science Graduate Fellow and a William Neal Reynolds fellow in the Royster Society of Fellows. My research is in computational and data science methods in many-body quantum mechanics.
